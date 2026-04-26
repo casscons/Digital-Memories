@@ -455,6 +455,26 @@ footer{background:var(--bg);border-top:2px solid rgba(74,15,212,0.2);padding:18p
   .proc-steps{grid-template-columns:1fr}
   #page-home{padding:0 16px}.pg{padding:40px 16px}
 }
+
+/* ── QR PHONE MODAL ── */
+.qr-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(2,4,10,0.96);z-index:10000;display:none;align-items:center;justify-content:center;padding:20px}
+.qr-overlay.open{display:flex}
+.qr-box{background:var(--bg2);border:2px solid rgba(74,15,212,0.4);border-radius:16px;padding:22px 26px;max-width:360px;width:100%;text-align:center;box-shadow:0 0 60px rgba(74,15,212,0.3);max-height:90vh;overflow-y:auto}
+.qr-box h3{font-family:var(--serif);font-size:1.3rem;color:#fff;margin-bottom:5px}
+.qr-box p{color:var(--dim);font-size:13px;line-height:1.6;margin-bottom:14px}
+#qrCanvas{border-radius:8px;background:#fff;padding:10px;margin:0 auto 12px;display:block}
+.qr-steps{text-align:left;background:rgba(74,15,212,0.1);border-radius:8px;padding:12px;margin-bottom:14px}
+.qr-step{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--dim);padding:3px 0}
+.qr-step-num{font-family:var(--mono);font-size:10px;background:var(--sky);color:#fff;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-weight:700}
+.qr-sms-row{display:flex;gap:8px;margin-bottom:10px}
+.qr-sms-row .field{flex:1;font-size:13px;padding:10px 12px}
+.qr-sms-btn{padding:10px 14px;background:var(--sky);border:none;border-radius:8px;color:#fff;font-family:var(--body);font-size:13px;font-weight:700;cursor:pointer;transition:all var(--tr);white-space:nowrap;box-shadow:0 0 14px var(--glow)}
+.qr-sms-btn:hover{background:var(--sky2)}
+.qr-close{width:100%;padding:11px;background:transparent;border:1px solid rgba(200,216,240,0.15);border-radius:8px;color:var(--dim);font-family:var(--body);font-size:13px;cursor:pointer;transition:all var(--tr)}
+.qr-close:hover{border-color:rgba(200,216,240,0.4);color:var(--ink)}
+.phone-btn{width:100%;padding:14px;background:rgba(74,15,212,0.08);border:2px solid rgba(74,15,212,0.35);border-radius:8px;color:#fff;font-family:var(--body);font-size:1.05rem;font-weight:700;cursor:pointer;transition:all var(--tr);display:flex;align-items:center;justify-content:center;gap:8px;margin-top:9px}
+.phone-btn:hover{border-color:var(--sky);background:rgba(74,15,212,0.15);color:var(--ice)}
+
 </style>
 </head>
 <body>
@@ -513,8 +533,8 @@ footer{background:var(--bg);border-top:2px solid rgba(74,15,212,0.2);padding:18p
             <span class="cam-hint">📱 On your phone, this opens your camera directly</span>
           </label>
           <input type="file" id="camIn" accept="image/*" capture="environment" style="display:none" onchange="handlePhoto(this)">
-          <button class="phone-btn" onclick="openQrModal()">
-            📱 &nbsp;Taking this on a laptop? Send the link to your phone instead
+          <button class="phone-btn" onclick="openQrModal()" style="font-size:1.05rem;color:#fff;font-weight:700;padding:14px;border:2px solid rgba(74,15,212,0.4)">
+            📱 &nbsp;Viewing this page on a laptop? Send the link to your phone instead
           </button>
           <div class="or-div"><span>or count them yourself</span></div>
           <button class="man-link" onclick="showManual()">✏️ &nbsp;I'll enter my items by hand</button>
@@ -2030,12 +2050,12 @@ const SITE_URL = 'https://casscons.github.io/Digital-Memories/';
 function openQrModal() {
   const overlay = document.getElementById('qrOverlay');
   overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  document.documentElement.style.overflow = 'hidden';
   setTimeout(drawQRCanvas, 50);
 }
 function closeQrModal() {
   document.getElementById('qrOverlay').classList.remove('open');
-  document.body.style.overflow = '';
+  document.documentElement.style.overflow = '';
 }
 
 // Pure JS QR code drawn to canvas — no external requests
@@ -2054,7 +2074,7 @@ function drawQRCanvas() {
     document.body.appendChild(tmp);
     try {
       new QRCode(tmp, {
-        text: url, width: 200, height: 200,
+        text: url, width: 180, height: 180,
         colorDark: '#0a0a1a', colorLight: '#ffffff',
         correctLevel: QRCode.CorrectLevel.M
       });
@@ -2065,7 +2085,7 @@ function drawQRCanvas() {
           canvas.style.display = 'none';
           const display = document.createElement('img');
           display.src = img.src;
-          display.style.cssText = 'width:200px;height:200px;border-radius:10px;display:block;margin:0 auto;border:6px solid #fff';
+          display.style.cssText = 'width:180px;height:180px;border-radius:8px;display:block;margin:0 auto 8px;border:6px solid #fff';
           display.alt = 'QR Code — scan with your phone camera';
           canvas.parentNode.insertBefore(display, canvas);
         }
@@ -2208,7 +2228,7 @@ triggerReveal();
 // a11y
 function adjFont(d){const c=parseFloat(getComputedStyle(document.body).fontSize);document.body.style.fontSize=(d===0?18:Math.min(26,Math.max(14,c+d*2)))+'px';}
 // keyboard close
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){closePkgModal();closeWorkflow();closeStaffPanel();closeStaffModal();document.getElementById('rcptOverlay').classList.remove('open');}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closePkgModal();closeWorkflow();closeStaffPanel();closeStaffModal();closeQrModal();document.getElementById('rcptOverlay').classList.remove('open');}});
 // logo secret (5 clicks opens staff login)
 let lc=0,lt=null;
 document.getElementById('logoBtn').addEventListener('click',()=>{lc++;if(lt)clearTimeout(lt);lt=setTimeout(()=>lc=0,2000);if(lc>=5){lc=0;openStaffLogin();}});
@@ -2220,7 +2240,7 @@ document.getElementById('logoBtn').addEventListener('click',()=>{lc++;if(lt)clea
     <div style="font-size:2.5rem;margin-bottom:10px">📱</div>
     <h3>Open on Your Phone</h3>
     <p>Scan this QR code with your phone camera — the site opens instantly and you can take the photo right there.</p>
-    <canvas id="qrCanvas" width="200" height="200"></canvas>
+    <canvas id="qrCanvas" width="180" height="180"></canvas>
     <div class="qr-steps">
       <div class="qr-step"><span class="qr-step-num">1</span><span>Point your phone camera at the QR code above</span></div>
       <div class="qr-step"><span class="qr-step-num">2</span><span>Tap the link that appears on your phone screen</span></div>
