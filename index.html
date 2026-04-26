@@ -1,0 +1,2125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+<title>Digital Memories Edmonton — VHS, 8mm Film &amp; Tape Digitization</title>
+<meta name="description" content="Digital Memories Edmonton preserves VHS tapes, 8mm film, Super 8, Betamax and audio recordings. Free pickup. Instant quote — snap a photo.">
+<meta name="keywords" content="VHS digitization Edmonton, 8mm film transfer Edmonton, tape to digital Alberta, Super 8 conversion Edmonton, Betamax transfer Edmonton">
+<link rel="canonical" href="https://digitalmemories.ca/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Digital Memories Edmonton","description":"VHS, 8mm film and tape digitization Edmonton Alberta","address":{"@type":"PostalAddress","addressLocality":"Edmonton","addressRegion":"AB","addressCountry":"CA"},"telephone":"(780) 555-0192","email":"hello@digitalmemories.ca","openingHours":["Mo-Fr 08:00-20:00","Sa-Su 09:00-18:00"],"priceRange":"$$","areaServed":"Edmonton, Alberta"}</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#04080f;--bg2:#070d18;--sky:#4a0fd4;--sky2:#5e1fff;--ice:#7ec8ff;
+  --glow:rgba(74,15,212,0.4);--glow2:rgba(74,15,212,0.15);
+  --ink:#c8d8f0;--dim:rgba(200,216,240,0.65);--dimmer:rgba(200,216,240,0.38);
+  --white:#fff;--border:rgba(74,15,212,0.28);
+  --green:#10b981;--amber:#f59e0b;--red:#ef4444;
+  --serif:'Playfair Display',Georgia,serif;--body:'Lato',sans-serif;--mono:'DM Mono',monospace;
+  --tr:0.25s ease;--r:10px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.7;overflow-x:hidden;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:9998;opacity:0.22}
+.fs{position:fixed;top:108px;bottom:0;width:22px;background:#020409;z-index:1;pointer-events:none}
+.fs-l{left:0}.fs-r{right:0}
+.fs::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent 0,transparent 10px,#04080f 10px,#04080f 12px,rgba(74,15,212,0.2) 12px,rgba(74,15,212,0.2) 22px,#04080f 22px,#04080f 24px,transparent 24px,transparent 34px);animation:filmroll 2.8s linear infinite}
+@keyframes filmroll{to{background-position:0 34px}}
+/* a11y */
+.a11y{background:rgba(74,15,212,0.1);border-bottom:1px solid rgba(74,15,212,0.2);padding:5px 20px;display:flex;align-items:center;justify-content:flex-end;gap:8px}
+.a11y span{font-family:var(--mono);font-size:12px;color:var(--dimmer)}
+.a11y button{background:rgba(74,15,212,0.18);border:1px solid rgba(126,200,255,0.2);border-radius:4px;padding:3px 11px;color:var(--ice);cursor:pointer;font-family:var(--mono);font-size:13px;font-weight:700;transition:all var(--tr)}
+.a11y button:hover{background:var(--sky);color:#fff}
+/* nav */
+nav{background:rgba(4,8,15,0.97);backdrop-filter:blur(16px);border-bottom:2px solid rgba(74,15,212,0.3);position:sticky;top:0;z-index:200;padding:0 14px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;gap:6px}
+.logo{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--white);display:flex;align-items:center;gap:8px;flex-shrink:0;cursor:pointer;text-decoration:none}
+.logo span{color:var(--sky)}
+.tab-nav{display:flex;gap:2px;align-items:center;overflow-x:auto}
+.tb{padding:8px 12px;background:transparent;border:none;font-family:var(--body);font-size:14px;font-weight:700;color:var(--dim);cursor:pointer;border-radius:6px;transition:all var(--tr);white-space:nowrap;border-bottom:3px solid transparent}
+.tb:hover{color:var(--ice);background:rgba(74,15,212,0.1)}
+.tb.active{color:var(--ice);border-bottom-color:var(--sky);background:rgba(74,15,212,0.12)}
+/* pages */
+.page{display:none;min-height:calc(100vh - 108px)}.page.active{display:block}
+.pg{max-width:1060px;margin:0 auto;padding:50px 30px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--sky);margin-bottom:10px;display:block}
+.pg-h{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:10px}
+.pg-h em{font-style:italic;color:var(--sky)}
+.divider{width:44px;height:3px;background:var(--sky);margin:12px 0 24px;border-radius:2px;box-shadow:0 0 10px var(--glow)}
+/* shared */
+.field-lbl{display:block;font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--dimmer);margin-bottom:5px}
+.field{width:100%;background:rgba(255,255,255,0.05);border:2px solid rgba(74,15,212,0.28);border-radius:8px;padding:13px 15px;color:#fff;font-family:var(--body);font-size:1rem;outline:none;transition:all var(--tr)}
+.field::placeholder{color:rgba(200,216,240,0.22)}
+.field:focus{border-color:var(--sky);background:rgba(74,15,212,0.06);box-shadow:0 0 14px rgba(74,15,212,0.2)}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.big-btn{width:100%;padding:17px;background:var(--sky);border:none;border-radius:10px;color:#fff;font-family:var(--body);font-size:1.05rem;font-weight:700;cursor:pointer;transition:all var(--tr);box-shadow:0 0 22px var(--glow)}
+.big-btn:hover{background:var(--sky2);transform:translateY(-2px)}
+.ghost-btn{width:100%;padding:13px;background:transparent;border:2px solid rgba(74,15,212,0.28);border-radius:10px;color:var(--dim);font-family:var(--body);font-size:1rem;font-weight:700;cursor:pointer;transition:all var(--tr);margin-top:10px}
+.ghost-btn:hover{border-color:var(--sky);color:var(--ice)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}
+/* badges */
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700}
+.bq{background:rgba(107,114,128,0.2);color:#9ca3af;border:1px solid rgba(107,114,128,0.3)}
+.bp{background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.3)}
+.bd{background:rgba(74,15,212,0.2);color:var(--ice);border:1px solid var(--border)}
+.bqc{background:rgba(16,185,129,0.15);color:#34d399;border:1px solid rgba(16,185,129,0.3)}
+.br{background:rgba(16,185,129,0.25);color:#6ee7b7;border:1px solid rgba(16,185,129,0.5)}
+.bdn{background:rgba(74,15,212,0.3);color:var(--ice);border:1px solid var(--sky)}
+/* progress bars */
+.pw{background:rgba(255,255,255,0.06);border-radius:20px;height:10px;overflow:hidden;margin-top:6px}
+.pb{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--sky),var(--ice));transition:width 0.5s ease;box-shadow:0 0 8px var(--glow)}
+/* HOME */
+#page-home{background:radial-gradient(ellipse at 25% 60%,rgba(74,15,212,0.18) 0%,transparent 50%),radial-gradient(ellipse at 80% 15%,rgba(37,103,184,0.12) 0%,transparent 45%),var(--bg);padding:0 30px}
+.hero{max-width:960px;margin:0 auto;padding:54px 0 16px;text-align:center}
+.hero-tag{font-family:var(--mono);font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--sky);margin-bottom:14px;display:block}
+.hero-h1{font-family:var(--serif);font-size:clamp(2.1rem,5vw,3.8rem);font-weight:900;line-height:1.1;color:#fff;margin-bottom:14px}
+.hero-h1 em{font-style:italic;color:var(--sky);display:block}
+.hero-sub{font-size:1.05rem;font-weight:400;color:var(--dim);max-width:660px;margin:0 auto 14px;line-height:1.8}
+.hero-poem{font-family:var(--serif);font-style:italic;font-size:1rem;color:rgba(126,200,255,0.65);border-left:3px solid rgba(74,15,212,0.6);padding:12px 20px;margin:0 auto 34px;line-height:1.9;text-align:left;max-width:480px;background:rgba(74,15,212,0.06);border-radius:0 6px 6px 0}
+/* quote box */
+.qbox{max-width:700px;margin:0 auto 54px;background:rgba(74,15,212,0.08);border:2px solid rgba(74,15,212,0.35);border-radius:14px;padding:26px}
+.qstep{display:none}.qstep.active{display:block}
+.cam-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;padding:32px 20px;background:rgba(74,15,212,0.1);border:3px dashed rgba(74,15,212,0.5);border-radius:12px;cursor:pointer;transition:all var(--tr);gap:10px}
+.cam-btn:hover{background:rgba(74,15,212,0.2);border-color:var(--sky);box-shadow:0 0 36px var(--glow2)}
+.cam-emoji{font-size:3.4rem;line-height:1}
+.cam-lbl{font-family:var(--serif);font-size:1.65rem;font-weight:700;color:#fff}
+.cam-sub{font-size:14px;color:var(--dim);text-align:center;max-width:380px}
+.cam-hint{font-family:var(--mono);font-size:11px;color:rgba(126,200,255,0.5);letter-spacing:0.08em;background:rgba(74,15,212,0.15);padding:5px 13px;border-radius:20px}
+.or-div{display:flex;align-items:center;gap:12px;margin:16px 0}
+.or-div::before,.or-div::after{content:'';flex:1;height:1px;background:rgba(74,15,212,0.22)}
+.or-div span{font-family:var(--mono);font-size:11px;color:var(--dimmer);letter-spacing:0.15em;text-transform:uppercase}
+.man-link{width:100%;padding:14px;background:transparent;border:2px solid rgba(74,15,212,0.28);border-radius:10px;color:var(--ice);font-family:var(--body);font-size:1rem;font-weight:700;cursor:pointer;transition:all var(--tr);display:flex;align-items:center;justify-content:center;gap:10px}
+.man-link:hover{border-color:var(--sky);background:rgba(74,15,212,0.12)}
+/* manual grid */
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.mi{background:rgba(255,255,255,0.03);border:1px solid rgba(74,15,212,0.2);border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:8px}
+.mi-ico{font-size:1.4rem;flex-shrink:0}
+.mi-info{flex:1;min-width:0}
+.mi-nm{font-size:13px;font-weight:700;color:var(--ink);line-height:1.3}
+.mi-pr{font-family:var(--mono);font-size:10px;color:var(--dimmer);margin-top:1px}
+.mi-ctrl{display:flex;align-items:center;gap:5px;flex-shrink:0}
+.mi-btn{width:30px;height:30px;border-radius:50%;border:2px solid rgba(74,15,212,0.4);background:rgba(74,15,212,0.1);color:var(--ice);font-size:1.1rem;cursor:pointer;transition:all var(--tr);display:flex;align-items:center;justify-content:center;font-weight:700}
+.mi-btn:hover{background:var(--sky);border-color:var(--sky);color:#fff}
+.mi-cnt{font-family:var(--mono);font-size:14px;color:#fff;min-width:18px;text-align:center;font-weight:700}
+/* analyzing */
+.analyzing{text-align:center;padding:26px 0}
+.spin-ring{width:58px;height:58px;border-radius:50%;border:4px solid rgba(74,15,212,0.2);border-top-color:var(--sky);animation:spin 0.8s linear infinite;margin:0 auto 16px;box-shadow:0 0 22px var(--glow)}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* quote table */
+.sq-wrap{overflow-x:auto;margin-bottom:16px}
+.sq-table{width:100%;border-collapse:collapse;font-size:14px}
+.sq-table th{padding:10px 13px;font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;border-bottom:2px solid rgba(74,15,212,0.3)}
+.sq-table th:first-child{text-align:left;color:var(--dimmer)}
+.th-std{background:rgba(74,15,212,0.12);color:var(--ice);text-align:center;cursor:pointer;border-radius:6px 6px 0 0}
+.th-pre{background:rgba(74,15,212,0.22);color:#fff;text-align:center;cursor:pointer;border-radius:6px 6px 0 0}
+.th-std:hover,.th-pre:hover{filter:brightness(1.2)}
+.sq-table td{padding:8px 13px;border-bottom:1px solid rgba(74,15,212,0.08);font-size:13px;color:var(--dim)}
+.sq-table td:nth-child(2){background:rgba(74,15,212,0.05);text-align:center;color:var(--ice);font-family:var(--mono)}
+.sq-table td:nth-child(3){background:rgba(74,15,212,0.1);text-align:center;color:#fff;font-family:var(--mono)}
+.sq-tot td{border-bottom:none;padding-top:11px;font-weight:700}
+.sq-tot td:first-child{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:var(--dimmer)}
+.sq-tot td:nth-child(2){background:rgba(74,15,212,0.1);font-size:1.35rem;color:var(--ice);font-family:var(--serif);padding:9px 13px}
+.sq-tot td:nth-child(3){background:rgba(74,15,212,0.18);font-size:1.35rem;color:#fff;font-family:var(--serif);padding:9px 13px}
+.dec{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px}
+.btn-std{padding:14px 8px;background:rgba(74,15,212,0.15);border:2px solid rgba(74,15,212,0.4);border-radius:8px;color:var(--ice);font-family:var(--body);font-size:14px;font-weight:700;cursor:pointer;transition:all var(--tr);text-align:center}
+.btn-std:hover{background:var(--sky);border-color:var(--sky);color:#fff}
+.btn-pre{padding:14px 8px;background:var(--sky);border:2px solid var(--sky);border-radius:8px;color:#fff;font-family:var(--body);font-size:14px;font-weight:700;cursor:pointer;transition:all var(--tr);text-align:center;box-shadow:0 0 22px var(--glow)}
+.btn-pre:hover{background:var(--sky2)}
+.btn-think{padding:14px 8px;background:transparent;border:2px solid rgba(200,216,240,0.15);border-radius:8px;color:var(--dim);font-family:var(--body);font-size:13px;font-weight:700;cursor:pointer;transition:all var(--tr);text-align:center}
+.btn-think:hover{border-color:rgba(200,216,240,0.5);color:var(--ink)}
+.bc{display:block;font-family:var(--mono);font-size:10px;font-weight:400;opacity:0.7;margin-top:3px}
+/* PROGRESS CHECK PAGE */
+#page-progress{background:var(--bg)}
+.prog-lookup{max-width:540px;margin:0 auto 40px;text-align:center}
+.prog-lookup h3{font-family:var(--serif);font-size:1.4rem;color:#fff;margin-bottom:8px}
+.prog-lookup p{color:var(--dim);font-size:15px;line-height:1.7;margin-bottom:24px}
+.prog-form{background:rgba(74,15,212,0.08);border:2px solid rgba(74,15,212,0.3);border-radius:12px;padding:24px;text-align:left}
+.prog-form .fg2{margin-bottom:14px}
+.prog-result{max-width:720px;margin:0 auto;display:none}
+/* order progress card */
+.ocard{background:rgba(74,15,212,0.07);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px}
+.ocard-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+.ocard-ref{font-family:var(--mono);font-size:11px;color:var(--dimmer);letter-spacing:0.15em}
+.ocard-name{font-family:var(--serif);font-size:1.3rem;color:#fff;font-weight:700}
+.overall-prog{background:rgba(74,15,212,0.1);border:1px solid rgba(74,15,212,0.25);border-radius:10px;padding:16px;margin-bottom:18px}
+.op-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
+.op-text{font-family:var(--serif);font-size:1.05rem;color:#fff;font-weight:700}
+.op-pct{font-family:var(--mono);font-size:1.05rem;color:var(--sky);font-weight:700}
+.op-stage{font-size:13px;color:var(--dim);margin-top:5px}
+/* checklist items */
+.cl-section-title{font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--dimmer);margin-bottom:12px}
+.cl-item{background:rgba(255,255,255,0.02);border:1px solid rgba(74,15,212,0.15);border-radius:8px;padding:14px 16px;margin-bottom:8px;display:flex;align-items:flex-start;gap:14px;transition:all var(--tr)}
+.cl-item.done{border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.04)}
+.cl-check{width:22px;height:22px;border-radius:6px;border:2px solid rgba(74,15,212,0.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;transition:all var(--tr)}
+.cl-item.done .cl-check{background:rgba(16,185,129,0.3);border-color:#6ee7b7}
+.cl-check-icon{font-size:12px;color:#6ee7b7;display:none}
+.cl-item.done .cl-check-icon{display:block}
+.cl-info{flex:1}
+.cl-title{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.cl-item.done .cl-title{color:#6ee7b7}
+.cl-meta{font-size:12px;color:var(--dimmer);font-family:var(--mono)}
+.cl-item.done .cl-meta{color:rgba(110,231,183,0.6)}
+/* intake photo in progress view */
+.intake-thumb{width:100%;max-height:200px;object-fit:cover;border-radius:8px;border:1px solid rgba(74,15,212,0.3);margin-bottom:16px}
+/* updates log */
+.ul-wrap{margin-top:16px}
+.ul-title{font-family:var(--mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dimmer);margin-bottom:10px}
+.ul-item{display:flex;gap:12px;padding:7px 0;border-bottom:1px solid rgba(74,15,212,0.1);font-size:13px}
+.ul-item:last-child{border-bottom:none}
+.ul-date{color:var(--dimmer);font-family:var(--mono);font-size:11px;white-space:nowrap;padding-top:2px}
+.ul-text{color:var(--dim)}
+/* upgrade offer */
+.upg-offer{background:rgba(16,185,129,0.08);border:2px solid rgba(16,185,129,0.3);border-radius:10px;padding:16px;margin-top:10px;display:none}
+.upg-offer.vis{display:block}
+.upg-h{font-family:var(--serif);font-size:1.05rem;color:#6ee7b7;margin-bottom:8px}
+.upg-video{background:rgba(0,0,0,0.4);border-radius:8px;height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;border:1px solid rgba(16,185,129,0.2);font-size:1.8rem;cursor:pointer;transition:all var(--tr)}
+.upg-video:hover{background:rgba(0,0,0,0.6)}
+.upg-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.upg-accept{padding:11px;background:rgba(16,185,129,0.2);border:2px solid rgba(16,185,129,0.4);border-radius:8px;color:#6ee7b7;font-family:var(--body);font-size:14px;font-weight:700;cursor:pointer;transition:all var(--tr)}
+.upg-accept:hover{background:rgba(16,185,129,0.35)}
+.upg-decline{padding:11px;background:transparent;border:1px solid rgba(200,216,240,0.15);border-radius:8px;color:var(--dimmer);font-family:var(--body);font-size:13px;cursor:pointer;transition:all var(--tr)}
+.upg-decline:hover{border-color:rgba(200,216,240,0.4);color:var(--dim)}
+/* WORKFLOW OVERLAY */
+.wf-overlay{position:fixed;inset:0;background:rgba(2,4,10,0.96);z-index:500;display:none;overflow-y:auto}
+.wf-overlay.open{display:block}
+.wf-inner{max-width:740px;margin:0 auto;padding:30px 22px 56px}
+.wf-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
+.wf-title{font-family:var(--serif);font-size:1.45rem;color:#fff;font-weight:700}
+.wf-close{background:none;border:none;color:var(--dimmer);font-size:1.8rem;cursor:pointer;line-height:1;transition:color var(--tr)}
+.wf-close:hover{color:var(--sky)}
+.step-track{display:flex;align-items:center;margin-bottom:34px}
+.snode{display:flex;flex-direction:column;align-items:center;flex:1;position:relative}
+.snode::before{content:'';position:absolute;top:18px;left:50%;right:-50%;height:2px;background:rgba(74,15,212,0.25);z-index:0}
+.snode:last-child::before{display:none}
+.sci{width:36px;height:36px;border-radius:50%;border:2px solid rgba(74,15,212,0.3);background:var(--bg2);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px;font-weight:700;color:var(--dimmer);z-index:1;position:relative;transition:all var(--tr)}
+.snode.done .sci{background:var(--sky);border-color:var(--sky);color:#fff}
+.snode.active .sci{background:rgba(74,15,212,0.3);border-color:var(--sky);color:var(--ice);box-shadow:0 0 14px var(--glow)}
+.slbl{font-family:var(--mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dimmer);margin-top:5px;text-align:center}
+.snode.active .slbl,.snode.done .slbl{color:var(--ice)}
+.wf-step{display:none}.wf-step.active{display:block}
+.ws-title{font-family:var(--serif);font-size:1.25rem;color:#fff;margin-bottom:6px}
+.ws-sub{color:var(--dim);font-size:14px;margin-bottom:20px;line-height:1.6}
+/* delivery */
+.del-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:22px}
+.del-card{background:rgba(74,15,212,0.06);border:2px solid rgba(74,15,212,0.25);border-radius:12px;padding:20px 16px;cursor:pointer;transition:all var(--tr);text-align:center}
+.del-card:hover,.del-card.sel{border-color:var(--sky);background:rgba(74,15,212,0.14);box-shadow:0 0 20px var(--glow2)}
+.del-icon{font-size:2.4rem;margin-bottom:8px;display:block}
+.del-name{font-family:var(--serif);font-size:1rem;font-weight:700;color:#fff;margin-bottom:4px}
+.del-desc{font-size:12px;color:var(--dim);line-height:1.5}
+.del-price{font-family:var(--mono);font-size:12px;color:var(--ice);margin-top:6px;display:block}
+/* package in workflow */
+.pkg-g{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+.pkg-opt{background:rgba(74,15,212,0.06);border:2px solid rgba(74,15,212,0.25);border-radius:12px;padding:20px;cursor:pointer;transition:all var(--tr)}
+.pkg-opt:hover,.pkg-opt.sel{border-color:var(--sky);background:rgba(74,15,212,0.12);box-shadow:0 0 20px var(--glow2)}
+.pkg-opt-nm{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:5px;display:flex;align-items:center;gap:7px}
+.pkg-opt-nm .ib{font-size:13px;color:var(--sky)}
+.pkg-opt-tag{font-size:12px;color:var(--dim);font-style:italic;margin-bottom:10px}
+.pkf{font-size:13px;color:var(--dim);padding:4px 0;border-bottom:1px solid rgba(74,15,212,0.1);display:flex;align-items:center;gap:7px}
+.pkf:last-child{border-bottom:none}
+.pkf::before{content:'✓';color:var(--sky);font-size:11px;font-weight:700;flex-shrink:0}
+.pkf.no::before{content:'—';color:var(--dimmer)}
+.pkf.no{color:var(--dimmer)}
+.upg-note{background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);border-radius:8px;padding:12px 14px;font-size:13px;color:rgba(52,211,153,0.9);margin-bottom:16px;line-height:1.6}
+/* rush */
+.rush-row{background:rgba(74,15,212,0.06);border:2px solid rgba(74,15,212,0.25);border-radius:12px;padding:18px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all var(--tr);margin-bottom:8px}
+.rush-row:hover{border-color:rgba(74,15,212,0.5)}
+.rush-row.sel{border-color:var(--sky);background:rgba(74,15,212,0.12)}
+.rtog{width:48px;height:26px;border-radius:13px;background:rgba(74,15,212,0.2);border:2px solid rgba(74,15,212,0.4);position:relative;flex-shrink:0;transition:all var(--tr)}
+.rtog::after{content:'';position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--dimmer);transition:all var(--tr)}
+.rush-row.sel .rtog{background:var(--sky);border-color:var(--sky)}
+.rush-row.sel .rtog::after{transform:translateX(22px);background:#fff}
+/* review table */
+.rev-table{width:100%;border-collapse:collapse;margin-bottom:14px}
+.rev-table td{padding:8px 0;border-bottom:1px solid rgba(74,15,212,0.1);font-size:14px}
+.rev-table td:first-child{color:var(--dim)}
+.rev-table td:last-child{text-align:right;color:var(--ice);font-family:var(--mono);font-size:13px}
+.rev-total td{border-bottom:none;padding-top:12px;font-weight:700}
+.rev-total td:last-child{font-size:1.4rem;color:#fff;font-family:var(--serif)}
+/* payment */
+.pay-g{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.pay-opt{background:rgba(74,15,212,0.06);border:2px solid rgba(74,15,212,0.25);border-radius:12px;padding:18px;cursor:pointer;transition:all var(--tr);text-align:center}
+.pay-opt:hover,.pay-opt.sel{border-color:var(--sky);background:rgba(74,15,212,0.12)}
+.pay-icon{font-size:2rem;margin-bottom:7px;display:block}
+.pay-nm{font-family:var(--serif);font-size:1rem;font-weight:700;color:#fff;margin-bottom:3px}
+.pay-desc{font-size:12px;color:var(--dim);line-height:1.5}
+.pay-detail{background:rgba(74,15,212,0.1);border:1px solid rgba(74,15,212,0.3);border-radius:10px;padding:16px;margin-bottom:16px}
+.pay-detail h4{font-family:var(--serif);font-size:1.05rem;color:#fff;margin-bottom:11px}
+.pay-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(74,15,212,0.12);font-size:14px}
+.pay-row:last-of-type{border-bottom:none}
+.pay-row .l{color:var(--dim)}
+.pay-row .v{color:var(--ice);font-family:var(--mono);font-weight:700}
+.copy-btn{background:rgba(74,15,212,0.2);border:1px solid rgba(74,15,212,0.4);border-radius:6px;padding:3px 8px;color:var(--ice);font-family:var(--mono);font-size:10px;cursor:pointer;transition:all var(--tr);margin-left:6px}
+.copy-btn:hover{background:var(--sky);color:#fff}
+/* confirm */
+.conf-box{text-align:center;padding:10px 0}
+.big-check{font-size:3.8rem;display:block;margin-bottom:12px;animation:pop 0.5s cubic-bezier(0.34,1.56,0.64,1) both}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+.ref-box{display:inline-block;background:rgba(74,15,212,0.15);border:1px solid var(--border);border-radius:8px;padding:11px 18px;font-family:var(--mono);font-size:1rem;color:var(--sky);font-weight:700;letter-spacing:0.15em;margin:12px 0}
+.next-steps{list-style:none;text-align:left;margin:16px 0}
+.next-steps li{display:flex;align-items:flex-start;gap:11px;padding:8px 0;border-bottom:1px solid rgba(74,15,212,0.1);font-size:14px;color:var(--dim)}
+.next-steps li:last-child{border-bottom:none}
+.ns-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+/* STAFF LOGIN MODAL */
+.staff-modal{position:fixed;inset:0;background:rgba(2,4,10,0.92);z-index:600;display:none;align-items:center;justify-content:center;padding:20px}
+.staff-modal.open{display:flex}
+.staff-box{background:var(--bg2);border:2px solid rgba(74,15,212,0.4);border-radius:14px;padding:32px;max-width:420px;width:100%;box-shadow:0 0 60px rgba(74,15,212,0.25)}
+.staff-box h3{font-family:var(--serif);font-size:1.5rem;color:#fff;margin-bottom:6px}
+.staff-box p{color:var(--dim);font-size:14px;margin-bottom:22px}
+.staff-close{float:right;background:none;border:none;color:var(--dimmer);font-size:1.6rem;cursor:pointer;line-height:1;margin-top:-4px;transition:color var(--tr)}
+.staff-close:hover{color:var(--sky)}
+.user-select{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.user-btn{padding:16px;background:rgba(74,15,212,0.08);border:2px solid rgba(74,15,212,0.25);border-radius:10px;cursor:pointer;transition:all var(--tr);text-align:center;font-family:var(--body)}
+.user-btn:hover,.user-btn.sel{border-color:var(--sky);background:rgba(74,15,212,0.15)}
+.user-btn .user-ico{font-size:2rem;display:block;margin-bottom:5px}
+.user-btn .user-nm{font-size:14px;font-weight:700;color:#fff}
+.user-btn .user-role{font-size:11px;color:var(--dimmer);font-family:var(--mono)}
+/* STAFF PANEL */
+.staff-panel{position:fixed;inset:0;background:rgba(2,4,10,0.99);z-index:700;display:none;overflow-y:auto}
+.staff-panel.open{display:block}
+.sp-inner{max-width:960px;margin:0 auto;padding:30px 22px 60px}
+.sp-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px;border-bottom:2px solid rgba(74,15,212,0.3);padding-bottom:16px;flex-wrap:wrap;gap:10px}
+.sp-title{font-family:var(--serif);font-size:1.4rem;color:#fff;font-weight:700}
+.sp-user{font-family:var(--mono);font-size:12px;color:var(--sky);letter-spacing:0.12em}
+.sp-close{background:none;border:none;color:var(--dimmer);font-size:1.8rem;cursor:pointer;line-height:1;transition:color var(--tr)}
+.sp-close:hover{color:var(--sky)}
+.sp-tabs{display:flex;gap:4px;margin-bottom:24px;border-bottom:1px solid rgba(74,15,212,0.2);padding-bottom:2px}
+.sp-tb{padding:8px 16px;background:transparent;border:none;font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dimmer);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all var(--tr)}
+.sp-tb:hover{color:var(--ice)}
+.sp-tb.active{color:var(--ice);border-bottom-color:var(--sky)}
+.sp-tab-content{display:none}.sp-tab-content.active{display:block}
+/* order list in staff panel */
+.ord-list{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.ord-row{background:rgba(74,15,212,0.07);border:1px solid var(--border);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all var(--tr);flex-wrap:wrap}
+.ord-row:hover{border-color:rgba(74,15,212,0.5);background:rgba(74,15,212,0.12)}
+.or-ref{font-family:var(--mono);font-size:11px;color:var(--sky);letter-spacing:0.1em;min-width:88px}
+.or-name{font-weight:700;color:#fff;font-size:14px;flex:1}
+.or-date{font-family:var(--mono);font-size:11px;color:var(--dimmer)}
+/* order detail in staff */
+.ord-detail{display:none}.ord-detail.active{display:block}
+.back-btn{background:none;border:none;color:var(--sky);font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;padding:0;margin-bottom:18px;display:flex;align-items:center;gap:6px;transition:color var(--tr)}
+.back-btn:hover{color:var(--ice)}
+.sp-sec{background:rgba(74,15,212,0.06);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px}
+.sp-sec h4{font-family:var(--serif);font-size:1.1rem;color:#fff;margin-bottom:12px;display:flex;align-items:center;gap:9px}
+.sp-sec h4 .tag{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;background:rgba(74,15,212,0.2);border:1px solid var(--border);border-radius:4px;padding:2px 7px;color:var(--ice);font-weight:400}
+/* checklist in staff */
+.sp-cl-item{background:rgba(255,255,255,0.02);border:1px solid rgba(74,15,212,0.15);border-radius:8px;padding:14px;margin-bottom:8px;display:flex;align-items:flex-start;gap:12px;transition:all var(--tr)}
+.sp-cl-item.done{border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.04)}
+.sp-checkbox{width:24px;height:24px;border-radius:6px;border:2px solid rgba(74,15,212,0.4);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;transition:all var(--tr)}
+.sp-checkbox:hover{border-color:var(--sky);background:rgba(74,15,212,0.1)}
+.sp-cl-item.done .sp-checkbox{background:rgba(16,185,129,0.3);border-color:#6ee7b7}
+.sp-check-icon{font-size:14px;display:none}
+.sp-cl-item.done .sp-check-icon{display:block}
+.sp-cl-info{flex:1}
+.sp-cl-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px}
+.sp-cl-item.done .sp-cl-title{color:#6ee7b7;text-decoration:line-through}
+.sp-cl-meta{font-size:12px;color:var(--dimmer);font-family:var(--mono)}
+/* intake photo area */
+.intake-area{border:2px dashed rgba(74,15,212,0.35);border-radius:10px;padding:22px;text-align:center;cursor:pointer;transition:all var(--tr);background:rgba(74,15,212,0.04)}
+.intake-area:hover{border-color:var(--sky);background:rgba(74,15,212,0.08)}
+.intake-preview{max-width:100%;border-radius:8px;margin-top:12px;border:1px solid rgba(74,15,212,0.3)}
+/* payment confirm */
+.pay-conf-row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+.pay-conf-row .field{flex:1;min-width:200px}
+.pay-conf-btn{padding:13px 18px;background:rgba(16,185,129,0.2);border:2px solid rgba(16,185,129,0.4);border-radius:8px;color:#6ee7b7;font-family:var(--body);font-size:14px;font-weight:700;cursor:pointer;transition:all var(--tr);white-space:nowrap}
+.pay-conf-btn:hover{background:rgba(16,185,129,0.35)}
+/* preview clip */
+.pv-row{display:flex;gap:10px;align-items:flex-end;margin-top:10px;flex-wrap:wrap}
+.pv-btn{padding:10px 14px;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.4);border-radius:8px;color:#fbbf24;font-family:var(--body);font-size:13px;font-weight:700;cursor:pointer;transition:all var(--tr);white-space:nowrap}
+.pv-btn:hover{background:rgba(245,158,11,0.25)}
+/* notes */
+.notes-add{display:flex;gap:8px}
+.notes-add textarea{flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(74,15,212,0.25);border-radius:8px;padding:10px 12px;color:#fff;font-family:var(--body);font-size:13px;outline:none;resize:none;height:58px;transition:border-color var(--tr)}
+.notes-add textarea:focus{border-color:var(--sky)}
+.notes-add button{padding:10px 14px;background:rgba(74,15,212,0.2);border:1px solid var(--border);border-radius:8px;color:var(--ice);font-family:var(--body);font-size:13px;cursor:pointer;transition:all var(--tr);align-self:flex-end;white-space:nowrap}
+.notes-add button:hover{background:var(--sky);color:#fff}
+/* password change */
+.pwd-form{max-width:400px}
+.pwd-form .field{margin-bottom:12px}
+/* stage buttons */
+.stage-btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.stage-btn{padding:5px 10px;background:rgba(74,15,212,0.1);border:1px solid rgba(74,15,212,0.3);border-radius:6px;color:var(--dim);font-family:var(--mono);font-size:10px;cursor:pointer;transition:all var(--tr);letter-spacing:0.06em;text-transform:uppercase}
+.stage-btn:hover{background:rgba(74,15,212,0.2);color:var(--ice)}
+.stage-btn.curr{background:var(--sky);border-color:var(--sky);color:#fff}
+/* SERVICES / PRICING / CONTACT */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+.svc-card{background:rgba(74,15,212,0.05);border:1px solid rgba(74,15,212,0.2);border-radius:12px;padding:22px;transition:all var(--tr)}
+.svc-card:hover{border-color:rgba(74,15,212,0.5);transform:translateY(-3px)}
+.svc-icon{font-size:2rem;margin-bottom:9px;display:block}
+.svc-h3{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:7px}
+.svc-desc{color:var(--dim);font-size:13px;line-height:1.7;margin-bottom:10px}
+.svc-list{list-style:none}
+.svc-list li{padding:4px 0;border-bottom:1px solid rgba(74,15,212,0.1);color:var(--dim);font-size:13px;display:flex;align-items:center;gap:7px}
+.svc-list li:last-child{border-bottom:none}
+.svc-list li::before{content:'▸';color:var(--sky);font-size:11px;flex-shrink:0}
+.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.proc-step{text-align:center;padding:16px 12px;background:rgba(74,15,212,0.06);border:1px solid rgba(74,15,212,0.18);border-radius:10px}
+.proc-num{font-family:var(--serif);font-size:1.9rem;font-weight:900;color:var(--sky);display:block;text-shadow:0 0 20px var(--glow)}
+.proc-lbl{font-size:13px;color:var(--dim);margin-top:4px;line-height:1.4}
+.pkg-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:26px}
+.pkg-card{background:rgba(74,15,212,0.06);border:2px solid rgba(74,15,212,0.25);border-radius:12px;padding:22px;position:relative;transition:all var(--tr)}
+.pkg-card:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(74,15,212,0.18)}
+.pkg-card.feat{border-color:var(--sky);background:rgba(74,15,212,0.1);box-shadow:0 0 28px var(--glow2)}
+.pkg-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--sky);color:#fff;font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:4px 14px;border-radius:20px;white-space:nowrap;box-shadow:0 0 14px var(--glow)}
+.pkg-tier-l{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--sky);margin-bottom:4px}
+.pkg-nm{font-family:var(--serif);font-size:1.55rem;font-weight:700;color:#fff;margin-bottom:4px;cursor:pointer}
+.pkg-nm .info-i{color:var(--sky);font-size:14px}
+.pkg-tag{color:var(--dimmer);font-size:13px;font-style:italic;margin-bottom:14px}
+.pkg-feat-list{list-style:none}
+.pkg-feat-list li{display:flex;align-items:flex-start;gap:7px;padding:5px 0;border-bottom:1px solid rgba(74,15,212,0.1);font-size:13px;color:var(--dim)}
+.pkg-feat-list li:last-child{border-bottom:none}
+.pkg-feat-list li::before{content:'✓';color:var(--sky);font-weight:700;flex-shrink:0;font-size:11px;margin-top:2px}
+.pkg-feat-list li.no::before{content:'—';color:var(--dimmer)}
+.pkg-feat-list li.no{color:var(--dimmer)}
+.price-table{width:100%;border-collapse:collapse;margin-bottom:12px}
+.price-table thead tr{background:rgba(74,15,212,0.15)}
+.price-table th{padding:10px 13px;font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ice);text-align:center;border-bottom:2px solid rgba(74,15,212,0.3)}
+.price-table th:first-child{text-align:left;color:var(--dimmer)}
+.price-table td{padding:9px 13px;border-bottom:1px solid rgba(74,15,212,0.1);font-size:14px;color:var(--dim)}
+.price-table td:nth-child(2),.price-table td:nth-child(3){text-align:center;font-family:var(--mono);font-size:13px;color:var(--ice)}
+.price-table td:nth-child(3){color:#fff}
+.price-table tr:hover td{background:rgba(74,15,212,0.06)}
+/* chat */
+.chat-widget{background:rgba(74,15,212,0.07);border:2px solid rgba(74,15,212,0.3);border-radius:14px;overflow:hidden}
+.chat-hdr{background:rgba(74,15,212,0.16);border-bottom:1px solid rgba(74,15,212,0.25);padding:12px 17px;display:flex;align-items:center;gap:9px}
+.chat-dot{width:8px;height:8px;border-radius:50%;background:var(--sky);box-shadow:0 0 8px var(--glow);animation:chatpulse 2s infinite}
+@keyframes chatpulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.chat-msgs{height:300px;overflow-y:auto;padding:13px;display:flex;flex-direction:column;gap:9px;scroll-behavior:smooth}
+.chat-msgs::-webkit-scrollbar{width:3px}
+.chat-msgs::-webkit-scrollbar-thumb{background:rgba(74,15,212,0.35);border-radius:2px}
+.msg{max-width:88%;padding:9px 12px;border-radius:8px;font-size:14px;line-height:1.6}
+.msg-a{background:rgba(74,15,212,0.12);border:1px solid rgba(74,15,212,0.25);color:var(--ink);align-self:flex-start}
+.msg-a strong{color:var(--sky);display:block;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:3px;font-family:var(--mono)}
+.msg-u{background:rgba(255,255,255,0.08);color:#fff;align-self:flex-end;border:1px solid rgba(255,255,255,0.1)}
+.typing-msg{background:rgba(74,15,212,0.12);border:1px solid rgba(74,15,212,0.25);align-self:flex-start;display:none;padding:9px 12px;border-radius:8px}
+.dots span{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sky);margin:0 2px;animation:dot 1.2s infinite}
+.dots span:nth-child(2){animation-delay:0.2s}.dots span:nth-child(3){animation-delay:0.4s}
+@keyframes dot{0%,80%,100%{opacity:0.2;transform:scale(0.8)}40%{opacity:1;transform:scale(1)}}
+.chat-foot{padding:10px 13px;border-top:1px solid rgba(74,15,212,0.2);display:flex;gap:7px}
+.chat-in{flex:1;background:rgba(255,255,255,0.04);border:2px solid rgba(74,15,212,0.25);border-radius:8px;padding:11px 13px;color:#fff;font-family:var(--body);font-size:1rem;outline:none;transition:all var(--tr)}
+.chat-in:focus{border-color:var(--sky);background:rgba(74,15,212,0.06)}
+.chat-send{background:var(--sky);border:none;border-radius:8px;padding:11px 15px;color:#fff;cursor:pointer;font-family:var(--body);font-size:13px;font-weight:700;box-shadow:0 0 12px var(--glow);transition:all var(--tr)}
+.chat-send:hover{background:var(--sky2)}
+.chat-send:disabled{opacity:0.4;cursor:not-allowed}
+.c-detail{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid rgba(74,15,212,0.12);color:var(--dim);font-size:15px}
+.c-detail svg{width:16px;height:16px;stroke:var(--sky);fill:none;stroke-width:1.5;flex-shrink:0}
+/* modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(2,4,10,0.88);z-index:500;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--bg2);border:2px solid rgba(74,15,212,0.4);border-radius:14px;padding:26px;max-width:430px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 0 56px rgba(74,15,212,0.25)}
+.modal-close{float:right;background:none;border:none;color:var(--dimmer);font-size:1.6rem;cursor:pointer;line-height:1;margin-top:-4px;transition:color var(--tr)}
+.modal-close:hover{color:var(--sky)}
+.modal-tier{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--sky);margin-bottom:5px;display:block}
+.modal-feat{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid rgba(74,15,212,0.12)}
+.modal-feat:last-of-type{border-bottom:none}
+.mf-ico{font-size:1.1rem;flex-shrink:0;margin-top:2px}
+.mf-text strong{display:block;color:var(--ink);font-size:14px;margin-bottom:2px}
+.mf-text span{color:var(--dimmer);font-size:12px;line-height:1.5}
+/* receipt */
+.rcpt-overlay{position:fixed;inset:0;background:rgba(2,4,10,0.92);z-index:600;display:none;align-items:center;justify-content:center;padding:20px}
+.rcpt-overlay.open{display:flex}
+.rcpt{background:var(--bg2);border:2px solid rgba(74,15,212,0.4);border-radius:14px;padding:30px;max-width:480px;width:100%;max-height:90vh;overflow-y:auto}
+.rcpt-hdr{text-align:center;border-bottom:2px solid rgba(74,15,212,0.25);padding-bottom:16px;margin-bottom:16px}
+.rcpt-logo{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:#fff;margin-bottom:3px}
+.rcpt-logo span{color:var(--sky)}
+.r-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(74,15,212,0.08);font-size:14px}
+.r-row:last-of-type{border-bottom:none}
+.r-row .rl{color:var(--dim)}
+.r-row .rv{color:var(--ice);font-family:var(--mono);font-size:13px}
+.r-total{margin-top:12px;padding-top:12px;border-top:2px solid rgba(74,15,212,0.3);display:flex;justify-content:space-between;align-items:baseline}
+.r-total-l{color:var(--dimmer);font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em}
+.r-total-v{font-family:var(--serif);font-size:1.8rem;font-weight:900;color:#fff}
+.r-stamp{background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);border-radius:8px;padding:11px 14px;text-align:center;margin-top:16px;font-family:var(--mono);font-size:11px;color:#6ee7b7;letter-spacing:0.08em}
+@media print{body *{visibility:hidden}.rcpt,.rcpt *{visibility:visible}.rcpt{position:fixed;left:0;top:0;right:0}}
+/* footer */
+footer{background:var(--bg);border-top:2px solid rgba(74,15,212,0.2);padding:18px 30px}
+.fi{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.fl{font-family:var(--serif);font-size:1.1rem;color:var(--ice);display:flex;align-items:center;gap:8px;cursor:pointer}
+.fl span{color:var(--sky)}
+.fl svg{width:20px;height:20px}
+.fr{font-family:var(--mono);font-size:11px;color:var(--dimmer);text-align:right;line-height:1.7}
+/* responsive */
+@media(max-width:900px){
+  .two-col,.pkg-cards,.pkg-g,.svc-grid,.pay-g,.del-grid,.dec,.fg2{grid-template-columns:1fr}
+  .proc-steps{grid-template-columns:1fr 1fr}
+  .tab-nav{gap:0}
+  .tb{font-size:13px;padding:7px 10px}
+}
+@media(max-width:600px){
+  .nav-inner{height:56px}.logo{font-size:1rem}
+  .fs{width:16px}.mg{grid-template-columns:1fr}.dec{grid-template-columns:1fr}
+  .proc-steps{grid-template-columns:1fr}
+  #page-home{padding:0 16px}.pg{padding:40px 16px}
+}
+</style>
+</head>
+<body>
+<div class="fs fs-l"></div><div class="fs fs-r"></div>
+<div class="a11y">
+  <span>Text Size:</span>
+  <button onclick="adjFont(-1)">A−</button>
+  <button onclick="adjFont(0)">A</button>
+  <button onclick="adjFont(1)">A+</button>
+</div>
+<nav>
+  <div class="nav-inner">
+    <div class="logo" onclick="showPage('home')" id="logoBtn">
+      <svg viewBox="0 0 36 36" fill="none" width="32" height="32">
+        <circle cx="18" cy="18" r="15.5" stroke="var(--sky)" stroke-width="1.4"/>
+        <circle cx="18" cy="18" r="5" fill="var(--sky)" opacity="0.85"/>
+        <line x1="18" y1="3" x2="18" y2="11" stroke="var(--sky)" stroke-width="1.4"/>
+        <line x1="18" y1="25" x2="18" y2="33" stroke="var(--sky)" stroke-width="1.4"/>
+        <line x1="3" y1="18" x2="11" y2="18" stroke="var(--sky)" stroke-width="1.4"/>
+        <line x1="25" y1="18" x2="33" y2="18" stroke="var(--sky)" stroke-width="1.4"/>
+      </svg>
+      Digital <span>Memories</span>
+    </div>
+    <div class="tab-nav">
+      <button class="tb active" onclick="showPage('home')">🏠 Home</button>
+      <button class="tb" onclick="showPage('services')">🎞️ Services</button>
+      <button class="tb" onclick="showPage('pricing')">💰 Pricing</button>
+      <button class="tb" onclick="showPage('contact')">💬 Contact</button>
+      <button class="tb" onclick="showPage('progress')">🔍 Check My Progress</button>
+      <button class="tb" onclick="showPage('download')">📥 Get My Files</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HOME ══ -->
+<div id="page-home" class="page active">
+  <div id="hero">
+    <div class="hero">
+      <span class="hero-tag" style="color:rgba(126,200,255,0.65);text-transform:uppercase;letter-spacing:0.28em;font-size:17px">Proudly Serving Families Across Alberta</span>
+      <h1 class="hero-h1">Their faces still want to be seen,<br>their voices still want to be heard.</h1>
+      <p class="hero-sub">Somewhere in your home, there are tapes, film reels, and cassettes holding the most precious moments of your life. Moments that are slowly fading. Moments you have only 1 copy of. We can bring them back — we provide digital copies you can now easily share with loved ones, even if the original copies (and now digital files) live in your home.</p>
+      <blockquote class="hero-poem">
+        Someone pressed record once.<br>
+        A birthday. A first step. A laugh that filled the room.<br>
+        A face you haven't seen in years, a voice you haven't heard in years — still waiting on a tape.<br>
+        <em>Don't wait until it's too late.</em>
+      </blockquote>
+      <div class="qbox" id="quoteBox">
+        <!-- STEP 1 -->
+        <div class="qstep active" id="qs1">
+          <p style="font-family:var(--mono);font-size:11px;color:var(--dimmer);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:12px">STEP 1 OF 3 · SNAP A PHOTO FOR AN INSTANT QUOTE</p>
+          <label class="cam-btn" for="camIn" tabindex="0" onkeydown="if(event.key==='Enter')document.getElementById('camIn').click()">
+            <span class="cam-emoji">📷</span>
+            <span class="cam-lbl">Take a Photo of Your Tapes</span>
+            <span class="cam-sub">Lay everything out, snap one picture — our AI counts it all and builds your quote in seconds</span>
+            <span class="cam-hint">📱 On your phone, this opens your camera directly</span>
+          </label>
+          <input type="file" id="camIn" accept="image/*" capture="environment" style="display:none" onchange="handlePhoto(this)">
+          <div class="or-div"><span>or count them yourself</span></div>
+          <button class="man-link" onclick="showManual()">✏️ &nbsp;I'll enter my items by hand</button>
+        </div>
+        <!-- STEP 1b manual -->
+        <div class="qstep" id="qs1b">
+          <p style="font-family:var(--serif);font-size:1.05rem;color:#fff;margin-bottom:4px;font-weight:700">What do you have?</p>
+          <p style="color:var(--dim);font-size:13px;margin-bottom:14px">Tap <strong style="color:var(--ice)">+</strong> to add each item.</p>
+          <div class="mg" id="manualGrid"></div>
+          <button onclick="buildManualQuote()" class="big-btn" style="margin-top:12px">Calculate My Quote →</button>
+          <button onclick="goStep('qs1')" class="ghost-btn">← Use camera instead</button>
+        </div>
+        <!-- STEP 2 analyzing -->
+        <div class="qstep" id="qs2">
+          <div class="analyzing">
+            <div class="spin-ring"></div>
+            <h3 style="font-family:var(--serif);font-size:1.45rem;color:#fff;margin-bottom:7px">Analysing your photo…</h3>
+            <p style="color:var(--dim);font-size:14px">Our AI is counting and identifying your tapes and reels</p>
+          </div>
+        </div>
+        <!-- STEP 3 quote result -->
+        <div class="qstep" id="qs3">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:11px">
+            <h3 style="font-family:var(--serif);font-size:1.15rem;color:#fff">Your Instant Quote</h3>
+            <button style="background:none;border:none;font-family:var(--mono);font-size:11px;color:var(--sky);cursor:pointer;letter-spacing:0.1em;text-transform:uppercase" onclick="resetFlow()">↺ Start over</button>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:12px">
+            <img id="photoThumb" style="width:100px;height:76px;object-fit:cover;border-radius:7px;border:1px solid rgba(74,15,212,0.3);flex-shrink:0;display:none" alt="Your media">
+            <div id="aiFound" style="background:rgba(74,15,212,0.1);border:1px solid rgba(74,15,212,0.25);border-radius:8px;padding:10px 13px;font-size:13px;color:var(--dim);font-style:italic;flex:1"></div>
+          </div>
+          <div class="sq-wrap">
+            <table class="sq-table">
+              <thead><tr>
+                <th style="text-align:left">Item</th>
+                <th class="th-std" onclick="openModal('std')">ⓘ Standard</th>
+                <th class="th-pre" onclick="openModal('pre')">ⓘ Premium</th>
+              </tr></thead>
+              <tbody id="quoteRows"></tbody>
+              <tfoot><tr class="sq-tot"><td>Your Total</td><td id="stdTotal">—</td><td id="preTotal">—</td></tr></tfoot>
+            </table>
+          </div>
+          <p style="font-size:11px;color:var(--dimmer);font-family:var(--mono);text-align:center;margin-bottom:12px">👆 Tap <strong style="color:var(--ice)">Standard</strong> or <strong style="color:#fff">Premium</strong> header to see what's included</p>
+          <div class="quote-summary">
+            <div>
+              <span class="qs-label">Your Quote</span>
+            </div>
+            <div class="qs-amounts">
+              <div><span style="font-family:var(--mono);font-size:9px;color:var(--dimmer);letter-spacing:0.1em;text-transform:uppercase;display:block">Standard</span><span class="qs-std" id="stdBtn">—</span></div>
+              <span class="qs-sep">·</span>
+              <div><span style="font-family:var(--mono);font-size:9px;color:var(--dimmer);letter-spacing:0.1em;text-transform:uppercase;display:block">Premium</span><span class="qs-pre" id="preBtn">—</span></div>
+            </div>
+          </div>
+          <div class="dec-3">
+            <button class="btn-accept-now" onclick="goStep('qs3a')">
+              <div><span style="font-size:1rem">✓ Yes! I want to book this</span><span class="btn-sub">Enter your name &amp; phone to start the process</span></div>
+              <span class="btn-arrow">→</span>
+            </button>
+            <button class="btn-think-log" onclick="goStep('qs3b')">
+              <div><span style="font-size:0.95rem">💭 I need to think about it — save my quote</span><span class="btn-sub">We'll text you a reminder in one week</span></div>
+              <span class="btn-arrow">→</span>
+            </button>
+            <button class="btn-think-nolog" onclick="goStep('qs3c')">
+              <div><span>I'm just browsing — don't save anything</span><span class="btn-sub">Your quote ends here, no information stored</span></div>
+              <span class="btn-arrow">×</span>
+            </button>
+          </div>
+          <p style="text-align:center;font-family:var(--mono);font-size:11px;color:var(--dimmer);margin-top:8px">No payment now · Free pickup option · We come to you</p>
+        </div>
+
+        <!-- STEP 3a: Accept — capture name/phone then go to workflow -->
+        <div class="qstep" id="qs3a">
+          <div style="text-align:center;margin-bottom:18px">
+            <span style="font-size:2.5rem;display:block;margin-bottom:10px">🎉</span>
+            <h3 style="font-family:var(--serif);font-size:1.35rem;color:#fff;margin-bottom:7px">Wonderful! Let's get started.</h3>
+            <p style="color:var(--dim);font-size:14px;max-width:420px;margin:0 auto 20px">Just your name and phone number so we can log your order and begin the booking process.</p>
+          </div>
+          <div class="fg2" style="margin-bottom:12px">
+            <div><label class="field-lbl">Your First Name *</label><input type="text" class="field" id="acceptName" placeholder="e.g. Margaret" autocomplete="given-name"></div>
+            <div><label class="field-lbl">Your Phone Number *</label><input type="tel" class="field" id="acceptPhone" placeholder="(780) 555-0100" autocomplete="tel"></div>
+          </div>
+          <div style="margin-bottom:18px">
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:14px;color:var(--dim)">
+              <input type="radio" name="acceptPkg" id="acceptStd" value="std" style="accent-color:var(--sky)"> 
+              <span>Standard — <strong style="color:var(--ice)" id="acceptStdPrice">$0</strong></span>
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:14px;color:var(--dim);margin-top:8px">
+              <input type="radio" name="acceptPkg" id="acceptPre" value="pre" style="accent-color:var(--sky)" checked>
+              <span>Premium — <strong style="color:#fff" id="acceptPrePrice">$0</strong></span>
+            </label>
+          </div>
+          <button class="big-btn" onclick="proceedToBooking()">Continue to Booking →</button>
+          <button class="ghost-btn" onclick="goStep('qs3')">← Back to quote</button>
+        </div>
+        <!-- STEP 3b: Think + log — captures name/phone, saves, 1-week reminder -->
+        <div class="qstep" id="qs3b">
+          <div style="text-align:center;margin-bottom:18px">
+            <span style="font-size:2.5rem;display:block;margin-bottom:10px">💭</span>
+            <h3 style="font-family:var(--serif);font-size:1.35rem;color:#fff;margin-bottom:7px">No rush at all.</h3>
+            <p style="color:var(--dim);font-size:14px;max-width:420px;margin:0 auto 20px">We'll save your quote and send you a friendly reminder text in one week. Your quote will be waiting when you're ready.</p>
+            <div style="font-family:var(--serif);font-size:1.8rem;font-weight:900;color:var(--sky);text-shadow:0 0 22px var(--glow);margin-bottom:16px" id="thinkAmt2">$0</div>
+          </div>
+          <div class="fg2" style="margin-bottom:12px">
+            <div><label class="field-lbl">Your First Name *</label><input type="text" class="field" id="thinkName" placeholder="e.g. Margaret" autocomplete="given-name"></div>
+            <div><label class="field-lbl">Your Phone Number *</label><input type="tel" class="field" id="thinkPhone" placeholder="(780) 555-0100" autocomplete="tel"></div>
+          </div>
+          <button class="big-btn" onclick="saveThinkQuote()">Save My Quote — Remind Me in a Week 🔔</button>
+          <button class="ghost-btn" onclick="goStep('qs3')">← Back to quote</button>
+        </div>
+        <!-- STEP 3c: No log — clean exit -->
+        <div class="qstep" id="qs3c">
+          <div style="text-align:center;padding:12px 0">
+            <span style="font-size:3rem;display:block;margin-bottom:14px">👍</span>
+            <h3 style="font-family:var(--serif);font-size:1.35rem;color:#fff;margin-bottom:10px">No problem at all!</h3>
+            <p style="color:var(--dim);font-size:15px;line-height:1.8;max-width:420px;margin:0 auto 20px">We haven't stored anything. Whenever you're ready, just snap another photo and we'll build your quote again in seconds.</p>
+            <p style="color:var(--dim);font-size:14px;line-height:1.8;max-width:420px;margin:0 auto 20px">Your tapes will keep fading. We'll be here when the time is right. 💙</p>
+            <button class="big-btn" style="max-width:280px;margin:0 auto" onclick="resetFlow()">Start a New Quote</button>
+          </div>
+        </div>
+        <!-- STEP 4 think (legacy - kept for saved quotes) -->
+        <div class="qstep" id="qs4">
+          <div style="text-align:center;padding:6px 0">
+            <h3 style="font-family:var(--serif);font-size:1.45rem;color:#fff;margin-bottom:7px">Absolutely no rush.</h3>
+            <p style="color:var(--dim);font-size:14px;margin-bottom:16px;max-width:430px;margin-left:auto;margin-right:auto">Would you like us to save your quote? We'll send a friendly reminder in 30 days.</p>
+            <div style="font-family:var(--serif);font-size:1.9rem;font-weight:900;color:var(--sky);text-shadow:0 0 22px var(--glow);display:block;margin-bottom:16px" id="thinkAmt">$0</div>
+            <div class="fg2" style="margin-bottom:12px">
+              <div><label class="field-lbl">Your First Name</label><input type="text" class="field" id="saveName" placeholder="e.g. Margaret"></div>
+              <div><label class="field-lbl">Phone Number</label><input type="tel" class="field" id="savePhone" placeholder="(780) 555-0100"></div>
+            </div>
+            <button class="big-btn" onclick="saveQuote()">Save My Quote &amp; Remind Me 🔔</button>
+            <button class="ghost-btn" onclick="resetFlow()">No thanks — start a new quote</button>
+          </div>
+        </div>
+        <!-- STEP 5 saved -->
+        <div class="qstep" id="qs5">
+          <div style="text-align:center;padding:10px 0">
+            <span style="font-size:3.5rem;display:block;margin-bottom:12px;animation:pop 0.5s cubic-bezier(0.34,1.56,0.64,1) both">✅</span>
+            <h3 style="font-family:var(--serif);font-size:1.45rem;color:#fff;margin-bottom:10px">Saved, <span id="savedName" style="color:var(--ice)"></span>!</h3>
+            <p style="color:var(--dim);font-size:14px;line-height:1.75;margin-bottom:7px">We'll text you in 30 days. When you're ready, reply to that text or call <strong style="color:var(--ice)">(780) 555-0192</strong>.</p>
+            <p style="color:var(--dim);font-size:14px">Quote ref: <strong id="qRef" style="color:var(--sky);font-family:var(--mono)"></strong></p>
+            <p style="font-family:var(--sky);font-size:1rem;color:var(--sky);margin-top:12px;font-weight:700">To check your quote later: tap "Check My Progress" above and enter your name + phone number.</p>
+            <div style="display:inline-block;background:rgba(74,15,212,0.15);border:1px solid var(--border);border-radius:6px;padding:7px 14px;font-family:var(--mono);font-size:11px;color:var(--dimmer);margin-top:10px">Reply STOP to any of our texts to opt out</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SERVICES ══ -->
+<div id="page-services" class="page">
+  <div class="pg">
+    <span class="eyebrow reveal">Everything We Do</span>
+    <h2 class="pg-h reveal">Every format. <em>Every memory.</em></h2>
+    <div class="divider reveal"></div>
+    <p style="color:var(--dim);max-width:620px;font-size:15px;line-height:1.8;margin-bottom:26px" class="reveal">From a single VHS tape to boxes of Super 8 film reels — handled in-house, never outsourced.</p>
+    <div class="svc-grid">
+      <div class="svc-card reveal"><span class="svc-icon">📼</span><h3 class="svc-h3">Video Tape Digitization</h3><p class="svc-desc">VHS, Betamax, Hi8 and MiniDV transferred to digital using broadcast-quality equipment. Every tape cleaned and quality-checked.</p><ul class="svc-list"><li>VHS &amp; VHS-C</li><li>S-VHS (Super VHS)</li><li>Betamax</li><li>Hi8 &amp; Video8</li><li>MiniDV &amp; Digital8</li><li>DVCAM &amp; HDV</li></ul></div>
+      <div class="svc-card reveal d1"><span class="svc-icon">🎞️</span><h3 class="svc-h3">Film Reel Digitization</h3><p class="svc-desc">Wolverine Pro Master 800 professional scanner — frame by frame, not projection. Every detail preserved.</p><ul class="svc-list"><li>8mm Home Movies</li><li>Super 8mm Film</li><li>16mm Film</li><li>Film cleaning &amp; splicing</li><li>Colour restoration</li><li>HD &amp; 4K output</li></ul></div>
+      <div class="svc-card reveal"><span class="svc-icon">🎵</span><h3 class="svc-h3">Audio Preservation</h3><p class="svc-desc">Grandma's voice on a cassette. Dad's band on a reel-to-reel. The family record from 1962. High-fidelity digital audio.</p><ul class="svc-list"><li>Audio Cassette Tapes</li><li>Micro-Cassette</li><li>¼" Reel-to-Reel</li><li>33, 45 &amp; 78 rpm Vinyl</li><li>8-Track Audio Tapes</li><li>Output: MP3, WAV, FLAC</li></ul></div>
+      <div class="svc-card reveal d1"><span class="svc-icon">🚗</span><h3 class="svc-h3">Free Pickup &amp; Delivery</h3><p class="svc-desc">We come to you — evenings, weekends, whenever you're home. No driving, no lineups, no confusion.</p><ul class="svc-list"><li>Free pickup &amp; delivery (Edmonton)</li><li>Evenings &amp; weekends available</li><li>Cloud link + USB drive options</li><li>Real-time tracking</li><li>Digital intake &amp; waiver</li></ul></div>
+    </div>
+    <h3 style="font-family:var(--serif);font-size:1.45rem;color:#fff;margin:44px 0 7px" class="reveal">How It Works — Simple as 1, 2, 3, 4</h3>
+    <div class="proc-steps">
+      <div class="proc-step reveal"><span class="proc-num">1</span><p class="proc-lbl"><strong style="color:var(--ice)">Snap a Photo</strong><br>Get an instant quote</p></div>
+      <div class="proc-step reveal d1"><span class="proc-num">2</span><p class="proc-lbl"><strong style="color:var(--ice)">We Pick Up</strong><br>At your door, your schedule</p></div>
+      <div class="proc-step reveal d2"><span class="proc-num">3</span><p class="proc-lbl"><strong style="color:var(--ice)">We Digitize</strong><br>Professional in-house care</p></div>
+      <div class="proc-step reveal d3"><span class="proc-num">4</span><p class="proc-lbl"><strong style="color:var(--ice)">You Receive</strong><br>Cloud link + USB, forever safe</p></div>
+    </div>
+    <div style="text-align:center;margin-top:38px" class="reveal">
+      <button onclick="showPage('home');setTimeout(()=>document.getElementById('quoteBox').scrollIntoView({behavior:'smooth'}),120)" class="big-btn" style="max-width:320px;margin:0 auto">📷 Get My Free Quote Now →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PRICING ══ -->
+<div id="page-pricing" class="page">
+  <div class="pg">
+    <span class="eyebrow reveal">Our Pricing</span>
+    <h2 class="pg-h reveal">Honest pricing. <em>No surprises.</em></h2>
+    <div class="divider reveal"></div>
+    <p style="color:var(--dim);max-width:600px;font-size:15px;line-height:1.8;margin-bottom:26px" class="reveal">All prices in Canadian dollars including GST. Click <strong style="color:var(--ice)">Standard</strong> or <strong style="color:var(--ice)">Premium</strong> to see exactly what each includes.</p>
+    <div class="pkg-cards">
+      <div class="pkg-card reveal">
+        <div class="pkg-tier-l">Standard</div>
+        <div class="pkg-nm" onclick="openModal('std')">Standard <span class="info-i">ⓘ</span></div>
+        <div class="pkg-tag">Good quality · Great value</div>
+        <ul class="pkg-feat-list"><li>Digital .mp4 files</li><li>Private cloud download link</li><li>Free pickup &amp; delivery</li><li>7–10 business day turnaround</li><li class="no">Colour restoration</li><li class="no">Chapter markers &amp; titles</li><li class="no">USB drive included</li></ul>
+      </div>
+      <div class="pkg-card feat reveal d1">
+        <div class="pkg-badge">Most Popular ★</div>
+        <div class="pkg-tier-l">Premium</div>
+        <div class="pkg-nm" onclick="openModal('pre')">Premium <span class="info-i">ⓘ</span></div>
+        <div class="pkg-tag">Best quality · Heirloom grade</div>
+        <ul class="pkg-feat-list"><li>HD &amp; 4K digital files</li><li>Private cloud download link</li><li>USB drive — yours to keep</li><li>Free pickup &amp; delivery</li><li>5–7 business day turnaround</li><li>Scene-by-scene colour restoration</li><li>Chapter markers &amp; title cards</li></ul>
+      </div>
+    </div>
+    <h3 style="font-family:var(--serif);font-size:1.3rem;color:#fff;margin-bottom:12px" class="reveal">Pricing by Format</h3>
+    <div style="overflow-x:auto" class="reveal">
+      <table class="price-table">
+        <thead><tr><th style="text-align:left">Format</th><th onclick="openModal('std')" style="cursor:pointer">Standard ⓘ</th><th onclick="openModal('pre')" style="cursor:pointer">Premium ⓘ</th></tr></thead>
+        <tbody>
+          <tr><td>VHS / S-VHS / Betamax (per tape)</td><td>$35</td><td>$45</td></tr>
+          <tr><td>Hi8 / Video8 / Digital8 (per tape)</td><td>$32</td><td>$42</td></tr>
+          <tr><td>MiniDV / DVCAM (per tape)</td><td>$28</td><td>$36</td></tr>
+          <tr><td>8mm / Super 8 film reel (~50ft)</td><td>$37</td><td>$52</td></tr>
+          <tr><td>16mm film reel (~100ft)</td><td>$60</td><td>$80</td></tr>
+          <tr><td>Audio cassette (per tape)</td><td>$20</td><td>$28</td></tr>
+          <tr><td>Reel-to-reel audio (per reel)</td><td>$50</td><td>$65</td></tr>
+          <tr><td>Film cleaning (one-time)</td><td>$15</td><td>Included</td></tr>
+          <tr><td>USB drive</td><td>$15 optional</td><td>Included</td></tr>
+          <tr><td>We pick up + return delivery</td><td>$25 + $25</td><td>$25 + $25</td></tr>
+          <tr><td>Drop off in person</td><td>Free</td><td>Free</td></tr>
+          <tr><td>Rush order (48hr turnaround)</td><td>+25%</td><td>+25%</td></tr>
+          <tr><td>Standard→Premium upgrade (later, per item)</td><td colspan="2" style="text-align:center;color:var(--ice);font-size:12px">Just the price difference — 30-sec preview clip offered first</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:var(--dimmer);font-family:var(--mono);text-align:center;margin-top:8px" class="reveal">Senior discount: 10% off · Minimum 5 items · All prices CAD incl. GST</p>
+    <div style="text-align:center;margin-top:30px" class="reveal">
+      <button onclick="showPage('home');setTimeout(()=>document.getElementById('quoteBox').scrollIntoView({behavior:'smooth'}),120)" class="big-btn" style="max-width:320px;margin:0 auto">📷 Snap a Photo — Get My Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CONTACT ══ -->
+<div id="page-contact" class="page">
+  <div class="pg">
+    <span class="eyebrow reveal">Get In Touch</span>
+    <h2 class="pg-h reveal">We're real people. <em>Talk to us.</em></h2>
+    <div class="divider reveal"></div>
+    <div class="two-col">
+      <div class="reveal">
+        <h3 style="font-family:var(--serif);font-size:1.3rem;color:#fff;margin-bottom:9px">We're here to help.</h3>
+        <p style="color:var(--dim);font-size:15px;line-height:1.8;margin-bottom:16px">Questions about formats, pricing, or pickup? Chat with our assistant below — available 24/7. Or call us directly.</p>
+        <div class="c-detail"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 013 .14h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.86 14l.06 2.92z"/></svg>(780) 555-0192</div>
+        <div class="c-detail"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>hello@digitalmemories.ca</div>
+        <div class="c-detail"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Edmonton, Alberta — We Come To You</div>
+        <div class="c-detail"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Evenings &amp; weekends available</div>
+        <div style="margin-top:18px"><button onclick="showPage('home');setTimeout(()=>document.getElementById('quoteBox').scrollIntoView({behavior:'smooth'}),120)" class="big-btn" style="max-width:240px">📷 Get a Quote Now</button></div>
+      </div>
+      <div class="reveal d2">
+        <div class="chat-widget">
+          <div class="chat-hdr">
+            <div class="chat-dot"></div>
+            <span style="font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ice);font-weight:700">Digital Memories · Live Chat</span>
+            <span style="color:var(--dimmer);font-size:11px;margin-left:auto;font-family:var(--mono)">24 / 7</span>
+          </div>
+          <div class="chat-msgs" id="chatMsgs">
+            <div class="msg msg-a"><strong>Digital Memories</strong>Hello! 👋 I'm here to help preserve your family's precious memories. Questions about formats, pricing, or pickup? I'm here anytime!</div>
+          </div>
+          <div class="chat-foot">
+            <input class="chat-in" id="chatIn" placeholder="Ask us anything…" onkeydown="if(event.key==='Enter')sendChat()">
+            <button class="chat-send" id="chatSend" onclick="sendChat()">Send</button>
+          </div>
+        </div>
+        <p style="color:var(--dimmer);font-size:11px;text-align:center;margin-top:6px;font-family:var(--mono)">Share your name &amp; phone to save this chat for follow-up</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CHECK MY PROGRESS ══ -->
+<div id="page-progress" class="page">
+  <div class="pg">
+    <span class="eyebrow reveal">Order Status</span>
+    <h2 class="pg-h reveal">Check Your <em>Progress</em></h2>
+    <div class="divider reveal"></div>
+    <div class="prog-lookup reveal">
+      <h3>Where are my memories?</h3>
+      <p>Enter the first name and phone number you used when you placed your order. We'll show you exactly where everything is — tape by tape, reel by reel.</p>
+      <div class="prog-form">
+        <div class="fg2">
+          <div><label class="field-lbl">Your First Name</label><input type="text" class="field" id="lookupName" placeholder="e.g. Margaret" autocomplete="given-name"></div>
+          <div><label class="field-lbl">Your Phone Number</label><input type="tel" class="field" id="lookupPhone" placeholder="(780) 555-0100" autocomplete="tel" onkeydown="if(event.key==='Enter')lookupProgress()"></div>
+        </div>
+        <button class="big-btn" onclick="lookupProgress()">Show My Progress →</button>
+      </div>
+      <p style="font-size:13px;color:var(--dimmer);font-family:var(--mono);margin-top:12px">Can't find your order? Call us at (780) 555-0192 — we'll look it up right away.</p>
+    </div>
+    <div id="progResult" class="prog-result"></div>
+  </div>
+</div>
+
+<!-- ══ GET MY FILES (DOWNLOAD) ══ -->
+<div id="page-download" class="page">
+  <div class="pg">
+    <span class="eyebrow reveal">Your Digital Files</span>
+    <h2 class="pg-h reveal">Download Your <em>Memories</em></h2>
+    <div class="divider reveal"></div>
+    <div class="dl-lookup reveal">
+      <h3>Access your digitized files</h3>
+      <p>Enter the details we gave you when your order was completed. Your files are available for 30 days from the date payment was received.</p>
+      <div class="dl-form">
+        <div class="fg2" style="margin-bottom:11px">
+          <div><label class="field-lbl">Your First Name</label><input type="text" class="field" id="dlName" placeholder="e.g. Margaret" autocomplete="given-name"></div>
+          <div><label class="field-lbl">Your Phone Number</label><input type="tel" class="field" id="dlPhone" placeholder="(780) 555-0100" autocomplete="tel"></div>
+        </div>
+        <div style="margin-bottom:14px">
+          <label class="field-lbl">Download Password</label>
+          <input type="password" class="field" id="dlPass" placeholder="Password provided by Digital Memories" onkeydown="if(event.key==='Enter')lookupDownload()">
+          <p style="font-size:12px;color:var(--dimmer);font-family:var(--mono);margin-top:6px">Your password was sent in your delivery confirmation text. Call (780) 555-0192 if you can't find it.</p>
+        </div>
+        <button class="big-btn" onclick="lookupDownload()">Access My Files →</button>
+      </div>
+    </div>
+    <div id="dlResult" class="dl-result"></div>
+
+    <div style="max-width:540px;margin:40px auto 0;text-align:center;padding:24px;background:rgba(74,15,212,0.06);border:1px solid rgba(74,15,212,0.2);border-radius:12px" class="reveal">
+      <div style="font-size:2rem;margin-bottom:10px">📤</div>
+      <h3 style="font-family:var(--serif);font-size:1.1rem;color:#fff;margin-bottom:7px">Want to share with family?</h3>
+      <p style="color:var(--dim);font-size:14px;line-height:1.7;margin-bottom:14px">Once you've downloaded your files, you can share them using the sharing feature in your Google Drive link. Family members can view and download using the same link — no password needed once you've shared it with them directly.</p>
+      <p style="color:var(--dimmer);font-size:12px;font-family:var(--mono)">Need help sharing? Call us at (780) 555-0192 — we're happy to walk you through it.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ WORKFLOW OVERLAY ══ -->
+<div class="wf-overlay" id="wfOverlay">
+  <div class="wf-inner">
+    <div class="wf-hdr">
+      <span class="wf-title">Book Your Digitization</span>
+      <button class="wf-close" onclick="closeWorkflow()">×</button>
+    </div>
+    <div class="step-track" id="stepTrack">
+      <div class="snode active" id="sn1"><div class="sci">1</div><div class="slbl">Delivery</div></div>
+      <div class="snode" id="sn2"><div class="sci">2</div><div class="slbl">Package</div></div>
+      <div class="snode" id="sn3"><div class="sci">3</div><div class="slbl">Details</div></div>
+      <div class="snode" id="sn4"><div class="sci">4</div><div class="slbl">Review</div></div>
+      <div class="snode" id="sn5"><div class="sci">5</div><div class="slbl">Payment</div></div>
+      <div class="snode" id="sn6"><div class="sci">✓</div><div class="slbl">Done!</div></div>
+    </div>
+    <!-- WF1 delivery -->
+    <div class="wf-step active" id="wf1">
+      <h2 class="ws-title">How would you like to get your tapes to us?</h2>
+      <p class="ws-sub">Choose the option that works best for you.</p>
+      <div class="del-grid">
+        <div class="del-card" id="del-dropoff" onclick="selectDelivery('dropoff')"><span class="del-icon">📍</span><div class="del-name">Drop Off</div><div class="del-desc">Bring your tapes to us in person by appointment</div><span class="del-price">Free</span></div>
+        <div class="del-card" id="del-pickup" onclick="selectDelivery('pickup')"><span class="del-icon">🚗</span><div class="del-name">We Pick Up</div><div class="del-desc">We come to your door — evenings &amp; weekends</div><span class="del-price">$25 pickup + $25 return</span></div>
+        <div class="del-card" id="del-courier" onclick="selectDelivery('courier')"><span class="del-icon">📬</span><div class="del-name">Ship to Us</div><div class="del-desc">Ship by courier — we cover return on orders over $100</div><span class="del-price">Your shipping cost</span></div>
+      </div>
+      <button class="big-btn" onclick="wfNext(1)" id="wf1next" style="opacity:0.4;pointer-events:none">Continue →</button>
+    </div>
+    <!-- WF2 package + rush -->
+    <div class="wf-step" id="wf2">
+      <h2 class="ws-title">Standard or Premium?</h2>
+      <p class="ws-sub">Both include our full professional care. You can always upgrade later!</p>
+      <div class="upg-note"><strong>💡 Good to know:</strong> If you start with Standard, we can show you a 30-second preview clip once processing begins — then decide whether to upgrade to Premium for just the price difference.</div>
+      <div class="pkg-g">
+        <div class="pkg-opt" id="pkg-std" onclick="selectPackage('std')">
+          <div class="pkg-opt-nm">Standard <span class="ib" onclick="event.stopPropagation();openModal('std')">ⓘ</span></div>
+          <div class="pkg-opt-tag">Good quality · Great value</div>
+          <div class="pkf">Digital .mp4 files</div>
+          <div class="pkf">Cloud download link</div>
+          <div class="pkf">7–10 business days</div>
+          <div class="pkf no">Colour restoration</div>
+          <div class="pkf no">USB drive included</div>
+        </div>
+        <div class="pkg-opt" id="pkg-pre" onclick="selectPackage('pre')">
+          <div class="pkg-opt-nm">Premium <span class="ib" onclick="event.stopPropagation();openModal('pre')">ⓘ</span></div>
+          <div class="pkg-opt-tag">Best quality · Heirloom grade</div>
+          <div class="pkf">HD &amp; 4K digital files</div>
+          <div class="pkf">Colour restoration</div>
+          <div class="pkf">USB drive included</div>
+          <div class="pkf">5–7 business days</div>
+        </div>
+      </div>
+      <div class="rush-row" id="rushRow" onclick="toggleRush()">
+        <div class="rtog" id="rushToggle"></div>
+        <div><strong style="display:block;color:#fff;font-size:14px;font-weight:700">Rush Order — 48hr Turnaround</strong><span style="font-size:13px;color:var(--dim)">Bump to front of queue — +25% surcharge</span></div>
+      </div>
+      <button class="big-btn" onclick="wfNext(2)" id="wf2next" style="opacity:0.4;pointer-events:none;margin-top:12px">Continue →</button>
+      <button class="ghost-btn" onclick="wfBack(2)">← Back</button>
+    </div>
+    <!-- WF3 details -->
+    <div class="wf-step" id="wf3">
+      <h2 class="ws-title">Tell us about yourself</h2>
+      <p class="ws-sub">So we can arrange everything. We never share your information.</p>
+      <div class="fg2" style="margin-bottom:11px">
+        <div><label class="field-lbl">Your Full Name *</label><input type="text" class="field" id="cName" placeholder="First and Last name" autocomplete="name"></div>
+        <div><label class="field-lbl">Phone Number *</label><input type="tel" class="field" id="cPhone" placeholder="(780) 555-0100" autocomplete="tel"></div>
+      </div>
+      <div style="margin-bottom:11px"><label class="field-lbl">Email (for receipt &amp; files)</label><input type="email" class="field" id="cEmail" placeholder="your@email.com" autocomplete="email"></div>
+      <div id="addressRow" style="display:none;margin-bottom:11px"><label class="field-lbl">Pickup Address *</label><input type="text" class="field" id="cAddress" placeholder="123 Main St, Edmonton, AB" autocomplete="street-address"></div>
+      <div style="margin-bottom:11px"><label class="field-lbl">Best time for pickup or to reach you?</label><input type="text" class="field" id="cTime" placeholder="e.g. Weekday evenings after 5pm"></div>
+      <div style="margin-bottom:16px"><label class="field-lbl">Any notes about your tapes?</label><textarea class="field" id="cNotes" placeholder="e.g. About 2 boxes, some may be labelled…" style="height:65px;resize:none"></textarea></div>
+      <button class="big-btn" onclick="wfNext(3)">Continue →</button>
+      <button class="ghost-btn" onclick="wfBack(3)">← Back</button>
+    </div>
+    <!-- WF4 review -->
+    <div class="wf-step" id="wf4">
+      <h2 class="ws-title">Review your order</h2>
+      <p class="ws-sub">Please confirm everything looks right.</p>
+      <div style="background:rgba(74,15,212,0.08);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:16px">
+        <table class="rev-table" id="revTable"></table>
+      </div>
+      <div style="background:rgba(74,15,212,0.06);border:1px solid rgba(74,15,212,0.2);border-radius:10px;padding:14px;margin-bottom:16px;font-size:14px">
+        <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="color:var(--dim)">Name</span><span id="rev-name" style="color:var(--ink)"></span></div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="color:var(--dim)">Phone</span><span id="rev-phone" style="color:var(--ink)"></span></div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="color:var(--dim)">Delivery</span><span id="rev-del" style="color:var(--ice)"></span></div>
+        <div style="display:flex;justify-content:space-between"><span style="color:var(--dim)">Package</span><span id="rev-pkg" style="color:var(--ice)"></span></div>
+      </div>
+      <button class="big-btn" onclick="wfNext(4)">Looks Good — Proceed to Payment →</button>
+      <button class="ghost-btn" onclick="wfBack(4)">← Back</button>
+    </div>
+    <!-- WF5 payment -->
+    <div class="wf-step" id="wf5">
+      <h2 class="ws-title">How would you like to pay?</h2>
+      <p class="ws-sub">Payment required before delivery. We do not accept cash or cheque — this protects both of us with a clear record.</p>
+      <div class="pay-g">
+        <div class="pay-opt" id="pay-etransfer" onclick="selectPayment('etransfer')"><span class="pay-icon">📧</span><div class="pay-nm">E-Transfer</div><div class="pay-desc">Interac e-Transfer. Instant. No fees. From any Canadian bank app.</div></div>
+        <div class="pay-opt" id="pay-square" onclick="selectPayment('square')"><span class="pay-icon">💳</span><div class="pay-nm">Credit / Debit Card</div><div class="pay-desc">Secure via Square. Visa, Mastercard, Debit. Link sent to your phone.</div></div>
+      </div>
+      <div id="etransfer-detail" class="pay-detail" style="display:none">
+        <h4>E-Transfer Instructions</h4>
+        <div class="pay-row"><span class="l">Send to:</span><span class="v">hello@digitalmemories.ca <button class="copy-btn" onclick="copyText('hello@digitalmemories.ca')">Copy</button></span></div>
+        <div class="pay-row"><span class="l">Amount:</span><span class="v" id="et-amount">$0.00</span></div>
+        <div class="pay-row"><span class="l">Reference:</span><span class="v" id="et-ref">—</span></div>
+        <div class="pay-row"><span class="l">Security question:</span><span class="v">Not required (auto-deposit)</span></div>
+        <p style="font-size:12px;color:var(--dimmer);margin-top:8px;font-style:italic">Once sent, click below. We verify and confirm within a few hours.</p>
+        <button class="big-btn" onclick="confirmPayment('etransfer')" style="margin-top:10px">✓ I've Sent My E-Transfer</button>
+      </div>
+      <div id="square-detail" class="pay-detail" style="display:none">
+        <h4>Credit / Debit Card via Square</h4>
+        <p style="color:var(--dim);font-size:14px;margin-bottom:12px">We'll send a secure Square payment link to your phone once your booking is confirmed.</p>
+        <div class="pay-row"><span class="l">Amount due:</span><span class="v" id="sq-amount">$0.00</span></div>
+        <div class="pay-row"><span class="l">Booking ref:</span><span class="v" id="sq-ref">—</span></div>
+        <p style="font-size:12px;color:var(--dimmer);margin-top:8px;font-style:italic">Click below to confirm your booking. Your Square link arrives shortly.</p>
+        <button class="big-btn" onclick="confirmPayment('square')" style="margin-top:10px">✓ Send Me My Payment Link</button>
+      </div>
+      <button class="ghost-btn" onclick="wfBack(5)">← Back</button>
+    </div>
+    <!-- WF6 confirmation -->
+    <div class="wf-step" id="wf6">
+      <div class="conf-box">
+        <span class="big-check" id="confCheck">🎉</span>
+        <h3 style="font-family:var(--serif);font-size:1.5rem;color:#fff;margin-bottom:9px" id="confTitle">You're in our queue!</h3>
+        <div style="background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:10px;padding:16px;margin-bottom:14px;text-align:left">
+          <div style="font-family:var(--serif);font-size:1rem;color:#6ee7b7;font-weight:700;margin-bottom:6px">✅ We have placed you into our intake queue.</div>
+          <p style="color:var(--dim);font-size:14px;line-height:1.75" id="confMsg"></p>
+        </div>
+        <!-- Courier instructions — shown only when delivery=courier -->
+        <div id="courierInstructions" style="display:none;background:rgba(74,15,212,0.1);border:2px solid rgba(74,15,212,0.35);border-radius:10px;padding:18px;margin-bottom:14px;text-align:left">
+          <div style="font-family:var(--serif);font-size:1.05rem;color:var(--ice);font-weight:700;margin-bottom:10px">📬 Shipping Your Media to Us</div>
+          <p style="color:var(--dim);font-size:14px;line-height:1.75;margin-bottom:14px">Please ship to whichever location is most convenient for you. <strong style="color:#fbbf24">Important — before you pack your tapes, take a clear photo of everything laid out.</strong> This protects both of us by confirming exactly what was sent.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
+            <div style="background:rgba(74,15,212,0.12);border:1px solid rgba(74,15,212,0.3);border-radius:8px;padding:14px">
+              <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--sky);margin-bottom:6px">Edmonton</div>
+              <div style="font-size:13px;color:#fff;font-weight:700;line-height:1.6">Digital Memories<br>6535 – 168 Avenue NW<br>Edmonton, AB T5Y 3X9</div>
+            </div>
+            <div style="background:rgba(74,15,212,0.12);border:1px solid rgba(74,15,212,0.3);border-radius:8px;padding:14px">
+              <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--sky);margin-bottom:6px">Red Deer</div>
+              <div style="font-size:13px;color:#fff;font-weight:700;line-height:1.6">Digital Memories<br>11 Dobler Avenue<br>Red Deer, AB T4R 1X6 [Postal Code]</div>
+            </div>
+          </div>
+          <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:8px;padding:12px">
+            <div style="color:#fbbf24;font-size:13px;font-weight:700;margin-bottom:4px">⚠️ Before You Ship — Please Read</div>
+            <ul style="list-style:none;padding:0">
+              <li style="font-size:13px;color:var(--dim);padding:3px 0;display:flex;align-items:flex-start;gap:8px"><span style="color:#fbbf24;flex-shrink:0">📸</span>Take a clear photo of all your tapes before packing them — we'll match this when we receive them</li>
+              <li style="font-size:13px;color:var(--dim);padding:3px 0;display:flex;align-items:flex-start;gap:8px"><span style="color:#fbbf24;flex-shrink:0">🧾</span>Keep your courier receipt — it has the tracking number in case anything needs to be located</li>
+              <li style="font-size:13px;color:var(--dim);padding:3px 0;display:flex;align-items:flex-start;gap:8px"><span style="color:#fbbf24;flex-shrink:0">📦</span>Pack carefully — wrap reels in bubble wrap, tapes in a snug box with no room to rattle</li>
+              <li style="font-size:13px;color:var(--dim);padding:3px 0;display:flex;align-items:flex-start;gap:8px"><span style="color:#fbbf24;flex-shrink:0">📝</span>Write your booking reference on the outside of the box: <strong style="color:var(--ice)" id="courierRef">—</strong></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Pickup instructions -->
+        <div id="pickupInstructions" style="display:none;background:rgba(74,15,212,0.1);border:1px solid rgba(74,15,212,0.3);border-radius:10px;padding:16px;margin-bottom:14px;text-align:left">
+          <div style="font-family:var(--serif);font-size:1rem;color:var(--ice);font-weight:700;margin-bottom:8px">🚗 We're Coming to You</div>
+          <p style="color:var(--dim);font-size:14px;line-height:1.75;margin-bottom:10px">We've received your three preferred time slots and will confirm one of them by text or call — usually within a few hours.</p>
+          <div id="slotsDisplay" style="background:rgba(74,15,212,0.12);border-radius:8px;padding:12px"></div>
+        </div>
+        <!-- Drop off instructions -->
+        <div id="dropoffInstructions" style="display:none;background:rgba(74,15,212,0.1);border:1px solid rgba(74,15,212,0.3);border-radius:10px;padding:16px;margin-bottom:14px;text-align:left">
+          <div style="font-family:var(--serif);font-size:1rem;color:var(--ice);font-weight:700;margin-bottom:8px">📍 Dropping Off in Person</div>
+          <p style="color:var(--dim);font-size:14px;line-height:1.75;margin-bottom:10px">We've received your three preferred drop-off times. We'll confirm one shortly, and let you know which location works best.</p>
+          <div id="slotsDisplay2" style="background:rgba(74,15,212,0.12);border-radius:8px;padding:12px;margin-bottom:10px"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div style="background:rgba(74,15,212,0.12);border:1px solid rgba(74,15,212,0.25);border-radius:8px;padding:12px">
+              <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--sky);margin-bottom:5px">Edmonton</div>
+              <div style="font-size:13px;color:#fff;line-height:1.6">6535 – 168 Avenue NW<br>Edmonton, AB T5Y 3X9</div>
+            </div>
+            <div style="background:rgba(74,15,212,0.12);border:1px solid rgba(74,15,212,0.25);border-radius:8px;padding:12px">
+              <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--sky);margin-bottom:5px">Red Deer</div>
+              <div style="font-size:13px;color:#fff;line-height:1.6">11 Dobler Avenue<br>Red Deer, AB T4R 1X6</div>
+            </div>
+          </div>
+        </div>
+        <div class="ref-box" id="confRef"></div>
+        <div style="background:rgba(74,15,212,0.1);border:1px solid rgba(74,15,212,0.25);border-radius:8px;padding:12px 14px;margin-top:10px;font-size:13px;color:var(--sky);text-align:center">
+          💡 Track your order anytime: tap <strong>"Check My Progress"</strong> above and enter your name + phone number.
+        </div>
+        <ul class="next-steps" id="confNextSteps"></ul>
+        <button class="big-btn" style="margin-top:14px" onclick="showPage('progress');closeWorkflow();setTimeout(()=>{document.getElementById('lookupName').focus()},200)">Check My Progress →</button>
+        <button class="ghost-btn" onclick="closeWorkflow();resetFlow()">Done — Back to Home</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ STAFF LOGIN MODAL ══ -->
+<div class="staff-modal" id="staffModal">
+  <div class="staff-box">
+    <button class="staff-close" onclick="closeStaffModal()">×</button>
+    <div style="font-size:2.5rem;text-align:center;margin-bottom:12px">🔐</div>
+    <h3 style="text-align:center;margin-bottom:4px">Staff Login</h3>
+    <p style="text-align:center">Select your name and enter your password.</p>
+    <div class="user-select" id="userSelect">
+      <div class="user-btn" id="ubRene" onclick="selectUser('Rene')">
+        <span class="user-ico">👤</span>
+        <span class="user-nm">Rene</span>
+        <span class="user-role">Owner</span>
+      </div>
+      <div class="user-btn" id="ubJack" onclick="selectUser('Jack')">
+        <span class="user-ico">👤</span>
+        <span class="user-nm">Jack</span>
+        <span class="user-role">Staff</span>
+      </div>
+    </div>
+    <div style="margin-bottom:12px">
+      <label class="field-lbl">Password</label>
+      <input type="password" class="field" id="staffPwd" placeholder="Enter your password" onkeydown="if(event.key==='Enter')staffLogin()">
+    </div>
+    <div id="loginError" style="color:#ef4444;font-size:13px;font-family:var(--mono);margin-bottom:10px;display:none">❌ Incorrect password. Please try again.</div>
+    <button class="big-btn" onclick="staffLogin()">Log In →</button>
+  </div>
+</div>
+
+<!-- ══ STAFF PANEL ══ -->
+<div class="staff-panel" id="staffPanel">
+  <div class="sp-inner">
+    <div class="sp-hdr">
+      <div>
+        <div class="sp-title">Staff Panel — Digital Memories</div>
+        <div class="sp-user" id="spUserLabel">Logged in as: —</div>
+      </div>
+      <button class="sp-close" onclick="closeStaffPanel()">×</button>
+    </div>
+    <div class="sp-tabs">
+      <button class="sp-tb active" onclick="showSpTab('orders')">📋 Orders</button>
+      <button class="sp-tb" onclick="showSpTab('settings')">⚙️ My Settings</button>
+    </div>
+    <!-- ORDERS TAB -->
+    <div class="sp-tab-content active" id="sp-orders">
+      <div class="ord-list" id="spOrderList" style="display:block"></div>
+      <div class="ord-detail" id="spOrderDetail">
+        <button class="back-btn" onclick="showSpOrderList()">← All orders</button>
+        <div id="spDetailContent"></div>
+      </div>
+    </div>
+    <!-- SETTINGS TAB -->
+    <div class="sp-tab-content" id="sp-settings">
+      <div class="sp-sec">
+        <h4>🔑 Change My Password</h4>
+        <div class="pwd-form">
+          <label class="field-lbl">Current Password</label>
+          <input type="password" class="field" id="pwdCurrent" placeholder="Your current password" style="margin-bottom:12px">
+          <label class="field-lbl">New Password</label>
+          <input type="password" class="field" id="pwdNew" placeholder="New password" style="margin-bottom:12px">
+          <label class="field-lbl">Confirm New Password</label>
+          <input type="password" class="field" id="pwdConfirm" placeholder="Confirm new password" style="margin-bottom:14px">
+          <button class="big-btn" onclick="changePassword()" style="max-width:240px">Update Password</button>
+          <div id="pwdMsg" style="margin-top:10px;font-size:13px;font-family:var(--mono);display:none"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PACKAGE INFO MODAL ══ -->
+<div class="modal-overlay" id="pkgModal" onclick="if(event.target===this)closePkgModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closePkgModal()">×</button>
+    <div id="pkgModalContent"></div>
+  </div>
+</div>
+<!-- ══ RECEIPT MODAL ══ -->
+<div class="rcpt-overlay" id="rcptOverlay">
+  <div class="rcpt" id="rcptContent"></div>
+</div>
+
+<footer>
+  <div class="fi">
+    <div class="fl" onclick="showPage('home')" id="footLogo">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--sky)" stroke-width="1.2"/><circle cx="12" cy="12" r="3.5" fill="var(--sky)" opacity="0.85"/><line x1="12" y1="2" x2="12" y2="7" stroke="var(--sky)" stroke-width="1.2"/><line x1="12" y1="17" x2="12" y2="22" stroke="var(--sky)" stroke-width="1.2"/><line x1="2" y1="12" x2="7" y2="12" stroke="var(--sky)" stroke-width="1.2"/><line x1="17" y1="12" x2="22" y2="12" stroke="var(--sky)" stroke-width="1.2"/></svg>
+      Digital <span>Memories</span>
+    </div>
+    <div class="fr">
+      © 2025 Digital Memories Edmonton · (780) 555-0192<br>
+      Before the tape runs out. &nbsp;·&nbsp; <span style="cursor:pointer;color:rgba(74,15,212,0.35);font-size:10px" onclick="openStaffLogin()">Staff Login</span>
+    </div>
+  </div>
+</footer>
+<script>
+// ══ CONFIG ══════════════════════════════════════
+const CFG = {
+  etEmail:'hello@digitalmemories.ca', phone:'(780) 555-0192',
+  PRICES:{
+    vhs:  {label:'VHS / S-VHS / Betamax',  icon:'📼',std:35,pre:45,unit:'tape'},
+    hi8:  {label:'Hi8 / Video8 / Digital8', icon:'📹',std:32,pre:42,unit:'tape'},
+    minidv:{label:'MiniDV / DVCAM',         icon:'🎬',std:28,pre:36,unit:'tape'},
+    s8:   {label:'8mm / Super 8 reel',      icon:'🎞️',std:37,pre:52,unit:'reel'},
+    f16:  {label:'16mm film reel',          icon:'🎞️',std:60,pre:80,unit:'reel'},
+    cass: {label:'Audio cassette',          icon:'🎵',std:20,pre:28,unit:'tape'},
+    r2r:  {label:'Reel-to-reel audio',      icon:'🔊',std:50,pre:65,unit:'reel'},
+  },
+  CLEAN:15, PICKUP:50, RUSH:0.25,
+  STAGES:['received','cleaning','digitizing','qc','ready'],
+  STAGE_LBL:{received:'Received & In Queue',cleaning:'Cleaning & Preparing',digitizing:'Currently Digitizing',qc:'Quality Check',ready:'Ready!'},
+  STAGE_PCT:{received:10,cleaning:25,digitizing:65,qc:88,ready:100},
+  PKG_INFO:{
+    std:{name:'Standard Package',tier:'Good Quality · Great Value',features:[
+      {icon:'💾',title:'Digital .mp4 files',desc:'Standard Definition — plays on any TV, phone, tablet or computer'},
+      {icon:'☁️',title:'Private cloud download link',desc:'Secure link emailed to you. Easy to share with family. No tech skills needed'},
+      {icon:'🚗',title:'Free pickup & delivery',desc:'Edmonton and surrounding area — evenings & weekends'},
+      {icon:'📅',title:'7–10 business day turnaround',desc:'We take our time to do it right'},
+      {icon:'⬆️',title:'Upgrade to Premium anytime',desc:'See a 30-second preview clip first — then decide'},
+    ]},
+    pre:{name:'Premium Package',tier:'Best Quality · Heirloom Grade',features:[
+      {icon:'🎬',title:'HD & 4K digital files',desc:'The highest quality — your memories look better than the day they were recorded'},
+      {icon:'☁️',title:'Private cloud download link',desc:'Secure link with access for 1 year'},
+      {icon:'💿',title:'USB drive included',desc:'Physical USB — yours to keep, plug into any TV or computer'},
+      {icon:'🎨',title:'Scene-by-scene colour restoration',desc:'Every scene corrected — faded colours brought back to life'},
+      {icon:'🏷️',title:'Chapter markers & title cards',desc:'Custom titles and chapters — like a real family film'},
+      {icon:'⚡',title:'Priority queue — 5–7 business days',desc:'Your order goes to the front of the line'},
+    ]},
+  },
+};
+// ══ AUTH ════════════════════════════════════════
+const DEFAULT_USERS = {Rene:{name:'Rene Groenen',role:'Owner'},Jack:{name:'Jack',role:'Staff'}};
+let currentUser = null;
+let selectedUserKey = null;
+
+function getPassword(user) {
+  try {
+    const stored = localStorage.getItem('pwd:'+user);
+    return stored || user; // default = username
+  } catch(e){ return user; }
+}
+function setPassword(user, pwd) {
+  try { localStorage.setItem('pwd:'+user, pwd); } catch(e){}
+}
+function openStaffLogin() {
+  document.getElementById('staffModal').classList.add('open');
+  selectedUserKey = null;
+  document.querySelectorAll('.user-btn').forEach(b=>b.classList.remove('sel'));
+  document.getElementById('staffPwd').value='';
+  document.getElementById('loginError').style.display='none';
+}
+function closeStaffModal() { document.getElementById('staffModal').classList.remove('open'); }
+function selectUser(u) {
+  selectedUserKey = u;
+  document.querySelectorAll('.user-btn').forEach(b=>b.classList.remove('sel'));
+  document.getElementById('ub'+u).classList.add('sel');
+  document.getElementById('staffPwd').focus();
+  document.getElementById('loginError').style.display='none';
+}
+function staffLogin() {
+  if(!selectedUserKey){alert('Please select your name first.');return;}
+  const pwd = document.getElementById('staffPwd').value;
+  if(pwd === getPassword(selectedUserKey)){
+    currentUser = selectedUserKey;
+    closeStaffModal();
+    openStaffPanel();
+  } else {
+    document.getElementById('loginError').style.display='block';
+    document.getElementById('staffPwd').value='';
+    document.getElementById('staffPwd').focus();
+  }
+}
+function changePassword() {
+  const cur = document.getElementById('pwdCurrent').value;
+  const nw = document.getElementById('pwdNew').value;
+  const cf = document.getElementById('pwdConfirm').value;
+  const msg = document.getElementById('pwdMsg');
+  if(cur !== getPassword(currentUser)){msg.style.display='block';msg.style.color='#ef4444';msg.textContent='❌ Current password is incorrect.';return;}
+  if(nw.length < 4){msg.style.display='block';msg.style.color='#ef4444';msg.textContent='❌ New password must be at least 4 characters.';return;}
+  if(nw !== cf){msg.style.display='block';msg.style.color='#ef4444';msg.textContent='❌ Passwords do not match.';return;}
+  setPassword(currentUser, nw);
+  msg.style.display='block';msg.style.color='#6ee7b7';msg.textContent='✅ Password updated successfully!';
+  document.getElementById('pwdCurrent').value='';
+  document.getElementById('pwdNew').value='';
+  document.getElementById('pwdConfirm').value='';
+  setTimeout(()=>{msg.style.display='none';},3000);
+}
+
+// ══ STAFF PANEL ══════════════════════════════════
+function openStaffPanel() {
+  document.getElementById('spUserLabel').textContent='Logged in as: '+(DEFAULT_USERS[currentUser]?.name||currentUser);
+  document.getElementById('staffPanel').classList.add('open');
+  document.body.style.overflow='hidden';
+  showSpTab('orders');
+  refreshSpOrders();
+}
+function closeStaffPanel() {
+  document.getElementById('staffPanel').classList.remove('open');
+  document.body.style.overflow='';
+  currentUser=null;
+}
+function showSpTab(tab) {
+  document.querySelectorAll('.sp-tb').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.sp-tab-content').forEach(c=>c.classList.remove('active'));
+  document.getElementById('sp-'+tab).classList.add('active');
+  const idx = tab==='orders'?0:1;
+  document.querySelectorAll('.sp-tb')[idx].classList.add('active');
+}
+async function refreshSpOrders() {
+  const list = document.getElementById('spOrderList');
+  list.innerHTML='<p style="color:var(--dim);font-size:14px;padding:16px 0">Loading orders…</p>';
+  const bookings=[];
+  try {
+    if(window.storage){
+      const keys = await window.storage.list('booking:');
+      for(const key of (keys.keys||[])){
+        const r = await window.storage.get(key);
+        if(r) bookings.push(JSON.parse(r.value));
+      }
+    }
+  } catch(e){}
+  document.getElementById('spOrderDetail').classList.remove('active');
+  document.getElementById('spOrderList').style.display='block';
+  if(!bookings.length){
+    list.innerHTML='<div style="text-align:center;padding:32px;background:rgba(74,15,212,0.06);border:1px solid var(--border);border-radius:12px"><div style="font-size:2.5rem;margin-bottom:12px">📋</div><p style="color:var(--dim);font-size:14px">No orders yet. When customers book, they\'ll appear here.</p></div>';
+    return;
+  }
+  bookings.sort((a,b)=>new Date(b.createdAt||0)-new Date(a.createdAt||0));
+  const statusBadge = s => {
+    const m={confirmed:'bp',received:'bd',processing:'bd',ready:'br',delivered:'bdn'};
+    return `<span class="badge ${m[s]||'bq'}">${s||'pending'}</span>`;
+  };
+  list.innerHTML = bookings.map(b=>`<div class="ord-row" onclick="showSpOrder('${b.ref}')">
+    <div class="or-ref">${b.ref}</div>
+    <div class="or-name">${b.name||'—'} &nbsp;<span style="font-size:12px;color:var(--dim);font-weight:400">${b.phone||''}</span></div>
+    <div style="font-size:12px;color:var(--dim)">${(b.items||[]).length} items · ${b.package==='pre'?'Premium':'Standard'}${b.rush?' Rush':''}</div>
+    <div>${statusBadge(b.status)}</div>
+    <div class="or-date">${b.createdAt?new Date(b.createdAt).toLocaleDateString('en-CA'):''}</div>
+  </div>`).join('');
+}
+function showSpOrderList() {
+  document.getElementById('spOrderDetail').classList.remove('active');
+  document.getElementById('spOrderList').style.display='block';
+}
+async function showSpOrder(ref) {
+  let b = null;
+  try { if(window.storage){const r=await window.storage.get('booking:'+ref);if(r)b=JSON.parse(r.value);} } catch(e){}
+  if(!b){alert('Order not found.');return;}
+  document.getElementById('spOrderList').style.display='none';
+  document.getElementById('spOrderDetail').classList.add('active');
+  renderSpDetail(b);
+}
+function renderSpDetail(b) {
+  const prog = b.progress||{items:[],notes:[]};
+  const intakeItems = prog.intakeItems||[];
+  let html = `<div style="margin-bottom:18px">
+    <div style="font-family:var(--mono);font-size:11px;color:var(--sky);letter-spacing:0.1em;margin-bottom:4px">${b.ref}</div>
+    <div style="font-family:var(--serif);font-size:1.3rem;color:#fff;font-weight:700;margin-bottom:2px">${b.name}</div>
+    <div style="font-size:13px;color:var(--dim)">${b.phone} · ${b.email||''} · ${b.package==='pre'?'Premium':'Standard'}${b.rush?' + Rush':''} · $${(b.total||0).toFixed(2)}</div>
+  </div>`;
+
+  // INTAKE SECTION
+  html += `<div class="sp-sec">
+    <h4>📦 Intake — Receive Items <span class="tag">Step 1: When items arrive</span></h4>
+    <p style="color:var(--dim);font-size:13px;margin-bottom:14px">Take a photo of ALL items as received. Our AI will create the work order checklist automatically from this photo.</p>
+    ${prog.intakePhotoUrl?`<img src="${prog.intakePhotoUrl}" style="max-width:100%;border-radius:8px;border:1px solid rgba(74,15,212,0.3);margin-bottom:14px;max-height:200px;object-fit:cover" alt="Intake photo">`:''}
+    <label class="intake-area" for="intakePhoto-${b.ref}">
+      <div style="font-size:2rem;margin-bottom:7px">📷</div>
+      <p style="font-size:14px;color:var(--dim)">${prog.intakePhotoUrl?'Take another photo (replaces current)':'Tap to take intake photo — opens camera'}</p>
+      <img id="intakeImg-${b.ref}" class="intake-preview" style="display:none" alt="New intake photo">
+    </label>
+    <input type="file" id="intakePhoto-${b.ref}" accept="image/*" capture="environment" style="display:none" onchange="handleIntakePhoto(this,'${b.ref}')">
+    <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+      <button onclick="markStatus('${b.ref}','received')" style="padding:11px 18px;background:rgba(16,185,129,0.2);border:2px solid rgba(16,185,129,0.4);border-radius:8px;color:#6ee7b7;font-family:var(--body);font-size:14px;font-weight:700;cursor:pointer;transition:all var(--tr)" onmouseover="this.style.background='rgba(16,185,129,0.35)'" onmouseout="this.style.background='rgba(16,185,129,0.2)'">✓ Mark as Received</button>
+    </div>
+  </div>`;
+
+  // SCHEDULE CONFIRMATION (staff)
+  if((b.delivery==='pickup'||b.delivery==='dropoff')&&b.slots&&b.slots.length){
+    html+=`<div class="sp-sec">
+      <h4>📅 Confirm ${b.delivery==='pickup'?'Pickup':'Drop-Off'} Time <span class="tag">Select one to confirm</span></h4>
+      <p style="color:var(--dim);font-size:13px;margin-bottom:14px">Customer proposed these times. Click one to confirm it — they'll be notified immediately.</p>
+      ${b.confirmedSlot?`<div class="sched-confirmed">
+        <span class="sched-conf-icon">✅</span>
+        <div class="sched-conf-text">
+          <strong>Confirmed: ${formatSlot(b.confirmedSlot)}</strong>
+          <span>Customer has been notified of this time.</span>
+        </div>
+      </div>`:''}
+      <div class="slot-pick">
+        ${(b.slots||[]).map((s,i)=>`<div class="slot-option ${b.confirmedSlot===s?'confirmed':''}">
+          <span class="so-num">Option ${i+1}</span>
+          <span class="so-dt">${formatSlot(s)}</span>
+          <button class="so-confirm" onclick="confirmSlot('${b.ref}','${s}')">${b.confirmedSlot===s?'✅ Confirmed':'Confirm This →'}</button>
+        </div>`).join('')}
+      </div>
+    </div>`;
+  }
+
+  // WORK ORDER CHECKLIST
+  html += `<div class="sp-sec">
+    <h4>✅ Work Order — Item Checklist <span class="tag">Step 2: Check off as you complete each one</span></h4>
+    <p style="color:var(--dim);font-size:13px;margin-bottom:14px">Each item below gets checked off when complete. The customer sees this in real-time on their "Check My Progress" tab.</p>`;
+
+  if(intakeItems.length===0){
+    html += `<div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:8px;padding:14px;font-size:13px;color:#fbbf24;margin-bottom:14px">⚠️ Work order not yet created. Take an intake photo above — our AI will generate the checklist from it. Or add items manually below.</div>`;
+    // Manual add
+    html += `<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">`;
+    Object.entries(CFG.PRICES).forEach(([k,v])=>{
+      html+=`<button onclick="addIntakeItem('${b.ref}','${k}')" style="padding:9px 12px;background:rgba(74,15,212,0.1);border:1px solid rgba(74,15,212,0.25);border-radius:7px;color:var(--ice);font-family:var(--body);font-size:13px;cursor:pointer;transition:all var(--tr);text-align:left;display:flex;align-items:center;gap:8px" onmouseover="this.style.background='rgba(74,15,212,0.2)'" onmouseout="this.style.background='rgba(74,15,212,0.1)'">${v.icon} + Add ${v.label}</button>`;
+    });
+    html += `</div>`;
+  } else {
+    intakeItems.forEach((item,idx)=>{
+      const done=item.done||false;
+      html+=`<div class="sp-cl-item ${done?'done':''}" id="sp-item-${b.ref}-${idx}">
+        <div class="sp-checkbox" onclick="toggleItem('${b.ref}',${idx})">${done?'<span class="sp-check-icon">✓</span>':'<span class="sp-check-icon">✓</span>'}</div>
+        <div class="sp-cl-info">
+          <div class="sp-cl-title">${item.icon||'📼'} ${item.label}</div>
+          <div class="sp-cl-meta">${item.package||b.package||'std'} · ${item.note||''} ${done&&item.doneAt?'· Completed: '+item.doneAt:''}</div>
+        </div>
+        ${!done&&item.stage==='qc'?`<div class="pv-row">
+          <input type="url" class="field" id="pv-${b.ref}-${idx}" placeholder="Preview clip URL (optional)" style="font-size:12px">
+          <button class="pv-btn" onclick="markPreview('${b.ref}',${idx})">📹 Preview Ready</button>
+        </div>`:''}
+        ${item.previewReady&&!item.upgraded?`<div style="margin-top:8px;font-size:12px;color:#fbbf24;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);border-radius:6px;padding:6px 10px">⭐ Upgrade preview sent to customer — awaiting their decision</div>`:''}
+        ${item.upgraded?`<div style="margin-top:6px;font-size:12px;color:#6ee7b7">⭐ Customer upgraded to Premium</div>`:''}
+      </div>`;
+    });
+    // Stage update
+    const overallPct = intakeItems.length>0?Math.round(intakeItems.filter(i=>i.done).length/intakeItems.length*100):0;
+    html+=`<div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(74,15,212,0.15)">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+        <span style="font-family:var(--mono);font-size:11px;color:var(--dimmer);letter-spacing:0.1em;text-transform:uppercase">Overall Completion</span>
+        <span style="font-family:var(--mono);font-size:13px;color:var(--sky);font-weight:700">${overallPct}%</span>
+      </div>
+      <div class="pw"><div class="pb" style="width:${overallPct}%"></div></div>
+    </div>`;
+  }
+  html+=`</div>`;
+
+  // STATUS & DELIVERY
+  html+=`<div class="sp-sec">
+    <h4>🚀 Order Status <span class="tag">Step 3: Update as work progresses</span></h4>
+    <div class="stage-btns" style="margin-bottom:14px">
+      ${['received','processing','ready','delivered'].map(s=>`<button class="stage-btn ${b.status===s?'curr':''}" onclick="markStatus('${b.ref}','${s}')">${CFG.STAGE_LBL[s]||s}</button>`).join('')}
+    </div>
+    <p style="font-size:12px;color:var(--dimmer);font-family:var(--mono)">Current status: <strong style="color:var(--ice)">${b.status||'confirmed'}</strong></p>
+  </div>`;
+
+  // PAYMENT
+  html+=`<div class="sp-sec">
+    <h4>💳 Payment Confirmation <span class="tag">Confirm before delivery</span></h4>
+    <div class="pay-conf-row">
+      <div style="flex:1"><label class="field-lbl">Payment Reference / Confirmation #</label><input type="text" class="field" id="payRef-${b.ref}" placeholder="e-transfer ref or Square transaction #" style="font-size:13px"></div>
+      <button class="pay-conf-btn" onclick="confirmPaymentStaff('${b.ref}')">✓ Confirm Paid</button>
+    </div>
+    <p style="font-size:12px;color:var(--dimmer);margin-top:8px">Payment status: <strong style="color:var(--ice)">${b.payStatus||'pending'}</strong>${b.payRef?' · Ref: '+b.payRef:''}</p>
+    ${b.payStatus==='paid'?`<button onclick="showReceipt('${b.ref}')" style="margin-top:10px;padding:9px 16px;background:rgba(74,15,212,0.15);border:1px solid var(--border);border-radius:8px;color:var(--ice);font-family:var(--body);font-size:13px;cursor:pointer;transition:all var(--tr)" onmouseover="this.style.background='var(--sky)';this.style.color='#fff'" onmouseout="this.style.background='rgba(74,15,212,0.15)';this.style.color='var(--ice)'">📄 View Receipt</button>`:''}
+  </div>`;
+
+  // DOWNLOAD SECTION (for staff)
+  html+=`<div class="sp-sec sp-dl-sec">
+    <h4>📥 Digital Download Link <span class="tag">Set after payment confirmed</span></h4>
+    <p style="color:var(--dim);font-size:13px;margin-bottom:14px">Upload the customer's files to Google Drive, then paste the sharing link here. Set a password the customer will use to access their downloads. Link stays live for 30 days.</p>
+    ${b.dlUrl?`<div style="background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3);border-radius:8px;padding:12px 14px;margin-bottom:12px;font-size:13px">
+      <div style="color:#6ee7b7;font-weight:700;margin-bottom:4px">✅ Download link is set</div>
+      <div style="color:var(--dim)">Password: <strong style="color:var(--ice)">${b.dlPassword}</strong> · Expires: ${new Date(b.dlExpiry||0).toLocaleDateString('en-CA')} (${Math.max(0,Math.ceil(((b.dlExpiry||0)-Date.now())/86400000))} days left)</div>
+    </div>`:''}
+    <div style="margin-bottom:10px"><label class="field-lbl">Google Drive Sharing URL</label>
+      <input type="url" class="field" id="dlUrl-${b.ref}" placeholder="https://drive.google.com/drive/folders/..." value="${b.dlUrl||''}" style="font-size:13px">
+    </div>
+    <div style="margin-bottom:12px"><label class="field-lbl">Download Password (customer uses this to access)</label>
+      <input type="text" class="field" id="dlPwd-${b.ref}" placeholder="e.g. Memory2025 (memorable, easy to type)" value="${b.dlPassword||''}" style="font-size:13px">
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button onclick="setDownloadLink('${b.ref}')" style="padding:11px 18px;background:rgba(16,185,129,0.2);border:2px solid rgba(16,185,129,0.4);border-radius:8px;color:#6ee7b7;font-family:var(--body);font-size:14px;font-weight:700;cursor:pointer;transition:all var(--tr)" onmouseover="this.style.background='rgba(16,185,129,0.35)'" onmouseout="this.style.background='rgba(16,185,129,0.2)'">✅ Save Download Link</button>
+    </div>
+    <p style="font-size:12px;color:var(--dimmer);margin-top:8px;font-family:var(--mono)">💡 How to set up Google Drive: create a folder → upload files → right-click folder → Share → "Anyone with the link can view" → copy link → paste above.</p>
+  </div>`;
+
+  // NOTES
+  html+=`<div class="sp-sec">
+    <h4>📝 Notes <span class="tag">Visible to customer in progress tracker</span></h4>
+    <div id="sp-notes-${b.ref}" style="margin-bottom:12px">
+      ${(prog.notes||[]).reverse().map(n=>`<div class="ul-item"><div class="ul-date">${n.date}</div><div class="ul-text">${n.text}</div></div>`).join('')}
+    </div>
+    <div class="notes-add">
+      <textarea id="noteText-${b.ref}" placeholder="Add an update (customer will see this on their progress page)…"></textarea>
+      <button onclick="addNote('${b.ref}')">Add Note</button>
+    </div>
+  </div>`;
+
+  document.getElementById('spDetailContent').innerHTML=html;
+}
+
+// ══ INTAKE PHOTO (STAFF) ═══════════════════════
+function handleIntakePhoto(input, ref) {
+  const file=input.files[0]; if(!file) return;
+  const reader=new FileReader();
+  reader.onload=async e=>{
+    const dataUrl=e.target.result;
+    const img=document.getElementById('intakeImg-'+ref); if(img){img.src=dataUrl;img.style.display='block';}
+    // AI analyze and create checklist
+    await aiIntakeAnalyze(ref, dataUrl);
+  };
+  reader.readAsDataURL(file);
+}
+async function aiIntakeAnalyze(ref, dataUrl) {
+  let b=null;
+  try{if(window.storage){const r=await window.storage.get('booking:'+ref);if(r)b=JSON.parse(r.value);}}catch(e){}
+  if(!b) return;
+  const base64=dataUrl.split(',')[1], mtype=dataUrl.split(';')[0].split(':')[1];
+  let items=[];
+  try{
+    const resp=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:700,
+        system:'You are a media digitization specialist reviewing an intake photo. Identify every individual piece of media. Return ONLY valid JSON array of items, no markdown. Each item: {"type":"vhs|hi8|minidv|s8|f16|cass|r2r","label":"descriptive name e.g. VHS Tape 1 - Christmas 1994","note":"any label or condition visible"}. Create one entry per individual physical item (not grouped quantities).',
+        messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mtype,data:base64}},{type:'text',text:'List every individual tape or reel you can see as separate items. JSON array only.'}]}]
+      })
+    });
+    const data=await resp.json();
+    const raw=data.content?.[0]?.text||'[]';
+    const parsed=JSON.parse(raw);
+    if(Array.isArray(parsed)) items=parsed;
+  }catch(e){
+    // fallback: use ordered items from booking
+    items=(b.items||[]).flatMap(item=>{
+      const p=CFG.PRICES[item.type]; if(!p) return [];
+      return Array.from({length:item.qty||1},(_,i)=>({type:item.type,label:`${p.label} ${i+1}`,note:''}));
+    });
+  }
+  // Build checklist items
+  const intakeItems = items.map((item,idx)=>{
+    const p=CFG.PRICES[item.type]||{label:item.label||'Item',icon:'📼'};
+    return {id:idx,type:item.type||'vhs',icon:p.icon,label:item.label||`${p.label} ${idx+1}`,note:item.note||'',done:false,stage:'received',package:b.package||'std',previewReady:false,previewUrl:'',upgraded:false,doneAt:null};
+  });
+  if(!b.progress) b.progress={items:[],notes:[]};
+  b.progress.intakeItems=intakeItems;
+  b.progress.intakePhotoUrl=dataUrl;
+  b.progress.notes.push({date:new Date().toLocaleDateString('en-CA'),text:`Intake completed. ${intakeItems.length} item(s) logged and ready for processing.`});
+  b.status='received';
+  try{if(window.storage) await window.storage.set('booking:'+ref,JSON.stringify(b));}catch(e){}
+  renderSpDetail(b);
+  alert(`✅ Intake complete! ${intakeItems.length} item(s) added to the work order checklist.`);
+}
+async function addIntakeItem(ref, type) {
+  let b=null;
+  try{if(window.storage){const r=await window.storage.get('booking:'+ref);if(r)b=JSON.parse(r.value);}}catch(e){}
+  if(!b) return;
+  const p=CFG.PRICES[type];
+  if(!b.progress) b.progress={items:[],notes:[]};
+  if(!b.progress.intakeItems) b.progress.intakeItems=[];
+  const idx=b.progress.intakeItems.length;
+  b.progress.intakeItems.push({id:idx,type,icon:p.icon,label:`${p.label} ${idx+1}`,note:'',done:false,stage:'received',package:b.package||'std',previewReady:false,previewUrl:'',upgraded:false,doneAt:null});
+  try{if(window.storage) await window.storage.set('booking:'+ref,JSON.stringify(b));}catch(e){}
+  renderSpDetail(b);
+}
+async function toggleItem(ref, idx) {
+  let b=null;
+  try{if(window.storage){const r=await window.storage.get('booking:'+ref);if(r)b=JSON.parse(r.value);}}catch(e){}
+  if(!b||!b.progress?.intakeItems) return;
+  const item=b.progress.intakeItems[idx];
+  item.done=!item.done;
+  item.doneAt=item.done?new Date().toLocaleDateString('en-CA'):null;
+  item.stage=item.done?'ready':'digitizing';
+  const allDone=b.progress.intakeItems.every(i=>i.done);
+  if(allDone&&b.status!=='delivered'){
+    b.status='ready';
+    b.progress.notes.push({date:new Date().toLocaleDateString('en-CA'),text:'All items digitized and quality-checked — ready for delivery! 🎉'});
+  }
+  try{if(window.storage) await window.storage.set('booking:'+ref,JSON.stringify(b));}catch(e){}
+  renderSpDetail(b);
+}
+async function markPreview(ref, idx) {
+  const url=document.getElementById(`pv-${ref}-${idx}`)?.value.trim()||'';
+  let b=null;
+  try{if(window.storage){const r=await window.storage.get('booking:'+ref);if(r)b=JSON.parse(r.value);}}catch(e){}
+  if(!b) return;
+  b.progress.intakeItems[idx].previewReady=true;
+  b.progress.intakeItems[idx].previewUrl=url;
+  b.progress.notes.push({date:new Date().toLocaleDateString('en-CA'),text:`Preview clip ready for ${b.progress.intakeItems[idx].label}. Customer can now view and decide on Premium upgrade.`});
+  try{if(window.storage) await window.storage.set('booking:'+ref,JSON.stringify(b));}catch(e){}
+  renderSpDetail(b);
+  alert('Preview marked as ready — customer will see upgrade offer on their progress page.');
+}
+async function markStatus(ref, status) {
+  let b=null;
+  try{if(window.storage){const r=await window.storage.get('booking:'+ref);if(r)b=JSON.parse(r.value);}}catch(e){}
+  if(!b) return;
+  b.status=status;
+  const msgs={received:'Items received at our studio and logged.',processing:'Digitization has begun.',ready:'All items completed — ready for delivery!',delivered:'Files delivered. Thank you for choosing Digital Memories!'};
+  if(!b.progress) b.progress={items:[],notes:[]};
+  b.progress.notes.push({date:new Date().toLocaleDateString('en-CA'),text:msgs[status]||status});
+  try{if(window.storage) await window.storage.set('booking:'+ref,JSON.stringify(b));}catch(e){}
+  renderSpDetail(b);
+}
+async function confirmPaymentStaff(ref) {
+  const payRef=document.getElementById('payRef-'+ref)?.value.trim();
+  if(!payRef){alert('Please enter the payment reference number.');return;}
+  let b=null;
+  try{if(window.storage){const r=await window.storage.get('booking:'+ref);if(r)b=JSON.parse(r.value);}}catch(e){}
+  if(!b) return;
+  b.payStatus='paid'; b.payRef=payRef;
+  if(!b.progress) b.progress={items:[],notes:[]};
+  b.progress.notes.push({date:new Date().toLocaleDateString('en-CA'),text:`Payment confirmed. Reference: ${payRef}. Receipt available to customer.`});
+  try{if(window.storage) await window.storage.set('booking:'+ref,JSON.stringify(b));}catch(e){}
+  renderSpDetail(b);
+  alert('✅ Payment confirmed! Customer can now view their receipt.');
+}
+async function addNote(ref) {
+  const text=document.getElementById('noteText-'+ref)?.value.trim(); if(!text) return;
+  let b=null;
+  try{if(window.storage){const r=await window.storage.get('booking:'+ref);if(r)b=JSON.parse(r.value);}}catch(e){}
+  if(!b) return;
+  if(!b.progress) b.progress={items:[],notes:[]};
+  b.progress.notes.push({date:new Date().toLocaleDateString('en-CA'),text});
+  try{if(window.storage) await window.storage.set('booking:'+ref,JSON.stringify(b));}catch(e){}
+  renderSpDetail(b);
+}
+
+// ══ CUSTOMER PROGRESS LOOKUP ═════════════════════
+async function lookupProgress() {
+  const rawName=document.getElementById('lookupName').value.trim();
+  const rawPhone=document.getElementById('lookupPhone').value.trim();
+  if(!rawName){document.getElementById('lookupName').focus();return;}
+  if(!rawPhone){document.getElementById('lookupPhone').focus();return;}
+  const el=document.getElementById('progResult');
+  el.style.display='block';
+  el.innerHTML='<div style="text-align:center;padding:28px"><div class="spin-ring"></div><p style="color:var(--dim)">Looking up your order…</p></div>';
+  const name=rawName.toLowerCase().trim();
+  const phone=rawPhone.replace(/\D/g,'');
+  let found=[];
+  try{
+    if(window.storage){
+      const keys=await window.storage.list('booking:');
+      for(const key of (keys.keys||[])){
+        const r=await window.storage.get(key);
+        if(!r) continue;
+        const b=JSON.parse(r.value);
+        const bName=(b.name||'').toLowerCase();
+        const bPhone=(b.phone||'').replace(/\D/g,'');
+        const firstMatch=bName.split(' ')[0]===name||bName===name;
+        const phoneMatch=bPhone===phone||bPhone.endsWith(phone.slice(-7))||phone.endsWith(bPhone.slice(-7));
+        if(firstMatch&&phoneMatch) found.push(b);
+      }
+    }
+  }catch(e){}
+  if(!found.length){
+    el.innerHTML=`<div style="text-align:center;padding:28px;background:rgba(74,15,212,0.06);border:1px solid var(--border);border-radius:12px">
+      <div style="font-size:2.5rem;margin-bottom:12px">🔍</div>
+      <h3 style="font-family:var(--serif);font-size:1.2rem;color:#fff;margin-bottom:7px">Order not found</h3>
+      <p style="color:var(--dim);font-size:14px;line-height:1.7">We couldn't find an order for <strong style="color:var(--ice)">${rawName}</strong> with that phone number.<br>Please check your spelling, or call us at <strong style="color:var(--ice)">${CFG.phone}</strong> — we'll look it up right away!</p>
+    </div>`;
+    return;
+  }
+  el.innerHTML = found.map(b=>renderProgressCard(b)).join('');
+}
+function renderProgressCard(b) {
+  const prog = b.progress||{intakeItems:[],notes:[]};
+  const items = prog.intakeItems||[];
+  const doneCount = items.filter(i=>i.done).length;
+  const totalCount = items.length;
+  const overallPct = totalCount>0?Math.round(doneCount/totalCount*100):
+    (['received','confirmed'].includes(b.status)?5:b.status==='processing'?50:b.status==='ready'?100:b.status==='delivered'?100:0);
+  const statusLabel={confirmed:'Order Confirmed',received:'Received — In Our Studio',processing:'Being Digitized',ready:'Ready for Delivery! 🎉',delivered:'Delivered ✅'};
+  const statusBadge={confirmed:'bp',received:'bd',processing:'bd',ready:'br',delivered:'bdn'};
+  let html=`<div class="ocard">
+    <div class="ocard-hdr">
+      <div>
+        <div class="ocard-ref">${b.ref}</div>
+        <div class="ocard-name">Hello, ${(b.name||'').split(' ')[0]}! 👋</div>
+      </div>
+      <div><span class="badge ${statusBadge[b.status]||'bq'}">${statusLabel[b.status]||b.status||'Confirmed'}</span></div>
+    </div>
+    <div class="overall-prog">
+      <div class="op-row"><span class="op-text">Overall Progress</span><span class="op-pct">${overallPct}%</span></div>
+      <div class="pw"><div class="pb" style="width:${overallPct}%"></div></div>
+      <div class="op-stage">${getProgressText(b,items,doneCount,totalCount)}</div>
+    </div>`;
+
+  // Checklist items
+  if(items.length>0){
+    html+=`<div class="cl-section-title" style="margin-bottom:12px">Your Items — Tape by Tape, Reel by Reel</div>`;
+    items.forEach((item,idx)=>{
+      const upgDiff = CFG.PRICES[item.type]?(CFG.PRICES[item.type].pre-CFG.PRICES[item.type].std):15;
+      html+=`<div class="cl-item ${item.done?'done':''}">
+        <div class="cl-check"><span class="cl-check-icon">✓</span></div>
+        <div class="cl-info">
+          <div class="cl-title">${item.icon||'📼'} ${item.label}</div>
+          <div class="cl-meta">${item.done?'✅ Completed'+(item.doneAt?' on '+item.doneAt:''):'⏳ In progress'} · ${item.package==='pre'?'Premium':'Standard'}</div>
+        </div>
+      </div>
+      ${item.previewReady&&!item.upgraded?`<div class="upg-offer vis" id="cust-uo-${b.ref}-${idx}">
+        <div class="upg-h">🎬 Preview ready! Would you like to upgrade this to Premium?</div>
+        ${item.previewUrl?`<div class="upg-video" onclick="window.open('${item.previewUrl}','_blank')">▶ Watch your 30-second preview clip</div>`:'<div style="font-size:13px;color:var(--dimmer);margin-bottom:10px;font-style:italic">Preview clip is processing — check back shortly.</div>'}
+        <p style="font-size:13px;color:var(--dim);margin-bottom:10px">Upgrading this item to Premium adds colour restoration, HD quality, and a USB drive — for just <strong style="color:var(--ice)">$${upgDiff} more</strong>.</p>
+        <div class="upg-btns">
+          <button class="upg-accept" onclick="customerUpgrade('${b.ref}',${idx})">Yes — Upgrade for $${upgDiff}</button>
+          <button class="upg-decline" onclick="this.closest('.upg-offer').style.display='none'">No thanks, keep Standard</button>
+        </div>
+      </div>`:''}`;
+    });
+    html+=`<div style="margin-top:14px;display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(74,15,212,0.08);border-radius:8px">
+      <span style="font-family:var(--mono);font-size:12px;color:var(--dimmer)">COMPLETED</span>
+      <span style="font-family:var(--serif);font-size:1.1rem;color:var(--sky);font-weight:700">${doneCount} of ${totalCount}</span>
+    </div>`;
+  } else if(b.status==='confirmed'){
+    html+=`<div style="background:rgba(74,15,212,0.08);border:1px solid rgba(74,15,212,0.2);border-radius:10px;padding:16px;text-align:center;font-size:14px;color:var(--dim)">
+      <div style="font-size:2rem;margin-bottom:8px">📦</div>
+      Your order is confirmed and we're waiting for your media to arrive. Once we receive and photograph your items, each tape and reel will appear here with its own progress indicator.
+    </div>`;
+  }
+
+  // Updates log
+  const notes=(prog.notes||[]).filter(n=>n.text);
+  if(notes.length>0){
+    html+=`<div class="ul-wrap"><div class="ul-title">Updates from our team</div>`;
+    [...notes].reverse().slice(0,8).forEach(n=>{
+      html+=`<div class="ul-item"><div class="ul-date">${n.date}</div><div class="ul-text">${n.text}</div></div>`;
+    });
+    html+=`</div>`;
+  }
+
+  // Receipt button
+  if(b.payStatus==='paid'){
+    html+=`<div style="margin-top:16px;text-align:center"><button onclick="showReceipt('${b.ref}')" style="padding:11px 22px;background:rgba(74,15,212,0.15);border:1px solid var(--border);border-radius:8px;color:var(--ice);font-family:var(--body);font-size:14px;font-weight:700;cursor:pointer;transition:all var(--tr)" onmouseover="this.style.background='var(--sky)';this.style.color='#fff'" onmouseout="this.style.background='rgba(74,15,212,0.15)';this.style.color='var(--ice)'">📄 View My Receipt</button></div>`;
+  }
+
+  html+=`<p style="font-size:12px;color:var(--dimmer);text-align:center;margin-top:14px;font-family:var(--mono)">Questions? Call us at ${CFG.phone} — we're always happy to help.</p>`;
+  html+=`</div>`;
+  return html;
+}
+function getProgressText(b,items,done,total){
+  if(b.status==='delivered') return 'All done — your memories are saved forever! 💙';
+  if(b.status==='ready') return 'Everything is digitized and ready! We\'ll be in touch to arrange delivery.';
+  if(total>0){
+    if(done===total) return 'All items digitized — quality checking in progress!';
+    if(done===0) return 'Your media has been received. Digitization will begin shortly.';
+    return `${done} of ${total} item${done===1?'':'s'} completed. Our team is working through them now.`;
+  }
+  if(b.status==='received') return 'Your media has arrived at our studio. We\'ll start processing shortly.';
+  return 'Your order is confirmed. Awaiting pickup or drop-off.';
+}
+async function customerUpgrade(ref, idx) {
+  let b=null;
+  try{if(window.storage){const r=await window.storage.get('booking:'+ref);if(r)b=JSON.parse(r.value);}}catch(e){}
+  if(!b) return;
+  b.progress.intakeItems[idx].upgraded=true;
+  b.progress.notes.push({date:new Date().toLocaleDateString('en-CA'),text:`Customer requested Premium upgrade for ${b.progress.intakeItems[idx].label}. Additional charge will be invoiced.`});
+  try{if(window.storage) await window.storage.set('booking:'+ref,JSON.stringify(b));}catch(e){}
+  document.getElementById(`cust-uo-${ref}-${idx}`).innerHTML='<p style="font-size:13px;color:#6ee7b7;font-style:italic">✅ Upgrade requested! Our team will be in touch to confirm the additional charge.</p>';
+}
+
+
+// ══ NEW QUOTE STEP HANDLERS ═══════════════════════
+function proceedToBooking() {
+  const name = document.getElementById('acceptName').value.trim();
+  const phone = document.getElementById('acceptPhone').value.trim();
+  if(!name) { document.getElementById('acceptName').focus(); return; }
+  if(!phone) { document.getElementById('acceptPhone').focus(); return; }
+  const pkg = document.querySelector('input[name="acceptPkg"]:checked')?.value || 'pre';
+  // Pre-fill the workflow with their details
+  wfState.name = name; wfState.phone = phone;
+  document.getElementById('cName').value = name;
+  document.getElementById('cPhone').value = phone;
+  openWorkflow(pkg);
+}
+function updateAcceptPrices() {
+  document.getElementById('acceptStdPrice').textContent = '$'+_stdTotal.toFixed(2);
+  document.getElementById('acceptPrePrice').textContent = '$'+_preTotal.toFixed(2);
+  document.getElementById('thinkAmt2').textContent = '$'+_stdTotal.toFixed(2);
+}
+async function saveThinkQuote() {
+  const name = document.getElementById('thinkName').value.trim();
+  const phone = document.getElementById('thinkPhone').value.trim();
+  if(!name) { document.getElementById('thinkName').focus(); return; }
+  if(!phone) { document.getElementById('thinkPhone').focus(); return; }
+  const ref = 'DM-' + Date.now().toString(36).toUpperCase();
+  const rec = {ref, name, phone, stdTotal:_stdTotal, preTotal:_preTotal, items:_items,
+    date: new Date().toLocaleDateString('en-CA'), status:'saved_quote', reminderType:'1week',
+    progress:{intakeItems:[],notes:[{date:new Date().toLocaleDateString('en-CA'),text:'Quote saved. Reminder set for 1 week.'}]}};
+  try { if(window.storage) await window.storage.set('booking:'+ref, JSON.stringify(rec)); } catch(e){}
+  // Show confirmation inline
+  document.getElementById('qs3b').innerHTML = `<div style="text-align:center;padding:12px 0">
+    <span style="font-size:3rem;display:block;margin-bottom:12px;animation:pop 0.5s cubic-bezier(0.34,1.56,0.64,1) both">✅</span>
+    <h3 style="font-family:var(--serif);font-size:1.35rem;color:#fff;margin-bottom:10px">Saved, ${name}!</h3>
+    <p style="color:var(--dim);font-size:14px;line-height:1.75;margin-bottom:8px">We'll send a friendly text to <strong style="color:var(--ice)">${phone}</strong> in one week to check in. Your quote will be waiting.</p>
+    <p style="color:var(--dim);font-size:14px">Quote ref: <strong style="color:var(--sky);font-family:var(--mono)">${ref}</strong></p>
+    <p style="color:var(--sky);font-size:13px;margin-top:10px;font-weight:700">To check your quote: tap "Check My Progress" and enter your name + phone.</p>
+    <div style="display:inline-block;background:rgba(74,15,212,0.15);border:1px solid var(--border);border-radius:6px;padding:7px 14px;font-family:var(--mono);font-size:11px;color:var(--dimmer);margin-top:10px">Reply STOP to any of our texts to opt out permanently</div>
+  </div>`;
+}
+
+// ══ QUOTE FLOW ═══════════════════════════════════
+const counts={};Object.keys(CFG.PRICES).forEach(k=>counts[k]=0);
+let _items=[],_stdTotal=0,_preTotal=0;
+let wfState={delivery:'',package:'',rush:false,name:'',phone:'',email:'',address:'',time:'',notes:'',payMethod:''};
+let lastRef='';
+const chatHistory=[{role:'assistant',content:"Hello! 👋 I'm here to help preserve your family's precious memories. Questions about formats, pricing, or pickup? I'm here anytime!"}];
+
+function goStep(id){
+  document.querySelectorAll('.qstep').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('quoteBox').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function resetFlow(){
+  Object.keys(counts).forEach(k=>counts[k]=0);
+  _items=[];_stdTotal=0;_preTotal=0;
+  const ci=document.getElementById('camIn');if(ci)ci.value='';
+  const pt=document.getElementById('photoThumb');if(pt){pt.src='';pt.style.display='none';}
+  const af=document.getElementById('aiFound');if(af){af.innerHTML='';af.style.display='';}
+  goStep('qs1');
+}
+function showManual(){buildManualGrid();goStep('qs1b');}
+function buildManualGrid(){
+  const g=document.getElementById('manualGrid');g.innerHTML='';
+  Object.entries(CFG.PRICES).forEach(([k,v])=>{
+    const d=document.createElement('div');d.className='mi';
+    d.innerHTML=`<span class="mi-ico">${v.icon}</span><div class="mi-info"><div class="mi-nm">${v.label}</div><div class="mi-pr">Std $${v.std} / Pre $${v.pre} per ${v.unit}</div></div><div class="mi-ctrl"><button class="mi-btn" onclick="adj('${k}',-1)">−</button><span class="mi-cnt" id="cnt-${k}">0</span><button class="mi-btn" onclick="adj('${k}',1)">+</button></div>`;
+    g.appendChild(d);
+  });
+}
+function adj(k,d){counts[k]=Math.max(0,counts[k]+d);document.getElementById('cnt-'+k).textContent=counts[k];}
+function buildManualQuote(){
+  const entries=Object.entries(counts).filter(([,v])=>v>0);
+  if(!entries.length){alert('Please add at least one item using the + buttons.');return;}
+  const lines=[];let ss=0,ps=0,hf=false;
+  entries.forEach(([k,qty])=>{const p=CFG.PRICES[k];const sa=p.std*qty,pa=p.pre*qty;ss+=sa;ps+=pa;if(k==='s8'||k==='f16')hf=true;lines.push({type:k,qty,desc:`${p.icon} ${qty}× ${p.label}`,std:sa,pre:pa});});
+  if(hf){lines.push({type:'clean',qty:1,desc:'🧹 Film cleaning (one-time)',std:CFG.CLEAN,pre:0});ss+=CFG.CLEAN;}
+  renderQuote(null,lines,ss,ps,'Entered manually.');
+}
+function handlePhoto(input){
+  const file=input.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    const dataUrl=e.target.result;
+    document.getElementById('photoThumb').src=dataUrl;document.getElementById('photoThumb').style.display='block';
+    goStep('qs2');analyzePhoto(dataUrl);
+  };
+  reader.readAsDataURL(file);
+}
+async function analyzePhoto(dataUrl){
+  const base64=dataUrl.split(',')[1],mtype=dataUrl.split(';')[0].split(':')[1];
+  try{
+    const resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:600,system:'Media digitization specialist. Count all physical media in the photo. Return ONLY valid JSON: {"found":"brief description","items":[{"type":"vhs|hi8|minidv|s8|f16|cass|r2r","qty":number}],"confidence":"high|medium|low","caveat":"note or empty"}',
+        messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mtype,data:base64}},{type:'text',text:'Count all tapes, film reels, audio media. JSON only.'}]}]
+      })
+    });
+    const data=await resp.json();
+    let parsed;try{parsed=JSON.parse(data.content?.[0]?.text||'{}');}catch{parsed={found:'',items:[],confidence:'low',caveat:''};}
+    buildPhotoQuote(parsed);
+  }catch(err){goStep('qs1b');buildManualGrid();alert("Couldn't connect to AI — please use manual entry below.");}
+}
+function buildPhotoQuote(r){
+  if(!r.items||!r.items.length){goStep('qs1b');buildManualGrid();alert("Couldn't identify items clearly — try a brighter photo or use manual entry.");return;}
+  const lines=[];let ss=0,ps=0,hf=false;
+  r.items.forEach(item=>{const p=CFG.PRICES[item.type];if(!p||!item.qty)return;const sa=p.std*item.qty,pa=p.pre*item.qty;ss+=sa;ps+=pa;if(item.type==='s8'||item.type==='f16')hf=true;lines.push({type:item.type,qty:item.qty,desc:`${p.icon} ${item.qty}× ${p.label}`,std:sa,pre:pa});});
+  if(hf){lines.push({type:'clean',qty:1,desc:'🧹 Film cleaning (one-time)',std:CFG.CLEAN,pre:0});ss+=CFG.CLEAN;}
+  const aiMsg=`<strong>We spotted:</strong> ${r.found||'items identified'}${r.caveat?' — '+r.caveat:''}`;
+  renderQuote(aiMsg,lines,ss,ps,r.confidence==='low'?'Estimate — confirmed at intake.':'Based on photo · Confirmed at intake.');
+}
+function renderQuote(aiMsg,lines,ss,ps,note){
+  _items=lines;_stdTotal=ss;_preTotal=ps;
+  if(aiMsg)document.getElementById('aiFound').innerHTML=aiMsg;else document.getElementById('aiFound').style.display='none';
+  const tbody=document.getElementById('quoteRows');tbody.innerHTML='';
+  lines.forEach(l=>{const tr=document.createElement('tr');tr.innerHTML=`<td>${l.desc}</td><td>$${l.std.toFixed(2)}</td><td>$${l.pre.toFixed(2)}</td>`;tbody.appendChild(tr);});
+  const tr2=document.createElement('tr');tr2.innerHTML=`<td style="font-size:11px;color:var(--dimmer);font-style:italic">Turnaround</td><td style="font-size:11px;color:var(--dimmer)">7–10 days</td><td style="font-size:11px;color:var(--dimmer)">5–7 days</td>`;tbody.appendChild(tr2);
+  document.getElementById('stdTotal').textContent=`$${ss.toFixed(2)}`;document.getElementById('preTotal').textContent=`$${ps.toFixed(2)}`;
+  document.getElementById('stdBtn').textContent=`$${ss.toFixed(2)}`;document.getElementById('preBtn').textContent=`$${ps.toFixed(2)}`;
+  document.getElementById('thinkAmt').textContent=`$${ss.toFixed(2)}`;
+  goStep('qs3');
+  updateAcceptPrices();
+}
+async function saveQuote(){
+  const name=document.getElementById('saveName').value.trim(),phone=document.getElementById('savePhone').value.trim();
+  if(!name){document.getElementById('saveName').focus();return;}if(!phone){document.getElementById('savePhone').focus();return;}
+  const ref='DM-'+Date.now().toString(36).toUpperCase();
+  const rec={ref,name,phone,stdTotal:_stdTotal,preTotal:_preTotal,items:_items,date:new Date().toLocaleDateString('en-CA'),status:'saved_quote',progress:{intakeItems:[],notes:[{date:new Date().toLocaleDateString('en-CA'),text:'Quote saved. Awaiting booking confirmation.'}]}};
+  try{if(window.storage)await window.storage.set('booking:'+ref,JSON.stringify(rec));}catch(e){}
+  document.getElementById('savedName').textContent=name;document.getElementById('qRef').textContent=ref;goStep('qs5');
+}
+
+// ══ WORKFLOW ═════════════════════════════════════
+function openWorkflow(pkg){
+  wfState={delivery:'',package:pkg||'',rush:false,name:'',phone:'',email:'',address:'',time:'',notes:'',payMethod:''};
+  if(pkg)selectPackage(pkg);
+  document.getElementById('wfOverlay').classList.add('open');setWfStep(1);document.body.style.overflow='hidden';
+}
+function closeWorkflow(){document.getElementById('wfOverlay').classList.remove('open');document.body.style.overflow='';}
+function setWfStep(n){
+  document.querySelectorAll('.wf-step').forEach(s=>s.classList.remove('active'));
+  document.getElementById('wf'+n).classList.add('active');
+  for(let i=1;i<=6;i++){const nd=document.getElementById('sn'+i);nd.classList.remove('done','active');if(i<n)nd.classList.add('done');else if(i===n)nd.classList.add('active');}
+  document.getElementById('wfOverlay').scrollTo({top:0,behavior:'smooth'});
+}
+function wfNext(step){
+  if(step===1){if(!wfState.delivery)return;setWfStep(2);}
+  else if(step===2){
+    if(!wfState.package)return;
+    document.getElementById('addressRow').style.display=wfState.delivery==='pickup'?'block':'none';
+    setWfStep(3);
+  }
+  else if(step===3){
+    const name=document.getElementById('cName').value.trim(),phone=document.getElementById('cPhone').value.trim();
+    if(!name){document.getElementById('cName').focus();alert('Please enter your name.');return;}
+    if(!phone){document.getElementById('cPhone').focus();alert('Please enter your phone number.');return;}
+    if(wfState.delivery==='pickup'&&!document.getElementById('cAddress').value.trim()){document.getElementById('cAddress').focus();alert('Please enter your pickup address.');return;}
+    wfState.name=name;wfState.phone=phone;wfState.email=document.getElementById('cEmail').value.trim();
+    wfState.address=document.getElementById('cAddress').value.trim();wfState.time=document.getElementById('cTime').value.trim();wfState.notes=document.getElementById('cNotes').value.trim();
+    // Save schedule slots
+    if(wfState.delivery==='pickup'||wfState.delivery==='dropoff'){
+      wfState.slots=[
+        document.getElementById('slot1')?.value||'',
+        document.getElementById('slot2')?.value||'',
+        document.getElementById('slot3')?.value||'',
+      ].filter(s=>s);
+      if(!wfState.slots.length){alert('Please enter at least one preferred date and time for your '+( wfState.delivery==='pickup'?'pickup':'drop-off')+'.');return;}
+    }
+    buildReview();setWfStep(4);
+  }
+  else if(step===4){buildPaymentStep();setWfStep(5);}
+}
+function wfBack(step){setWfStep(step-1);}
+function selectDelivery(type){
+  wfState.delivery=type;
+  document.querySelectorAll('.del-card').forEach(c=>c.classList.remove('sel'));document.getElementById('del-'+type).classList.add('sel');
+  const btn=document.getElementById('wf1next');btn.style.opacity='1';btn.style.pointerEvents='auto';
+  // Show/hide schedule picker in step 3 based on delivery type
+  const ss=document.getElementById('scheduleSection');
+  if(ss){ss.style.display=(type==='pickup'||type==='dropoff')?'block':'none';}
+  // Set min date/time to tomorrow 8am
+  const tomorrow=new Date();tomorrow.setDate(tomorrow.getDate()+1);tomorrow.setHours(8,0,0,0);
+  const minDt=tomorrow.toISOString().slice(0,16);
+  ['slot1','slot2','slot3'].forEach(id=>{const el=document.getElementById(id);if(el){el.min=minDt;}});
+}
+function selectPackage(pkg){
+  wfState.package=pkg;
+  document.querySelectorAll('.pkg-opt').forEach(c=>c.classList.remove('sel'));const el=document.getElementById('pkg-'+pkg);if(el)el.classList.add('sel');
+  const btn=document.getElementById('wf2next');if(btn){btn.style.opacity='1';btn.style.pointerEvents='auto';}
+}
+function toggleRush(){wfState.rush=!wfState.rush;document.getElementById('rushRow').classList.toggle('sel',wfState.rush);}
+function calcTotal(){const base=wfState.package==='pre'?_preTotal:_stdTotal;let t=base;if(wfState.delivery==='pickup')t+=CFG.PICKUP;if(wfState.rush)t+=base*CFG.RUSH;return t;}
+function buildReview(){
+  const total=calcTotal();const base=wfState.package==='pre'?_preTotal:_stdTotal;
+  const tbody=document.getElementById('revTable');tbody.innerHTML='';
+  _items.forEach(l=>{const pr=wfState.package==='pre'?l.pre:l.std;const tr=document.createElement('tr');tr.innerHTML=`<td>${l.desc}</td><td style="text-align:right;font-family:var(--mono);color:var(--ice);font-size:13px">$${pr.toFixed(2)}</td>`;tbody.appendChild(tr);});
+  if(wfState.delivery==='pickup'){const tr=document.createElement('tr');tr.innerHTML=`<td>🚗 Pickup + return delivery</td><td style="text-align:right;font-family:var(--mono);color:var(--ice);font-size:13px">$${CFG.PICKUP.toFixed(2)}</td>`;tbody.appendChild(tr);}
+  if(wfState.rush){const sc=base*CFG.RUSH;const tr=document.createElement('tr');tr.innerHTML=`<td>⚡ Rush surcharge (25%)</td><td style="text-align:right;font-family:var(--mono);color:var(--ice);font-size:13px">$${sc.toFixed(2)}</td>`;tbody.appendChild(tr);}
+  const tr2=document.createElement('tr');tr2.className='rev-total';tr2.innerHTML=`<td>Total</td><td style="text-align:right">$${total.toFixed(2)}</td>`;tbody.appendChild(tr2);
+  document.getElementById('rev-name').textContent=wfState.name;document.getElementById('rev-phone').textContent=wfState.phone;
+  const dls={dropoff:'Drop Off (free)',pickup:'We Pick Up ($25 + $25 return)',courier:'Ship to Us'};
+  document.getElementById('rev-del').textContent=dls[wfState.delivery]||wfState.delivery;
+  document.getElementById('rev-pkg').textContent=(wfState.package==='pre'?'Premium ★':'Standard')+(wfState.rush?' + Rush':'');
+  // Show slots in review if applicable
+  let existingSlotRow=document.getElementById('rev-slots-row');
+  if(existingSlotRow) existingSlotRow.remove();
+  if(wfState.slots&&wfState.slots.length){
+    const slotHtml=wfState.slots.map((s,i)=>`<tr><td style="color:var(--dim);font-size:13px;padding:5px 0">Option ${i+1}</td><td style="text-align:right;font-family:var(--mono);color:var(--ice);font-size:12px">${formatSlot(s)}</td></tr>`).join('');
+    const tbody=document.getElementById('revTable');
+    const divider=document.createElement('tr');divider.id='rev-slots-row';
+    divider.innerHTML=`<td colspan="2" style="padding-top:10px;padding-bottom:4px"><div style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dimmer)">Proposed ${wfState.delivery==='pickup'?'Pickup':'Drop-Off'} Times</div></td>`;
+    tbody.insertBefore(divider, tbody.lastElementChild);
+    const slotsRow=document.createElement('tr');
+    slotsRow.innerHTML=`<td colspan="2" style="padding:0"><table style="width:100%">${slotHtml}</table></td>`;
+    tbody.insertBefore(slotsRow, tbody.lastElementChild);
+  }
+}
+function buildPaymentStep(){
+  const total=calcTotal();const ref='DM-'+Date.now().toString(36).toUpperCase();lastRef=ref;
+  document.getElementById('et-amount').textContent='$'+total.toFixed(2);
+  document.getElementById('et-ref').innerHTML=ref+' <button class="copy-btn" onclick="copyText(\''+ref+'\')">Copy</button>';
+  document.getElementById('sq-amount').textContent='$'+total.toFixed(2);document.getElementById('sq-ref').textContent=ref;
+}
+function selectPayment(method){
+  wfState.payMethod=method;document.querySelectorAll('.pay-opt').forEach(c=>c.classList.remove('sel'));document.getElementById('pay-'+method).classList.add('sel');
+  document.getElementById('etransfer-detail').style.display=method==='etransfer'?'block':'none';
+  document.getElementById('square-detail').style.display=method==='square'?'block':'none';
+}
+async function confirmPayment(method){
+  const total=calcTotal();const ref=lastRef||('DM-'+Date.now().toString(36).toUpperCase());lastRef=ref;
+  const booking={ref,name:wfState.name,phone:wfState.phone,email:wfState.email,address:wfState.address,time:wfState.time,notes:wfState.notes,delivery:wfState.delivery,package:wfState.package,rush:wfState.rush,slots:wfState.slots||[],confirmedSlot:'',items:_items,stdTotal:_stdTotal,preTotal:_preTotal,total,payMethod:method,payStatus:method==='etransfer'?'pending_verification':'pending_link',status:'confirmed',createdAt:new Date().toISOString(),
+    progress:{intakeItems:[],notes:[{date:new Date().toLocaleDateString('en-CA'),text:'Order confirmed. Awaiting payment verification.'}]}};
+  try{if(window.storage)await window.storage.set('booking:'+ref,JSON.stringify(booking));}catch(e){}
+  const isEt=method==='etransfer';
+  document.getElementById('confCheck').textContent='🎉';
+  document.getElementById('confTitle').textContent="You're in our queue, "+wfState.name+"!";
+  // Payment confirmation message
+  const payMsg = isEt
+    ? `We'll verify your e-transfer and confirm within a few hours. We'll text <strong style="color:var(--ice)">${wfState.phone}</strong> as soon as it's confirmed.`
+    : `We're sending your Square payment link to <strong style="color:var(--ice)">${wfState.phone}</strong> shortly.`;
+  document.getElementById('confMsg').innerHTML = payMsg;
+  document.getElementById('confRef').textContent = ref;
+  document.getElementById('courierRef').textContent = ref;
+  // Show delivery-specific instructions
+  document.getElementById('courierInstructions').style.display = wfState.delivery==='courier' ? 'block' : 'none';
+  document.getElementById('pickupInstructions').style.display = wfState.delivery==='pickup' ? 'block' : 'none';
+  document.getElementById('dropoffInstructions').style.display = wfState.delivery==='dropoff' ? 'block' : 'none';
+  // Populate slots display
+  if(wfState.slots&&wfState.slots.length){
+    const slotsHtml=wfState.slots.map((s,i)=>`<div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(74,15,212,0.15);font-size:13px"><span style="color:var(--dimmer);font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding-top:2px">Option ${i+1}</span><span style="color:var(--ice);font-weight:700">${formatSlot(s)}</span></div>`).join('');
+    ['slotsDisplay','slotsDisplay2'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=slotsHtml+'<div style="font-size:12px;color:var(--dimmer);font-family:var(--mono);margin-top:8px">We\'ll confirm one of these within a few hours ⏱</div>';});
+  }
+  // Next steps
+  const stepsByDelivery = {
+    courier: [{icon:'💳',text:isEt?'We verify your e-transfer (usually same day)':'You receive a Square payment link'},{icon:'📸',text:'Take a photo of your tapes before packing — then ship to our Edmonton or Red Deer address'},{icon:'🧾',text:'Keep your courier receipt for tracking'},{icon:'🎬',text:'We digitize everything and notify you when complete'}],
+    pickup:  [{icon:'💳',text:isEt?'We verify your e-transfer (usually same day)':'You receive a Square payment link'},{icon:'📞',text:'We call to confirm your pickup time — evenings & weekends available'},{icon:'🎬',text:'We pick up, digitize, and return everything to you'},{icon:'✅',text:'Track progress anytime — "Check My Progress" tab above'}],
+    dropoff: [{icon:'💳',text:isEt?'We verify your e-transfer (usually same day)':'You receive a Square payment link'},{icon:'📞',text:'We call to arrange a drop-off appointment at Edmonton or Red Deer'},{icon:'🎬',text:'We digitize everything with professional care'},{icon:'✅',text:'Track progress anytime — "Check My Progress" tab above'}],
+  };
+  const steps = stepsByDelivery[wfState.delivery] || stepsByDelivery['pickup'];
+  document.getElementById('confNextSteps').innerHTML = steps.map(s=>`<li><span class="ns-icon">${s.icon}</span>${s.text}</li>`).join('');
+  setWfStep(6);
+}
+function copyText(t){navigator.clipboard.writeText(t).catch(()=>{});}
+
+
+// ══ DIGITAL DOWNLOAD ═════════════════════════════
+async function lookupDownload() {
+  const rawName = document.getElementById('dlName').value.trim();
+  const rawPhone = document.getElementById('dlPhone').value.trim();
+  const rawPass = document.getElementById('dlPass').value.trim();
+  if(!rawName || !rawPhone || !rawPass) { alert('Please fill in all three fields — name, phone, and password.'); return; }
+  const el = document.getElementById('dlResult');
+  el.style.display = 'block';
+  el.innerHTML = '<div style="text-align:center;padding:28px"><div class="spin-ring"></div><p style="color:var(--dim)">Looking up your files…</p></div>';
+  const name = rawName.toLowerCase().trim();
+  const phone = rawPhone.replace(/\D/g,'');
+  let found = null;
+  try {
+    if(window.storage) {
+      const keys = await window.storage.list('booking:');
+      for(const key of (keys.keys||[])) {
+        const r = await window.storage.get(key);
+        if(!r) continue;
+        const b = JSON.parse(r.value);
+        const bName = (b.name||'').toLowerCase();
+        const bPhone = (b.phone||'').replace(/\D/g,'');
+        const nameMatch = bName.split(' ')[0]===name || bName===name;
+        const phoneMatch = bPhone===phone || bPhone.endsWith(phone.slice(-7)) || phone.endsWith(bPhone.slice(-7));
+        if(nameMatch && phoneMatch && b.dlPassword && b.dlPassword===rawPass) { found=b; break; }
+      }
+    }
+  } catch(e){}
+  if(!found) {
+    el.innerHTML = `<div style="text-align:center;padding:28px;background:rgba(74,15,212,0.06);border:1px solid var(--border);border-radius:12px">
+      <div style="font-size:2.5rem;margin-bottom:12px">🔒</div>
+      <h3 style="font-family:var(--serif);font-size:1.2rem;color:#fff;margin-bottom:7px">Files not found</h3>
+      <p style="color:var(--dim);font-size:14px;line-height:1.7">We couldn't find your files with those details. Please check your name, phone number, and password exactly as provided in your confirmation text.<br><br>Call us at <strong style="color:var(--ice)">${CFG.phone}</strong> and we'll help right away.</p>
+    </div>`;
+    return;
+  }
+  // Check expiry
+  const now = Date.now();
+  const expiry = found.dlExpiry || 0;
+  const daysLeft = Math.ceil((expiry - now) / 86400000);
+  const expired = now > expiry;
+  if(expired) {
+    el.innerHTML = `<div style="text-align:center;padding:28px;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.3);border-radius:12px">
+      <div style="font-size:2.5rem;margin-bottom:12px">⏰</div>
+      <h3 style="font-family:var(--serif);font-size:1.2rem;color:#fff;margin-bottom:7px">Download link has expired</h3>
+      <p style="color:var(--dim);font-size:14px;line-height:1.7">Your 30-day download window ended on <strong style="color:var(--ice)">${new Date(expiry).toLocaleDateString('en-CA')}</strong>.<br>Please call us at <strong style="color:var(--ice)">${CFG.phone}</strong> — we may be able to extend your access.</p>
+    </div>`;
+    return;
+  }
+  // Show download
+  const urgentClass = daysLeft <= 5 ? 'urgent' : '';
+  el.innerHTML = `<div class="dl-card">
+    <div style="font-size:3rem;margin-bottom:12px">🎬</div>
+    <div class="dl-card-title">Hello, ${(found.name||'').split(' ')[0]}! Your files are ready.</div>
+    <div class="dl-card-sub">Your digitized memories are waiting. Click the button below to open your Google Drive folder — everything is there, organized and ready to view or download.</div>
+    <span class="dl-expiry ${urgentClass}">⏱ ${daysLeft} day${daysLeft===1?'':'s'} remaining (expires ${new Date(expiry).toLocaleDateString('en-CA')})</span>
+    <a href="${found.dlUrl}" target="_blank" class="dl-btn">
+      📁 Open My Files on Google Drive
+    </a>
+    <p style="font-size:12px;color:var(--dimmer);font-family:var(--mono)">Files open in Google Drive — you can view, download, and share from there.</p>
+    <div class="dl-share-info">
+      <h4>📤 Sharing with family members</h4>
+      <div class="dl-share-row"><span class="l">How to share</span><span class="v">In Google Drive, click Share → enter their email</span></div>
+      <div class="dl-share-row"><span class="l">Or send the link</span><span class="v">They'll need to request access</span></div>
+      <div class="dl-share-row"><span class="l">File formats</span><span class="v">${found.package==='pre'?'HD/4K .mp4 files':'Standard .mp4 files'}</span></div>
+      <div class="dl-share-row"><span class="l">USB drive</span><span class="v">${found.package==='pre'?'Included in your package':'Available for $15 — call us'}</span></div>
+    </div>
+    <div class="dl-info-row">
+      <div class="dl-info-item"><span class="dl-info-lbl">Order</span><span class="dl-info-val">${found.ref}</span></div>
+      <div class="dl-info-item"><span class="dl-info-lbl">Package</span><span class="dl-info-val">${found.package==='pre'?'Premium':'Standard'}</span></div>
+      <div class="dl-info-item"><span class="dl-info-lbl">Items</span><span class="dl-info-val">${(found.progress?.intakeItems||found.items||[]).length}</span></div>
+    </div>
+  </div>`;
+}
+
+// Staff: set download link for an order
+async function setDownloadLink(ref) {
+  const url = document.getElementById('dlUrl-'+ref)?.value.trim();
+  const pwd = document.getElementById('dlPwd-'+ref)?.value.trim();
+  if(!url || !pwd) { alert('Please enter both the Google Drive URL and a download password.'); return; }
+  let b = null;
+  try { if(window.storage){const r=await window.storage.get('booking:'+ref);if(r)b=JSON.parse(r.value);} } catch(e){}
+  if(!b) return;
+  b.dlUrl = url;
+  b.dlPassword = pwd;
+  b.dlExpiry = Date.now() + (30 * 24 * 60 * 60 * 1000); // 30 days from now
+  b.dlSetAt = new Date().toLocaleDateString('en-CA');
+  if(!b.progress) b.progress = {intakeItems:[],notes:[]};
+  b.progress.notes.push({date:new Date().toLocaleDateString('en-CA'), text:`Digital download link set. Available for 30 days. Password sent to customer.`});
+  try { if(window.storage) await window.storage.set('booking:'+ref, JSON.stringify(b)); } catch(e){}
+  renderSpDetail(b);
+  alert(`✅ Download link set!\n\nTell ${b.name} their download password is: ${pwd}\n\nFiles available until: ${new Date(b.dlExpiry).toLocaleDateString('en-CA')}`);
+}
+
+// ══ SLOT CONFIRMATION ════════════════════════════
+async function confirmSlot(ref, slot) {
+  let b=null;
+  try{if(window.storage){const r=await window.storage.get('booking:'+ref);if(r)b=JSON.parse(r.value);}}catch(e){}
+  if(!b) return;
+  b.confirmedSlot = slot;
+  if(!b.progress) b.progress={intakeItems:[],notes:[]};
+  const label = b.delivery==='pickup'?'Pickup':'Drop-off';
+  b.progress.notes.push({date:new Date().toLocaleDateString('en-CA'),text:`${label} confirmed for ${formatSlot(slot)}. Customer notified.`});
+  try{if(window.storage) await window.storage.set('booking:'+ref, JSON.stringify(b));}catch(e){}
+  renderSpDetail(b);
+  alert(`✅ ${label} confirmed for ${formatSlot(slot)}!\n\nRemember to text ${b.name} at ${b.phone} to let them know.`);
+}
+
+// ══ RECEIPT ══════════════════════════════════════
+async function showReceipt(ref){
+  let b=null;try{if(window.storage){const r=await window.storage.get('booking:'+ref);if(r)b=JSON.parse(r.value);}}catch(e){}
+  if(!b){alert('Receipt not found. Call us at '+CFG.phone);return;}
+  const total=b.total||calcTotal();
+  const itemRows=(b.items||[]).map(l=>{const pr=b.package==='pre'?l.pre:l.std;return`<div class="r-row"><span class="rl">${l.desc}</span><span class="rv">$${pr.toFixed(2)}</span></div>`;}).join('');
+  document.getElementById('rcptContent').innerHTML=`
+    <div class="rcpt-hdr"><div class="rcpt-logo">Digital <span>Memories</span></div><div style="font-family:var(--mono);font-size:11px;color:var(--dimmer)">Edmonton, Alberta · hello@digitalmemories.ca · (780) 555-0192</div><div style="font-family:var(--mono);font-size:11px;color:var(--sky);margin-top:7px;letter-spacing:0.12em">OFFICIAL RECEIPT</div></div>
+    <div class="r-row"><span class="rl">Date</span><span class="rv">${new Date(b.createdAt||Date.now()).toLocaleDateString('en-CA')}</span></div>
+    <div class="r-row"><span class="rl">Reference</span><span class="rv">${b.ref}</span></div>
+    <div class="r-row"><span class="rl">Customer</span><span class="rv">${b.name}</span></div>
+    <div class="r-row"><span class="rl">Phone</span><span class="rv">${b.phone}</span></div>
+    <div class="r-row"><span class="rl">Package</span><span class="rv">${b.package==='pre'?'Premium':'Standard'}${b.rush?' + Rush':''}</span></div>
+    <div style="border-top:1px solid rgba(74,15,212,0.3);margin:12px 0 6px;padding-top:6px;font-family:var(--mono);font-size:10px;color:var(--dimmer);letter-spacing:0.12em;text-transform:uppercase">Items</div>
+    ${itemRows}${b.delivery==='pickup'?`<div class="r-row"><span class="rl">Pickup + delivery</span><span class="rv">$50.00</span></div>`:''}
+    ${b.rush?`<div class="r-row"><span class="rl">Rush surcharge (25%)</span><span class="rv">$${((b.package==='pre'?b.preTotal:b.stdTotal)*CFG.RUSH).toFixed(2)}</span></div>`:''}
+    <div class="r-total"><span class="r-total-l">Total Paid</span><span class="r-total-v">$${total.toFixed(2)}</span></div>
+    <div class="r-row" style="margin-top:12px"><span class="rl">Payment Method</span><span class="rv">${b.payMethod==='etransfer'?'Interac E-Transfer':'Square Credit/Debit Card'}</span></div>
+    <div class="r-stamp">✅ PAYMENT CONFIRMED · Thank you, ${b.name}!</div>
+    <button style="width:100%;margin-top:12px;padding:12px;background:rgba(74,15,212,0.15);border:1px solid var(--border);border-radius:8px;color:var(--ice);font-family:var(--body);font-size:14px;font-weight:700;cursor:pointer;transition:all var(--tr)" onclick="window.print()">🖨️ Print / Save Receipt</button>
+    <button style="width:100%;margin-top:8px;padding:11px;background:transparent;border:1px solid rgba(200,216,240,0.15);border-radius:8px;color:var(--dim);font-family:var(--body);font-size:14px;cursor:pointer;transition:all var(--tr)" onclick="document.getElementById('rcptOverlay').classList.remove('open')">Close</button>
+  `;
+  document.getElementById('rcptOverlay').classList.add('open');
+}
+
+// ══ PACKAGE MODAL ════════════════════════════════
+function openModal(type){
+  const pkg=CFG.PKG_INFO[type];
+  let html=`<span class="modal-tier">${pkg.tier}</span><h3 style="font-family:var(--serif);font-size:1.35rem;color:#fff;margin-bottom:13px">${pkg.name}</h3>`;
+  html+=pkg.features.map(f=>`<div class="modal-feat"><span class="mf-ico">${f.icon}</span><div class="mf-text"><strong>${f.title}</strong><span>${f.desc}</span></div></div>`).join('');
+  document.getElementById('pkgModalContent').innerHTML=html;document.getElementById('pkgModal').classList.add('open');
+}
+function closePkgModal(){document.getElementById('pkgModal').classList.remove('open');}
+
+// ══ CHAT ═════════════════════════════════════════
+const CHAT_SYS=`You are the warm, patient assistant for Digital Memories Edmonton — VHS, 8mm film and tape digitization. Speak kindly and plainly. Many customers are seniors.
+
+Pricing: VHS/Betamax $35 Std/$45 Pre · Hi8/Video8 $32/$42 · MiniDV $28/$36 · 8mm/Super8 $37/$52 · 16mm $60/$80 · Audio cassette $20/$28 · Reel-to-reel $50/$65 · Film cleaning $15 (free in Premium) · USB drive $15 (free in Premium) · Pickup+return $50 · Rush +25% · Senior discount 10%.
+Standard = mp4 files, cloud download, 7-10 days. Premium = HD/4K, colour restoration, chapter titles, USB, cloud, 5-7 days.
+Phone: (780) 555-0192 · Email: hello@digitalmemories.ca`;
+
+async function sendChat(){
+  const inp=document.getElementById('chatIn'),btn=document.getElementById('chatSend'),box=document.getElementById('chatMsgs');
+  const txt=inp.value.trim();if(!txt)return;
+  chatHistory.push({role:'user',content:txt});
+  const um=document.createElement('div');um.className='msg msg-u';um.textContent=txt;box.appendChild(um);inp.value='';btn.disabled=true;
+  const td=document.createElement('div');td.className='typing-msg';td.style.display='block';td.innerHTML='<div class="dots"><span></span><span></span><span></span></div>';box.appendChild(td);box.scrollTop=box.scrollHeight;
+  try{
+    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:900,system:CHAT_SYS,messages:chatHistory})});
+    const d=await r.json();
+    const reply=d.content?.[0]?.text||"I'm having trouble right now. Please call (780) 555-0192!";
+    chatHistory.push({role:'assistant',content:reply});td.remove();
+    const am=document.createElement('div');am.className='msg msg-a';am.innerHTML='<strong>Digital Memories</strong>'+reply;box.appendChild(am);
+  }catch(e){td.remove();const am=document.createElement('div');am.className='msg msg-a';am.innerHTML='<strong>Digital Memories</strong>Trouble connecting — please call (780) 555-0192!';box.appendChild(am);}
+  box.scrollTop=box.scrollHeight;btn.disabled=false;inp.focus();
+}
+
+// ══ NAVIGATION ═══════════════════════════════════
+function formatSlot(s){
+  if(!s) return '—';
+  try{
+    const d=new Date(s);
+    return d.toLocaleDateString('en-CA',{weekday:'short',month:'short',day:'numeric',year:'numeric'})+' at '+d.toLocaleTimeString('en-CA',{hour:'numeric',minute:'2-digit',hour12:true});
+  }catch(e){return s;}
+}
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  const map={home:0,services:1,pricing:2,contact:3,progress:4,download:5};
+  const btns=document.querySelectorAll('.tb');
+  if(map[id]!==undefined)btns[map[id]].classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  triggerReveal();
+}
+// reveal
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:0.1});
+function triggerReveal(){document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));}
+triggerReveal();
+// a11y
+function adjFont(d){const c=parseFloat(getComputedStyle(document.body).fontSize);document.body.style.fontSize=(d===0?18:Math.min(26,Math.max(14,c+d*2)))+'px';}
+// keyboard close
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closePkgModal();closeWorkflow();closeStaffPanel();closeStaffModal();document.getElementById('rcptOverlay').classList.remove('open');}});
+// logo secret (5 clicks opens staff login)
+let lc=0,lt=null;
+document.getElementById('logoBtn').addEventListener('click',()=>{lc++;if(lt)clearTimeout(lt);lt=setTimeout(()=>lc=0,2000);if(lc>=5){lc=0;openStaffLogin();}});
+</script>
+</body>
+</html>
