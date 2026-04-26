@@ -1456,7 +1456,7 @@ async function aiIntakeAnalyze(ref, dataUrl) {
   let items=[];
   try{
     const resp=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',headers:{'Content-Type':'application/json','anthropic-dangerous-direct-browser-access':'true'},
+      method:'POST',headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-dangerous-direct-browser-access':'true'},
       body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:700,
         system:'You are a media digitization specialist reviewing an intake photo. Identify every individual piece of media. Return ONLY valid JSON array of items, no markdown. Each item: {"type":"vhs|hi8|minidv|s8|f16|cass|r2r","label":"descriptive name e.g. VHS Tape 1 - Christmas 1994","note":"any label or condition visible"}. Create one entry per individual physical item (not grouped quantities).',
         messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mtype,data:base64}},{type:'text',text:'List every individual tape or reel you can see as separate items. JSON array only.'}]}]
@@ -1786,7 +1786,7 @@ function handlePhoto(input){
 async function analyzePhoto(dataUrl){
   const base64=dataUrl.split(',')[1],mtype=dataUrl.split(';')[0].split(':')[1];
   try{
-    const resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','anthropic-dangerous-direct-browser-access':'true'},
+    const resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-dangerous-direct-browser-access':'true'},
       body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:600,system:'Media digitization specialist. Count all physical media in the photo. Return ONLY valid JSON: {"found":"brief description","items":[{"type":"vhs|hi8|minidv|s8|f16|cass|r2r","qty":number}],"confidence":"high|medium|low","caveat":"note or empty"}',
         messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mtype,data:base64}},{type:'text',text:'Count all tapes, film reels, audio media. JSON only.'}]}]
       })
@@ -2235,7 +2235,7 @@ async function sendChat(){
   const um=document.createElement('div');um.className='msg msg-u';um.textContent=txt;box.appendChild(um);inp.value='';btn.disabled=true;
   const td=document.createElement('div');td.className='typing-msg';td.style.display='block';td.innerHTML='<div class="dots"><span></span><span></span><span></span></div>';box.appendChild(td);box.scrollTop=box.scrollHeight;
   try{
-    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:900,system:CHAT_SYS,messages:chatHistory})});
+    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:900,system:CHAT_SYS,messages:chatHistory})});
     const d=await r.json();
     const reply=d.content?.[0]?.text||"I'm having trouble right now. Please call (780) 555-0192!";
     chatHistory.push({role:'assistant',content:reply});td.remove();
