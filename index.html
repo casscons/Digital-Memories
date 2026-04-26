@@ -530,14 +530,14 @@ footer{background:var(--bg);border-top:2px solid rgba(74,15,212,0.2);padding:18p
             <span class="cam-emoji">📷</span>
             <span class="cam-lbl">Take a Photo of Your Tapes</span>
             <span class="cam-sub">Lay everything out, snap one picture — our AI counts it all and builds your quote in seconds</span>
-            <span class="cam-hint">📱 On your phone, this opens your camera directly</span>
+            <span class="cam-hint">📷 On phone: opens camera · On laptop: choose a photo file</span>
           </label>
           <input type="file" id="camIn" accept="image/*" capture="environment" style="display:none" onchange="handlePhoto(this)">
           <button class="phone-btn" onclick="openQrModal()" style="font-size:1.05rem;color:#fff;font-weight:700;padding:14px;border:2px solid rgba(74,15,212,0.4)">
             📱 &nbsp;Viewing this page on a laptop? Send the link to your phone instead
           </button>
-          <div class="or-div"><span>or count them yourself</span></div>
-          <button class="man-link" onclick="showManual()">✏️ &nbsp;I'll enter my items by hand</button>
+          <div class="or-div"><span>or enter without a photo</span></div>
+          <button class="man-link" onclick="showManual()">✏️ &nbsp;Add my items — I know what I have</button>
         </div>
         <!-- STEP 1b manual -->
         <div class="qstep" id="qs1b">
@@ -1786,10 +1786,17 @@ async function analyzePhoto(dataUrl){
     const data=await resp.json();
     let parsed;try{parsed=JSON.parse(data.content?.[0]?.text||'{}');}catch{parsed={found:'',items:[],confidence:'low',caveat:''};}
     buildPhotoQuote(parsed);
-  }catch(err){goStep('qs1b');buildManualGrid();alert("Couldn't connect to AI — please use manual entry below.");}
+  }catch(err){
+    // AI unavailable — slide straight to manual entry, keep it friendly
+    buildManualGrid();
+    goStep('qs1b');
+    // Show a soft banner instead of an alert
+    const banner = document.getElementById('aiBanner');
+    if(banner){ banner.style.display='block'; }
+  }
 }
 function buildPhotoQuote(r){
-  if(!r.items||!r.items.length){goStep('qs1b');buildManualGrid();alert("Couldn't identify items clearly — try a brighter photo or use manual entry.");return;}
+  if(!r.items||!r.items.length){buildManualGrid();goStep('qs1b');const b=document.getElementById('aiBanner');if(b)b.style.display='block';return;}
   const lines=[];let ss=0,ps=0,hf=false;
   r.items.forEach(item=>{const p=CFG.PRICES[item.type];if(!p||!item.qty)return;const sa=p.std*item.qty,pa=p.pre*item.qty;ss+=sa;ps+=pa;if(item.type==='s8'||item.type==='f16')hf=true;lines.push({type:item.type,qty:item.qty,desc:`${p.icon} ${item.qty}× ${p.label}`,std:sa,pre:pa});});
   if(hf){lines.push({type:'clean',qty:1,desc:'🧹 Film cleaning (one-time)',std:CFG.CLEAN,pre:0});ss+=CFG.CLEAN;}
@@ -2239,12 +2246,12 @@ document.getElementById('logoBtn').addEventListener('click',()=>{lc++;if(lt)clea
   <div class="qr-box">
     <div style="font-size:2.5rem;margin-bottom:10px">📱</div>
     <h3>Open on Your Phone</h3>
-    <p>Scan this QR code with your phone camera — the site opens instantly and you can take the photo right there.</p>
+    <p>Use your phone camera to scan the QR code below — it sends you straight to our page on your phone so you can take the photo there.</p>
     <canvas id="qrCanvas" width="180" height="180"></canvas>
     <div class="qr-steps">
-      <div class="qr-step"><span class="qr-step-num">1</span><span>Point your phone camera at the QR code above</span></div>
-      <div class="qr-step"><span class="qr-step-num">2</span><span>Tap the link that appears on your phone screen</span></div>
-      <div class="qr-step"><span class="qr-step-num">3</span><span>Tap the big camera button and take your photo</span></div>
+      <div class="qr-step"><span class="qr-step-num">1</span><span>Open your camera app and point it at the QR code — a link will pop up on your screen. Tap it.</span></div>
+      <div class="qr-step"><span class="qr-step-num">2</span><span>Our webpage opens on your phone. Tap the button that says <strong style="color:var(--ice)">"On your phone, this opens your camera directly"</strong></span></div>
+      <div class="qr-step"><span class="qr-step-num">3</span><span>Your camera app opens. Take your picture, then tap <strong style="color:var(--ice)">Choose</strong> — your quote builds automatically.</span></div>
     </div>
     <p style="font-family:var(--mono);font-size:11px;color:var(--dimmer);letter-spacing:0.08em;margin-bottom:10px">— OR —</p>
     <p style="color:var(--dim);font-size:13px;margin-bottom:10px">Enter your phone number and we'll open a text on this computer so you can send the link to yourself:</p>
