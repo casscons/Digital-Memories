@@ -6,8 +6,8 @@
 <title>Digital Memories Edmonton — VHS, 8mm Film &amp; Tape Digitization</title>
 <meta name="description" content="Digital Memories Edmonton preserves VHS tapes, 8mm film, Super 8, Betamax and audio recordings. Free pickup. Instant quote — snap a photo.">
 <meta name="keywords" content="VHS digitization Edmonton, 8mm film transfer Edmonton, tape to digital Alberta, Super 8 conversion Edmonton, Betamax transfer Edmonton">
-<link rel="canonical" href="https://digitalmemories.ca/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Digital Memories Edmonton","description":"VHS, 8mm film and tape digitization Edmonton Alberta","address":{"@type":"PostalAddress","addressLocality":"Edmonton","addressRegion":"AB","addressCountry":"CA"},"telephone":"(780) 555-0192","email":"hello@digitalmemories.ca","openingHours":["Mo-Fr 08:00-20:00","Sa-Su 09:00-18:00"],"priceRange":"$$","areaServed":"Edmonton, Alberta"}</script>
+<link rel="canonical" href="https://casscons.github.io/Digital-Memories/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Digital Memories Edmonton","description":"VHS, 8mm film and tape digitization Edmonton Alberta","address":{"@type":"PostalAddress","addressLocality":"Edmonton","addressRegion":"AB","addressCountry":"CA"},"telephone":"(780) 555-0192","email":"hello@digitalmemories.ca","openingHours":["Mo-Fr 08:00-20:00","Sa-Su 09:00-18:00"],"priceRange":"$$","areaServed":"Edmonton, Alberta","url":"https://casscons.github.io/Digital-Memories/"}</script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -513,6 +513,9 @@ footer{background:var(--bg);border-top:2px solid rgba(74,15,212,0.2);padding:18p
             <span class="cam-hint">📱 On your phone, this opens your camera directly</span>
           </label>
           <input type="file" id="camIn" accept="image/*" capture="environment" style="display:none" onchange="handlePhoto(this)">
+          <button class="phone-btn" onclick="openQrModal()">
+            📱 &nbsp;Taking this on a laptop? Send the link to your phone instead
+          </button>
           <div class="or-div"><span>or count them yourself</span></div>
           <button class="man-link" onclick="showManual()">✏️ &nbsp;I'll enter my items by hand</button>
         </div>
@@ -2020,6 +2023,65 @@ async function setDownloadLink(ref) {
   alert(`✅ Download link set!\n\nTell ${b.name} their download password is: ${pwd}\n\nFiles available until: ${new Date(b.dlExpiry).toLocaleDateString('en-CA')}`);
 }
 
+
+// ══ QR CODE & PHONE LINK ═════════════════════════
+const SITE_URL = 'https://casscons.github.io/Digital-Memories/';
+
+function openQrModal() {
+  document.getElementById('qrOverlay').classList.add('open');
+  generateQR();
+}
+function closeQrModal() {
+  document.getElementById('qrOverlay').classList.remove('open');
+}
+function generateQR() {
+  const canvas = document.getElementById('qrCanvas');
+  const ctx = canvas.getContext('2d');
+  // Load QRCode library dynamically
+  if(window.QRCode) { drawQR(); return; }
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+  script.onload = () => {
+    // qrcodejs uses a div, let's use a different approach
+    drawQR();
+  };
+  script.onerror = () => {
+    // Fallback: use QR API
+    const img = document.createElement('img');
+    img.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(SITE_URL)}`;
+    img.style.cssText = 'width:200px;height:200px;border-radius:10px;background:#fff;display:block;margin:0 auto 16px';
+    img.alt = 'QR Code';
+    canvas.replaceWith(img);
+  };
+  document.head.appendChild(script);
+}
+function drawQR() {
+  // Use QR API as the most reliable free approach
+  const canvas = document.getElementById('qrCanvas');
+  if(!canvas) return;
+  const img = document.createElement('img');
+  img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&bgcolor=ffffff&color=0a0a1a&data=' + encodeURIComponent(SITE_URL);
+  img.style.cssText = 'width:200px;height:200px;border-radius:10px;display:block;margin:0 auto 16px';
+  img.alt = 'QR Code — scan to open on phone';
+  canvas.style.display = 'none';
+  canvas.parentNode.insertBefore(img, canvas);
+}
+function sendSmsLink() {
+  const phone = document.getElementById('smsPhone').value.trim().replace(/\D/g,'');
+  const note = document.getElementById('smsNote');
+  if(!phone || phone.length < 10) {
+    note.style.color = '#ef4444';
+    note.textContent = 'Please enter a valid phone number.';
+    return;
+  }
+  // Use sms: protocol to open native SMS app pre-filled
+  const msg = 'Here is the link to get your quote from Digital Memories: ' + SITE_URL;
+  const smsLink = 'sms:+1' + phone + '?body=' + encodeURIComponent(msg);
+  window.location.href = smsLink;
+  note.style.color = 'rgba(126,200,255,0.65)';
+  note.textContent = '✓ Your SMS app should open with the message ready to send.';
+}
+
 // ══ SLOT CONFIRMATION ════════════════════════════
 async function confirmSlot(ref, slot) {
   let b=null;
@@ -2121,5 +2183,29 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closePkgModal();clo
 let lc=0,lt=null;
 document.getElementById('logoBtn').addEventListener('click',()=>{lc++;if(lt)clearTimeout(lt);lt=setTimeout(()=>lc=0,2000);if(lc>=5){lc=0;openStaffLogin();}});
 </script>
+
+<!-- ══ QR / PHONE LINK MODAL ══ -->
+<div class="qr-overlay" id="qrOverlay" onclick="if(event.target===this)closeQrModal()">
+  <div class="qr-box">
+    <div style="font-size:2.5rem;margin-bottom:10px">📱</div>
+    <h3>Open on Your Phone</h3>
+    <p>Scan this QR code with your phone camera — the site opens instantly and you can take the photo right there.</p>
+    <canvas id="qrCanvas" width="200" height="200"></canvas>
+    <div class="qr-steps">
+      <div class="qr-step"><span class="qr-step-num">1</span><span>Point your phone camera at the QR code above</span></div>
+      <div class="qr-step"><span class="qr-step-num">2</span><span>Tap the link that appears on your phone screen</span></div>
+      <div class="qr-step"><span class="qr-step-num">3</span><span>Tap the big camera button and take your photo</span></div>
+    </div>
+    <p style="font-family:var(--mono);font-size:11px;color:var(--dimmer);letter-spacing:0.08em;margin-bottom:10px">— OR —</p>
+    <p style="color:var(--dim);font-size:13px;margin-bottom:10px">Enter your phone number and we'll open a text on this computer so you can send the link to yourself:</p>
+    <div class="qr-sms-row">
+      <input type="tel" class="field" id="smsPhone" placeholder="(780) 555-0100" autocomplete="tel">
+      <button class="qr-sms-btn" onclick="sendSmsLink()">Text Me →</button>
+    </div>
+    <p id="smsNote" style="font-size:12px;color:var(--dimmer);font-family:var(--mono);margin-bottom:14px"></p>
+    <button class="qr-close" onclick="closeQrModal()">Close — I'll use this device instead</button>
+  </div>
+</div>
+
 </body>
 </html>
