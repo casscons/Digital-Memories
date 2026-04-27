@@ -1890,13 +1890,31 @@ async function analyzePhoto(dataUrl){
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:600,
         system:`You are a media digitization specialist identifying physical media in photos.
-CRITICAL RULES:
-1. Count ALL items — both exposed AND in closed packaging/cases.
-2. If you see closed cases/boxes that match an open/exposed item nearby, assume each closed case holds one item of that same type.
-3. Super 8 and 8mm reels often come in small square or round plastic cases — count each case as one reel (type s8 (small) or s8l (large)).
-4. Identify formats: vhs=VHS/Betamax, hi8=Hi8/Video8/Digital8, minidv=MiniDV/DVCAM, s8=Super8/8mm film reels (small/200ft), s8l=Super8/8mm film reels (large/400ft), f16=16mm reels, cass=audio cassettes, r2r=reel-to-reel.
-5. Return ONLY valid JSON, no markdown:
-{"found":"description","items":[{"type":"vhs|hi8|minidv|s8|s8l|f16|cass|r2r","qty":number}],"confidence":"high|medium|low","caveat":"notes"}\``,
+
+IDENTIFICATION RULES:
+- vhs = VHS/Betamax cassette tapes (rectangular plastic housing)
+- hi8 = Hi8/Video8/Digital8 small camcorder tapes (small rectangular cassette)
+- minidv = MiniDV/DVCAM tiny cassettes
+- s8 = Super 8 or 8mm film reels that are SMALL (up to 3–4" diameter, 200ft). Typically in small square plastic cases or bare.
+- s8l = Super 8 or 8mm film reels that are LARGE (5"+ diameter, 400ft). Round open reel or in larger round cases.
+- f16 = 16mm film reels (large, often metal, with distinctive spoke hub pattern)
+- cass = audio cassettes (small rectangle)
+- r2r = reel-to-reel audio tape (large round open reel, audio not film)
+
+SIZE IS CRITICAL for film reels:
+- Small reel (s8): reel diameter roughly the size of a CD or smaller
+- Large reel (s8l): reel diameter significantly bigger than a CD, palm-sized or larger
+- 16mm (f16): metal reels, often with 6-spoke hubs, larger still
+
+COUNTING RULES:
+1. Count every visible reel/tape — including partially visible ones at frame edges.
+2. For CLOSED STORAGE BOXES or CONTAINERS: if you can see a rectangular storage case that appears to contain multiple reels (stacked, grid pattern, or labelled), estimate the count if possible. If uncertain, flag in caveat.
+3. For STACKED reels: each visible disc is one reel even if stacked — look for thickness/stacking and count accordingly.
+4. Do NOT count clearly empty reels (no film wound on hub) as items for digitizing — note them in caveat as "X empty reels not counted".
+5. When in doubt about what's in a closed container, note it in caveat: "Possible additional reels in closed container — customer should verify count."
+
+Return ONLY valid JSON, no markdown:
+{"found":"brief description of what you see","items":[{"type":"vhs|hi8|minidv|s8|s8l|f16|cass|r2r","qty":number}],"confidence":"high|medium|low","caveat":"important notes including any closed containers or uncertain items"}\``,
         messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mtype,data:base64}},{type:'text',text:'Count all tapes and reels. No markdown. JSON only.'}]}]
       })
     });
@@ -1931,7 +1949,7 @@ function renderQuote(aiMsg,lines,ss,ps,note){
   if(aiMsg)document.getElementById('aiFound').innerHTML=aiMsg;else document.getElementById('aiFound').style.display='none';
   const tbody=document.getElementById('quoteRows');tbody.innerHTML='';
   lines.forEach(l=>{const tr=document.createElement('tr');tr.innerHTML=`<td>${l.desc}</td><td>$${l.std.toFixed(2)}</td><td>$${l.pre.toFixed(2)}</td>`;tbody.appendChild(tr);});
-  const tr2=document.createElement('tr');tr2.innerHTML=`<td style="font-size:11px;color:var(--dimmer);font-style:italic">Turnaround</td><td style="font-size:11px;color:var(--dimmer)">7–10 days</td><td style="font-size:11px;color:var(--dimmer)">5–7 days</td>`;tbody.appendChild(tr2);
+  // Turnaround times removed — no guarantees
   document.getElementById('stdTotal').textContent=`$${ss.toFixed(2)}`;document.getElementById('preTotal').textContent=`$${ps.toFixed(2)}`;
   document.getElementById('stdBtn').textContent=`$${ss.toFixed(2)}`;document.getElementById('preBtn').textContent=`$${ps.toFixed(2)}`;
   document.getElementById('thinkAmt').textContent=`$${ss.toFixed(2)}`;
