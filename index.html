@@ -460,12 +460,12 @@ footer{background:var(--bg);border-top:2px solid rgba(74,15,212,0.2);padding:18p
 .qr-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(2,4,10,0.96);z-index:10000;display:none;align-items:center;justify-content:center;padding:20px}
 .qr-overlay.open{display:flex}
 .qr-box{background:var(--bg2);border:2px solid rgba(74,15,212,0.4);border-radius:16px;padding:22px 26px;max-width:360px;width:100%;text-align:center;box-shadow:0 0 60px rgba(74,15,212,0.3);max-height:90vh;overflow-y:auto}
-.qr-box h3{font-family:var(--serif);font-size:1.3rem;color:#fff;margin-bottom:5px}
-.qr-box p{color:var(--dim);font-size:13px;line-height:1.6;margin-bottom:14px}
+.qr-box h3{font-family:var(--serif);font-size:1.5rem;color:#fff;margin-bottom:8px}
+.qr-box p{color:var(--ice);font-size:15px;line-height:1.65;margin-bottom:16px}
 #qrCanvas{border-radius:8px;background:#fff;padding:10px;margin:0 auto 12px;display:block}
 .qr-steps{text-align:left;background:rgba(74,15,212,0.1);border-radius:8px;padding:12px;margin-bottom:14px}
-.qr-step{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--dim);padding:3px 0}
-.qr-step-num{font-family:var(--mono);font-size:10px;background:var(--sky);color:#fff;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-weight:700}
+.qr-step{display:flex;align-items:flex-start;gap:12px;font-size:20px;color:#fff;font-weight:600;padding:8px 0;line-height:1.55}
+.qr-step-num{font-family:var(--mono);font-size:15px;background:var(--sky);color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px;font-weight:700}
 .qr-sms-row{display:flex;gap:8px;margin-bottom:10px}
 .qr-sms-row .field{flex:1;font-size:13px;padding:10px 12px}
 .qr-sms-btn{padding:10px 14px;background:var(--sky);border:none;border-radius:8px;color:#fff;font-family:var(--body);font-size:13px;font-weight:700;cursor:pointer;transition:all var(--tr);white-space:nowrap;box-shadow:0 0 14px var(--glow)}
@@ -477,8 +477,13 @@ footer{background:var(--bg);border-top:2px solid rgba(74,15,212,0.2);padding:18p
 
 
 /* ── QR ARRIVAL HIGHLIGHT ── */
-@keyframes camPulse{0%,100%{box-shadow:0 0 0 0 rgba(74,15,212,0.7)}50%{box-shadow:0 0 0 18px rgba(74,15,212,0)}}
-.cam-pulse{animation:camPulse 1.2s ease-in-out 3, none !important;border-color:var(--sky) !important;background:rgba(74,15,212,0.22) !important;}
+@keyframes camPulse{
+  0%  {box-shadow:0 0 0 0 rgba(255,255,255,1),0 0 0 0 rgba(126,200,255,0.8);border-color:#fff;background:rgba(74,15,212,0.35)}
+  40% {box-shadow:0 0 0 16px rgba(255,255,255,0.2),0 0 0 32px rgba(126,200,255,0.1);border-color:var(--ice);background:rgba(74,15,212,0.5)}
+  60% {box-shadow:0 0 0 20px rgba(255,255,255,0),0 0 0 44px rgba(126,200,255,0);border-color:#fff;background:rgba(74,15,212,0.4)}
+  100%{box-shadow:0 0 0 0 rgba(255,255,255,1),0 0 0 0 rgba(126,200,255,0.8);border-color:#fff;background:rgba(74,15,212,0.35)}
+}
+.cam-pulse{animation:camPulse 1s ease-in-out 5 !important;border-color:#fff !important;border-width:5px !important;background:rgba(74,15,212,0.35) !important;box-shadow:0 0 0 0 rgba(255,255,255,1) !important;}
 .cam-arrive-tip{background:var(--sky);color:#fff;font-family:var(--body);font-size:1rem;font-weight:700;text-align:center;padding:12px 16px;border-radius:8px;margin-bottom:12px;display:none;animation:fadein 0.5s ease both}
 .cam-arrive-tip.show{display:block}
 
@@ -532,7 +537,7 @@ footer{background:var(--bg);border-top:2px solid rgba(74,15,212,0.2);padding:18p
       <div class="qbox" id="quoteBox">
         <!-- STEP 1 -->
         <div class="qstep active" id="qs1">
-          <div class="cam-arrive-tip" id="camArriveTip">📱 You're in the right place! Tap the camera box below to take your photo →</div>
+          <div class="cam-arrive-tip" style="font-size:1.1rem;font-weight:700;padding:16px;letter-spacing:0.01em" id="camArriveTip">📱 You're in the right place! Tap the camera box below to take your photo →</div>
           <p style="font-family:var(--mono);font-size:11px;color:var(--dimmer);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:12px">STEP 1 OF 3 · SNAP A PHOTO FOR AN INSTANT QUOTE</p>
           <label class="cam-btn" for="camIn" tabindex="0" onkeydown="if(event.key==='Enter')document.getElementById('camIn').click()">
             <span class="cam-emoji">📷</span>
@@ -1455,9 +1460,9 @@ async function aiIntakeAnalyze(ref, dataUrl) {
   const base64=dataUrl.split(',')[1], mtype=dataUrl.split(';')[0].split(':')[1];
   let items=[];
   try{
-    const resp=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:700,
+    const resp=await fetch('https://casscons--83d25b8a41cb11f1b84042b51c65c3df.web.val.run',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:700,
         system:'You are a media digitization specialist reviewing an intake photo. Identify every individual piece of media. Return ONLY valid JSON array of items, no markdown. Each item: {"type":"vhs|hi8|minidv|s8|f16|cass|r2r","label":"descriptive name e.g. VHS Tape 1 - Christmas 1994","note":"any label or condition visible"}. Create one entry per individual physical item (not grouped quantities).',
         messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mtype,data:base64}},{type:'text',text:'List every individual tape or reel you can see as separate items. JSON array only.'}]}]
       })
@@ -1778,16 +1783,30 @@ function handlePhoto(input){
   const reader=new FileReader();
   reader.onload=e=>{
     const dataUrl=e.target.result;
-    document.getElementById('photoThumb').src=dataUrl;document.getElementById('photoThumb').style.display='block';
-    goStep('qs2');analyzePhoto(dataUrl);
+    // Compress/resize before sending — iPhone photos are 10-15MB, API limit is ~5MB
+    const img=new Image();
+    img.onload=()=>{
+      const MAX=1024;
+      const scale=Math.min(1,MAX/Math.max(img.width,img.height));
+      const w=Math.round(img.width*scale), h=Math.round(img.height*scale);
+      const canvas=document.createElement('canvas');
+      canvas.width=w; canvas.height=h;
+      canvas.getContext('2d').drawImage(img,0,0,w,h);
+      const compressed=canvas.toDataURL('image/jpeg',0.7); // 70% quality JPEG
+      document.getElementById('photoThumb').src=compressed;
+      document.getElementById('photoThumb').style.display='block';
+      goStep('qs2');
+      analyzePhoto(compressed);
+    };
+    img.src=dataUrl;
   };
   reader.readAsDataURL(file);
 }
 async function analyzePhoto(dataUrl){
   const base64=dataUrl.split(',')[1],mtype=dataUrl.split(';')[0].split(':')[1];
   try{
-    const resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:600,system:'Media digitization specialist. Count all physical media in the photo. Return ONLY valid JSON: {"found":"brief description","items":[{"type":"vhs|hi8|minidv|s8|f16|cass|r2r","qty":number}],"confidence":"high|medium|low","caveat":"note or empty"}',
+    const resp=await fetch('https://casscons--83d25b8a41cb11f1b84042b51c65c3df.web.val.run',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:600,system:'Media digitization specialist. Count all physical media in the photo. Return ONLY valid JSON: {"found":"brief description","items":[{"type":"vhs|hi8|minidv|s8|f16|cass|r2r","qty":number}],"confidence":"high|medium|low","caveat":"note or empty"}',
         messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mtype,data:base64}},{type:'text',text:'Count all tapes, film reels, audio media. JSON only.'}]}]
       })
     });
@@ -1795,12 +1814,11 @@ async function analyzePhoto(dataUrl){
     let parsed;try{parsed=JSON.parse(data.content?.[0]?.text||'{}');}catch{parsed={found:'',items:[],confidence:'low',caveat:''};}
     buildPhotoQuote(parsed);
   }catch(err){
-    // AI unavailable — slide straight to manual entry, keep it friendly
+    console.error('AI analysis error:', err);
     buildManualGrid();
     goStep('qs1b');
-    // Show a soft banner instead of an alert
     const banner = document.getElementById('aiBanner');
-    if(banner){ banner.style.display='block'; }
+    if(banner){ banner.style.display='block'; banner.innerHTML='📸 Photo received — tap <strong style="color:var(--ice)">+</strong> to add your items and get an instant quote.'; }
   }
 }
 function buildPhotoQuote(r){
@@ -2235,7 +2253,7 @@ async function sendChat(){
   const um=document.createElement('div');um.className='msg msg-u';um.textContent=txt;box.appendChild(um);inp.value='';btn.disabled=true;
   const td=document.createElement('div');td.className='typing-msg';td.style.display='block';td.innerHTML='<div class="dots"><span></span><span></span><span></span></div>';box.appendChild(td);box.scrollTop=box.scrollHeight;
   try{
-    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':'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','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:900,system:CHAT_SYS,messages:chatHistory})});
+    const r=await fetch('https://casscons--83d25b8a41cb11f1b84042b51c65c3df.web.val.run',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:900,system:CHAT_SYS,messages:chatHistory})});
     const d=await r.json();
     const reply=d.content?.[0]?.text||"I'm having trouble right now. Please call (780) 555-0192!";
     chatHistory.push({role:'assistant',content:reply});td.remove();
