@@ -1780,6 +1780,9 @@ function buildManualQuote(){
 }
 function handlePhoto(input){
   const file=input.files[0];if(!file)return;
+  // Pre-warm Val.town proxy so it's ready when image is compressed
+  fetch('https://casscons--83d25b8a41cb11f1b84042b51c65c3df.web.val.run',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:5,messages:[{role:'user',content:'hi'}]})
+  }).catch(()=>{});
   const reader=new FileReader();
   reader.onload=e=>{
     const dataUrl=e.target.result;
@@ -1804,21 +1807,30 @@ function handlePhoto(input){
 }
 async function analyzePhoto(dataUrl){
   const base64=dataUrl.split(',')[1],mtype=dataUrl.split(';')[0].split(':')[1];
-  try{
-    const resp=await fetch('https://casscons--83d25b8a41cb11f1b84042b51c65c3df.web.val.run',{method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:600,system:'Media digitization specialist. Count all physical media in the photo. Return ONLY valid JSON: {"found":"brief description","items":[{"type":"vhs|hi8|minidv|s8|f16|cass|r2r","qty":number}],"confidence":"high|medium|low","caveat":"note or empty"}',
-        messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mtype,data:base64}},{type:'text',text:'Count all tapes, film reels, audio media. JSON only.'}]}]
+  async function tryFetch(){
+    const resp=await fetch('https://casscons--83d25b8a41cb11f1b84042b51c65c3df.web.val.run',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:600,
+        system:'Media digitization specialist. Count all physical media. Return ONLY valid JSON no markdown: {"found":"desc","items":[{"type":"vhs|hi8|minidv|s8|f16|cass|r2r","qty":0}],"confidence":"low","caveat":""}',
+        messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mtype,data:base64}},{type:'text',text:'Count all tapes and reels. No markdown. JSON only.'}]}]
       })
     });
     const data=await resp.json();
-    let parsed;try{parsed=JSON.parse(data.content?.[0]?.text||'{}');}catch{parsed={found:'',items:[],confidence:'low',caveat:''};}
+    return (data.content?.[0]?.text||'{}').replace(/```json\n?|```\n?/g,'').trim();
+  }
+  try{
+    let raw;
+    try{raw=await tryFetch();}
+    catch(e){
+      await new Promise(r=>setTimeout(r,3000));
+      raw=await tryFetch();
+    }
+    let parsed;try{parsed=JSON.parse(raw);}catch{parsed={found:'',items:[],confidence:'low',caveat:''};}
     buildPhotoQuote(parsed);
   }catch(err){
-    console.error('AI analysis error:', err);
-    buildManualGrid();
-    goStep('qs1b');
-    const banner = document.getElementById('aiBanner');
-    if(banner){ banner.style.display='block'; banner.innerHTML='📸 Photo received — tap <strong style="color:var(--ice)">+</strong> to add your items and get an instant quote.'; }
+    console.error('AI analysis error:',err);
+    buildManualGrid();goStep('qs1b');
+    const b=document.getElementById('aiBanner');if(b){b.style.display='block';}
   }
 }
 function buildPhotoQuote(r){
