@@ -52,14 +52,17 @@ This is the complete single-file website for **Digital Memories Edmonton** — a
 | VHS / S-VHS / Betamax | $35/tape | $45/tape |
 | Hi8 / Video8 / Digital8 | $32/tape | $42/tape |
 | MiniDV / DVCAM | $28/tape | $36/tape |
-| 8mm / Super 8 reel | $37/reel | $52/reel |
-| 16mm film reel | $60/reel | $80/reel |
+| Super 8 / 8mm small reel (up to 200ft) | $90/reel | $115/reel |
+| Super 8 / 8mm large reel (400ft) | $135/reel | $195/reel |
+| 16mm film reel (400ft) | $135/reel | $195/reel |
 | Audio cassette | $20/tape | $28/tape |
 | Reel-to-reel audio | $50/reel | $65/reel |
-| Film cleaning (one-time) | $15 | Included |
+| Film cleaning (one-time per order) | $15 | Included |
 | USB drive | $15 optional | Included |
-| Pickup + return delivery | $25 + $25 | $25 + $25 |
-| Rush (48hr) | +25% | +25% |
+| Pickup + return delivery (within Edmonton) | $25 + $25 = $50 | FREE |
+| Pickup + return delivery (outside Edmonton) | $0.65/km × 2 | $0.65/km × 2 |
+| Rush (priority processing) | +25% | +25% |
+| Senior discount (65+) | 10% off | 10% off |
 
 ---
 
